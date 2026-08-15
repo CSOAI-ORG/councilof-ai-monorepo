@@ -1,0 +1,129 @@
+{
+  "name": "csoai-governance-crosswalk-mcp",
+  "description": "Csoai Governance Crosswalk MCP server. Tools: query crosswalk, crosswalk bridge, compliance gap analysis. Built by MEOK AI Labs.",
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "query_crosswalk",
+      "description": "Query the CSOAI crosswalk mapping for a specific framework.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "framework": {
+            "type": "string"
+          },
+          "article_or_clause": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "framework"
+        ]
+      }
+    },
+    {
+      "name": "crosswalk_bridge",
+      "description": "Bridge two frameworks through CSOAI \u2014 the killer feature.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "framework_a": {
+            "type": "string"
+          },
+          "framework_b": {
+            "type": "string"
+          },
+          "focus_area": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "framework_a",
+          "framework_b"
+        ]
+      }
+    },
+    {
+      "name": "compliance_gap_analysis",
+      "description": "Identify compliance gaps across multiple frameworks.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "frameworks": {
+            "type": "array"
+          },
+          "organization_sector": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "frameworks"
+        ]
+      }
+    },
+    {
+      "name": "get_unified_crosswalk",
+      "description": "Return the CSOAI Master Unified Crosswalk showing all 12 frameworks mapped together.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "search_by_topic",
+      "description": "Search across all crosswalks by topic.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "topic"
+        ]
+      }
+    },
+    {
+      "name": "list_frameworks",
+      "description": "List all supported frameworks with metadata.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "generate_compliance_report",
+      "description": "Generate a compliance requirements report for an organization.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "jurisdictions": {
+            "type": "array"
+          },
+          "ai_use_cases": {
+            "type": "array"
+          },
+          "organization_size": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "jurisdictions",
+          "ai_use_cases"
+        ]
+      }
+    },
+    {
+      "name": "get_partnership_charter",
+      "description": "Return the CSOAI Partnership Charter information.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
+}

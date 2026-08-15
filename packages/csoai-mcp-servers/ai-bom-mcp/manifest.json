@@ -1,0 +1,66 @@
+{
+  "manifest_version": "0.3",
+  "name": "ai-bom-mcp",
+  "display_name": "AI Bill of Materials",
+  "version": "1.0.0",
+  "description": "AI-BOM in CycloneDX + SPDX (EU AI Act Art 11).",
+  "long_description": "AI-BOM in CycloneDX + SPDX (EU AI Act Art 11). Pairs with meok-attestation-api for HMAC-signed compliance certs. Free tier: 10 calls/day. Pro: \u00a379/mo.",
+  "license": "MIT",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/meok-ai-labs/ai-bom-mcp",
+  "icon": "https://meok.ai/favicon.ico",
+  "categories": [
+    "compliance",
+    "governance"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "ai-governance",
+    "compliance",
+    "meok"
+  ],
+  "author": {
+    "name": "MEOK AI Labs",
+    "email": "hello@meok.ai",
+    "url": "https://meok.ai"
+  },
+  "server": {
+    "type": "python",
+    "entry_point": "server.py",
+    "mcp_config": {
+      "command": "python",
+      "args": [
+        "${__dirname}/server.py"
+      ],
+      "env": {
+        "MEOK_API_KEY": "${user_config.api_key}"
+      }
+    }
+  },
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "MEOK API Key (Optional)",
+      "description": "Optional. Free tier works without a key (10 calls/day). Pro tier: https://buy.stripe.com/eVq14pcgAcMO9wp7ew8k90N",
+      "default": "",
+      "sensitive": true,
+      "required": false
+    }
+  },
+  "tools_generated": true,
+  "compatibility": {
+    "claude_desktop": ">=0.10.0",
+    "python": ">=3.10",
+    "platforms": [
+      "darwin",
+      "linux",
+      "win32"
+    ]
+  },
+  "support": {
+    "issues": "https://github.com/meok-ai-labs/ai-bom-mcp/issues",
+    "email": "hello@meok.ai"
+  }
+}

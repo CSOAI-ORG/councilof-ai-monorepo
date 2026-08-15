@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1",
+  "name": "ai-bom-mcp",
+  "version": "1.0.0",
+  "title": "AI Bill of Materials",
+  "description": "Generate AI-BOM in CycloneDX + SPDX. Required by EU AI Act Article 11.",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/meok-ai-labs/ai-bom-mcp",
+  "license": "MIT",
+  "author": {
+    "name": "MEOK AI Labs",
+    "email": "hello@meok.ai",
+    "url": "https://meok.ai"
+  },
+  "categories": [
+    "governance"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "ai-governance",
+    "compliance",
+    "meok"
+  ],
+  "support_url": "https://github.com/meok-ai-labs",
+  "contact_email": "hello@meok.ai",
+  "endpoints": {
+    "free_tier": {
+      "calls_per_day": 10
+    },
+    "pro": "https://buy.stripe.com/eVq14pcgAcMO9wp7ew8k90N",
+    "enterprise": "hello@meok.ai"
+  }
+}

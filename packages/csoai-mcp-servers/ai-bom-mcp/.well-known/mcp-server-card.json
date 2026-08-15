@@ -1,0 +1,25 @@
+{
+  "name": "ai-bom-mcp",
+  "title": "Ai Bom Mcp",
+  "description": "AI Bill of Materials (AI-BOM) generator + auditor MCP \u2014 CycloneDX ML-BOM, SPDX 3.0 AI profile, EU AI Act Annex IV mapping, NIST AI RMF alignment, US EO 14028 federal procurement. By MEOK AI Labs.",
+  "version": "1.2.14",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "generate_ai_bom"
+    },
+    {
+      "name": "audit_ai_bom_completeness"
+    },
+    {
+      "name": "map_to_regulation"
+    },
+    {
+      "name": "required_fields"
+    }
+  ]
+}

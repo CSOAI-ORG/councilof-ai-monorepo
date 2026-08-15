@@ -1,0 +1,17 @@
+[
+  "tests/test_functional.py::test_compliance_gap_analysis",
+  "tests/test_functional.py::test_compliance_gap_analysis_sector",
+  "tests/test_functional.py::test_crosswalk_bridge",
+  "tests/test_functional.py::test_crosswalk_bridge_focus",
+  "tests/test_functional.py::test_get_unified_crosswalk",
+  "tests/test_functional.py::test_query_crosswalk_filter",
+  "tests/test_functional.py::test_query_crosswalk_invalid",
+  "tests/test_functional.py::test_query_crosswalk_valid",
+  "tests/test_functional.py::test_search_by_topic",
+  "tests/test_functional.py::test_search_by_topic_expanded",
+  "tests/test_governance_crosswalk.py::TestAuthMiddleware::test_check_access_allows_empty_key_as_free_tier",
+  "tests/test_governance_crosswalk.py::TestAuthMiddleware::test_check_access_returns_tuple",
+  "tests/test_governance_crosswalk.py::TestHealthEndpoint::test_health_url_resolves",
+  "tests/test_governance_crosswalk.py::TestMCPImport::test_import_server",
+  "tests/test_governance_crosswalk.py::TestMCPImport::test_mcp_or_server_object_exists"
+]

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csoai-asi-evolve"
+version = "0.1.0"
+description = "Sovereign wrapper around GAIR-NLP/ASI-Evolve: Ed25519-signed, care-floor-gated, honest-scored AI-researcher loop (LEARN->DESIGN->EXPERIMENT->ANALYZE)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Nicholas Templeman", email = "nicholas@csoai.org" }]
+dependencies = ["cryptography>=42.0.0"]
+
+[project.urls]
+Upstream = "https://github.com/GAIR-NLP/ASI-Evolve"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

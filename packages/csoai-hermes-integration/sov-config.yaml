@@ -1,0 +1,39 @@
+# sov-config.yaml — Canonical SOV governance config for governed-hermes
+# Mirrors the env-var defaults in plugins/observability/sov_governance/plugin.yaml
+# Operators can override per-deployment via env vars (preferred for secrets).
+
+hermes:
+  # Hermes server settings (subset of upstream config.yaml)
+  host: 0.0.0.0
+  port: 8000
+
+sov_governance:
+  enabled: true
+  signal_api:
+    url: https://signal.csoai.org
+    # API key MUST come from env (SOV_SIGNAL_API_KEY); never commit secrets.
+    timeout_s: 3.0
+    fallback_to_local: true   # use deterministic heuristic if API unreachable
+  thresholds:
+    governance: 0.50          # G axis floor; block below
+    safety: 0.60              # S axis floor; block below
+    provenance: 0.50          # P axis floor; record-only
+    care: 0.50                # C axis floor; record-only
+  behaviour:
+    block_on_fail: true       # hard-block calls below thresholds
+    hold_mode: block          # block | log | escalate
+  audit:
+    path: /app/.hermes/sov_audit
+    sign: true                # Ed25519 sign each record
+    rotation_max_mb: 100      # rotate sov_audit.jsonl at 100 MB
+  banned_tools:
+    - shell_exec
+    - browser_unsafe
+    - credentials_dump
+    - filesystem_unsafe_write
+
+# Promote the sov_signal_scorer as a model provider so any Hermes skill can
+# call it directly (e.g. via bridge_think or chain-of-thought).
+sov_signal_scorer:
+  enabled: true
+  api_url: https://signal.csoai.org

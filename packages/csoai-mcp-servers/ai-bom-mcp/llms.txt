@@ -1,0 +1,65 @@
+# ai-bom-mcp
+> AI Bill of Materials (AI-BOM) generation and auditing. CycloneDX ML-BOM and SPDX 3.0 AI profile for US federal procurement (EO 14028), EU AI Act Annex IV, NIST AI RMF, and ISO 42001. By MEOK AI Labs.
+
+## Install
+pip install ai-bom-mcp
+
+## Auth
+- Free tier: 10 calls/day, no API key needed
+- Pro tier: unlimited, set MEOK_API_KEY env var
+- All tools are read-only and stateless
+
+## Tools
+
+### generate_ai_bom
+Generate an AI-BOM document in CycloneDX 1.6 ML-BOM or SPDX 3.0 format with all 10 required field categories.
+- `model_name` (str, required): Name of the AI model
+- `model_version` (str, optional, default "1.0.0"): Model version
+- `organisation` (str, optional, default "MEOK AI Labs"): Organisation name
+- `licence` (str, optional, default "Apache-2.0"): Model licence
+- `architecture` (str, optional, default "Transformer"): Architecture type
+- `parameter_count` (str, optional, default "unknown"): Parameter count
+- `training_datasets` (str, optional): Comma-separated dataset names
+- `format` (str, optional, default "cyclonedx"): "cyclonedx" | "spdx"
+- `api_key` (str, optional): MEOK API key
+- Returns: Complete AI-BOM JSON document with metadata, model card, components; list of fields to populate; legal basis references
+- Use when: Creating an AI-BOM for regulatory submission or federal procurement
+
+### audit_ai_bom_completeness
+Audit an existing AI-BOM against the 10 required field categories.
+- `ai_bom_json` (str, required): AI-BOM document as JSON string
+- `api_key` (str, optional): MEOK API key
+- Returns: overall_score_percent, categories_complete (N/10), per-category COMPLETE/PARTIAL/MISSING status with missing_fields list
+- Use when: Checking if an AI-BOM is ready for submission
+
+### map_to_regulation
+Map an AI-BOM against a specific regulatory framework's documentation requirements.
+- `ai_bom_json` (str, required): AI-BOM document as JSON string
+- `regulation` (str, optional, default "eu_ai_act"): "eu_ai_act" | "nist_ai_rmf" | "us_eo_14028" | "iso_42001"
+- `api_key` (str, optional): MEOK API key
+- Returns: Regulation reference, required sections, field-level mapping between AI-BOM and regulation
+- Use when: Mapping your AI-BOM to a specific compliance framework
+
+### required_fields
+List all 10 required AI-BOM field categories and their individual fields.
+- `api_key` (str, optional): MEOK API key
+- Returns: 10 categories (model_identity, model_architecture, training_data, fine_tuning, evaluation, dependencies, security_controls, governance, usage_restrictions, distribution) with all fields per category
+- Use when: Understanding what fields are needed before generating an AI-BOM
+
+## 10 Required Categories
+1. model_identity (name, version, organisation, licence, release_date, model_id_hash)
+2. model_architecture (architecture_type, parameter_count, context_window, framework, training_compute_flops)
+3. training_data (dataset_sources, dataset_sizes, data_provenance, filtering_applied, synthetic_data_percent, copyright_status)
+4. fine_tuning (base_model, fine_tune_method, fine_tune_dataset, fine_tune_steps, rlhf_applied)
+5. evaluation (benchmarks_run, benchmark_scores, bias_testing_results, red_team_findings, eval_dataset_hash)
+6. dependencies (inference_engines, tokenisers, safety_filters, retrieval_systems, tools_registered)
+7. security_controls (prompt_injection_defence, output_filtering, pii_scrubbing, adversarial_robustness_rating)
+8. governance (risk_classification, regulations_applicable, human_oversight_mechanism, incident_reporting_contact)
+9. usage_restrictions (acceptable_use_policy, prohibited_use_cases, export_control_status, region_restrictions)
+10. distribution (distribution_channels, access_controls, update_cadence, decommissioning_policy)
+
+## Quick Example
+```python
+result = generate_ai_bom(model_name="MyLLM", model_version="2.0", architecture="Transformer", parameter_count="7B", training_datasets="Wikipedia,CommonCrawl")
+# Returns: CycloneDX 1.6 ML-BOM JSON with model card and POPULATE markers
+```

@@ -1,0 +1,75 @@
+# SOVOS CPO Monorepo Configuration
+# One Mind. Layer 0. Photonic Fabric.
+
+sovos:
+  version: "0.1.0"
+  name: "SOVOS-CPO"
+
+  layer0:
+    # Photonic fabric settings
+    cpo_enabled: true
+    default_bandwidth_tbps: 1.6
+    default_power_watts: 9.0
+    default_latency_ns: 50.0
+
+    # MCP endpoints
+    mcp_servers:
+      - name: "fishkeeper"
+        endpoint: "https://fishkeeper.ai/mcp"
+        tools: ["identify_koi", "water_quality", "feeding_schedule"]
+      - name: "grabhire"
+        endpoint: "https://grabhire.ai/mcp"
+        tools: ["quote_haulage", "track_vehicle", "schedule_pickup"]
+      - name: "muckaway"
+        endpoint: "https://muckaway.ai/mcp"
+        tools: ["waste_quote", "route_optimize", "compliance_check"]
+      - name: "councilof"
+        endpoint: "https://councilof.ai/mcp"
+        tools: ["audit_ai", "generate_certificate", "compliance_report"]
+
+    # A2A swarm
+    agents:
+      - id: "sov1_edge"
+        role: "gateway"
+        endpoint: "http://localhost:8080"
+      - id: "gpu_cluster_alpha"
+        role: "compute"
+        endpoint: "https://gpu.runpod.ai"
+      - id: "quantum_coprocessor"
+        role: "oracle"
+        endpoint: "https://api.saxonq.com"
+      - id: "watchdog_analyst"
+        role: "safety"
+        endpoint: "https://csoai.org/analyst"
+
+  data:
+    pipeline:
+      water_dim: 1024
+      milk_dim: 512
+      honey_dim: 128
+
+    # OWEM hive projections
+    hive_modes:
+      - frozen
+      - fluid
+      - left
+      - right
+      - small
+      - big
+
+  quantum:
+    backend: "simulator"  # simulator | saxonq | ibm | xanadu
+    n_qubits: 8
+    enhancement_threshold: 0.85  # Only enhance if confidence > this
+
+  photonic:
+    channels:
+      - channel_id: "sov1_to_gpu"
+        wavelength_nm: 1550.0
+        mode: "hybrid"
+      - channel_id: "gpu_to_quantum"
+        wavelength_nm: 1310.0
+        mode: "quantum"
+      - channel_id: "edge_to_internet"
+        wavelength_nm: 1550.0
+        mode: "classical"

@@ -1,0 +1,27 @@
+# self-measuring-mcp
+
+Deterministic, Ed25519-signed self-measurement for AI agents. Call `self_measure`
+on your own metrics and receive a verifiable card (license, provenance / Art 50
+marking, logging, oversight, openness) you can present to a CI gate,
+marketplace, or insurer.
+
+## Tools
+- `self_measure(entity, metrics)` -> signed measurement card (winner-neutral,
+  deterministic, no LLM judge)
+- `list_tools()` -> the tool schema
+
+## Key facts
+- Ed25519-signed card via sovos-city Chain (verifiable; never faked when
+  unsigned — it is labelled)
+- Deterministic transparency predicates: license_declared, model_card_present,
+  provenance_declared (Art 50), logs_retained (Art 12), oversight_enabled
+  (Art 14), eval_open
+- Drift detection vs prior signed state
+- Lawful: measures what the caller provides (self-attested public metrics) or
+  public artifacts; never a private/surprise scan. No ISO-17024/17065
+  certification claim — "verified measurement credential."
+
+## Related
+- Agent card: agent-card.json
+- Well-known: .well-known/self-measuring-mcp.json
+- Council of AI / Council City surface: councilof.ai

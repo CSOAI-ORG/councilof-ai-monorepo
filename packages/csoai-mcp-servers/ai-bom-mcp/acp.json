@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "ai-bom-mcp",
+    "description": "AI Bill of Materials (AI-BOM) generator + auditor MCP \u2014 CycloneDX ML-BOM, SPDX 3.0 AI profile, E...",
+    "version": "1.2.14",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "ai-bom-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_ai_bom",
+      "audit_ai_bom_completeness",
+      "map_to_regulation",
+      "required_fields"
+    ]
+  }
+}

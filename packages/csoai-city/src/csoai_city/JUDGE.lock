@@ -1,0 +1,13 @@
+{
+  "kind": "sovos-city.judge-lock",
+  "surfaces": {
+    "law.py": "5c79677b097cce07f17bfaf3f62f34b1d3f9dd5d51a163855780c9e0b9a0c0f4",
+    "CANARIES": "9b6bcf9cc89c2f650f713867267f151b247ef5d1f0c5edf15aae8727ed6ca990",
+    "PARAPHRASE_PROBES": "78eec4d2beb6536f18afd381058501b898acc65e4aa9cac30408d5743e7c60e1"
+  },
+  "judge_id": "a3ae43c7548610fa24088820",
+  "ratified_by": "Nicholas Templeman (owner), via owner instruction 2026-08-13 (recorded by Kimi lane)",
+  "reason": "RE-BOLT, NOT EVOLVE. Supersedes the 2026-08-12 ratification with identical surfaces (judge_id must be unchanged). Re-bolted for the 13-axis board v2 publish-delta. Jurisdiction NOT widened: affect-axis legal-semantic mappings (gold labels, severity bases, crosswalk anchors) remain COUNSEL-PENDING and queue for counsel review \u2014 they are NOT ratified judge surfaces. The 2026-08-13 item_gate blind-spot amendment touched the psychometric item gate, not the judge: law.py, CANARIES and PARAPHRASE_PROBES are byte-identical, which the unchanged judge_id proves.",
+  "ratified_at": "2026-08-13",
+  "doctrine": "Part AV \u2014 the generator evolves, the judge does not. Legal-semantic mappings never auto-promote; they queue for counsel."
+}

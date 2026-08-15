@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.csoai-org/council-signal-mcp",
+  "description": "Signed AI measurement (13-axis, deterministic judge). An agent calls measure_self on its own metrics and receives an Ed25519-signed card (license, provenance/Art 50, logging/Art 12, oversight/Art 14, openness) verifiable in one hop. Measurement, not certification; monitored containment; UNMEASURED is never wrong.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/CSOAI-ORG/csoai-static-deploy2",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registry_type": "pypi",
+      "identifier": "council-signal-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

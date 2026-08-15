@@ -1,0 +1,277 @@
+{
+  "g_space_state": {
+    "total_nodes": 92,
+    "total_clans": 6,
+    "node_types": {
+      "knowledge": 50,
+      "clan_agent": 30,
+      "family": 12
+    },
+    "active_nodes": 30,
+    "sigil_chain_length": 0,
+    "timestamp": "2026-07-27T05:18:44.891615+00:00"
+  },
+  "competition": {
+    "name": "MMLU Benchmark",
+    "task": "Answer 15 MMLU questions correctly",
+    "opponents": [
+      "GPT-4",
+      "Claude",
+      "Gemini"
+    ],
+    "clans_spawned": [
+      {
+        "clan_id": "clan-reasoning-25223ce6",
+        "family": "reasoning",
+        "agents": 5,
+        "status": "spawned"
+      },
+      {
+        "clan_id": "clan-sovereign-25223ce6",
+        "family": "sovereign",
+        "agents": 5,
+        "status": "spawned"
+      },
+      {
+        "clan_id": "clan-code-25223ce6",
+        "family": "code",
+        "agents": 5,
+        "status": "spawned"
+      },
+      {
+        "clan_id": "clan-math-25223ce6",
+        "family": "math",
+        "agents": 5,
+        "status": "spawned"
+      },
+      {
+        "clan_id": "clan-compliance-25223ce6",
+        "family": "compliance",
+        "agents": 5,
+        "status": "spawned"
+      },
+      {
+        "clan_id": "clan-general-25223ce6",
+        "family": "general",
+        "agents": 5,
+        "status": "spawned"
+      }
+    ],
+    "simulations": [
+      {
+        "clan_id": "clan-reasoning-25223ce6",
+        "iterations": 5,
+        "final_score": 0.605,
+        "results": [
+          {
+            "iteration": 0,
+            "avg_score": 0.144,
+            "agents_active": 0
+          },
+          {
+            "iteration": 1,
+            "avg_score": 0.238,
+            "agents_active": 0
+          },
+          {
+            "iteration": 2,
+            "avg_score": 0.346,
+            "agents_active": 5
+          },
+          {
+            "iteration": 3,
+            "avg_score": 0.468,
+            "agents_active": 5
+          },
+          {
+            "iteration": 4,
+            "avg_score": 0.605,
+            "agents_active": 5
+          }
+        ]
+      },
+      {
+        "clan_id": "clan-sovereign-25223ce6",
+        "iterations": 5,
+        "final_score": 0.605,
+        "results": [
+          {
+            "iteration": 0,
+            "avg_score": 0.144,
+            "agents_active": 0
+          },
+          {
+            "iteration": 1,
+            "avg_score": 0.238,
+            "agents_active": 0
+          },
+          {
+            "iteration": 2,
+            "avg_score": 0.346,
+            "agents_active": 5
+          },
+          {
+            "iteration": 3,
+            "avg_score": 0.468,
+            "agents_active": 5
+          },
+          {
+            "iteration": 4,
+            "avg_score": 0.605,
+            "agents_active": 5
+          }
+        ]
+      },
+      {
+        "clan_id": "clan-code-25223ce6",
+        "iterations": 5,
+        "final_score": 0.605,
+        "results": [
+          {
+            "iteration": 0,
+            "avg_score": 0.144,
+            "agents_active": 0
+          },
+          {
+            "iteration": 1,
+            "avg_score": 0.238,
+            "agents_active": 0
+          },
+          {
+            "iteration": 2,
+            "avg_score": 0.346,
+            "agents_active": 5
+          },
+          {
+            "iteration": 3,
+            "avg_score": 0.468,
+            "agents_active": 5
+          },
+          {
+            "iteration": 4,
+            "avg_score": 0.605,
+            "agents_active": 5
+          }
+        ]
+      },
+      {
+        "clan_id": "clan-math-25223ce6",
+        "iterations": 5,
+        "final_score": 0.605,
+        "results": [
+          {
+            "iteration": 0,
+            "avg_score": 0.144,
+            "agents_active": 0
+          },
+          {
+            "iteration": 1,
+            "avg_score": 0.238,
+            "agents_active": 0
+          },
+          {
+            "iteration": 2,
+            "avg_score": 0.346,
+            "agents_active": 5
+          },
+          {
+            "iteration": 3,
+            "avg_score": 0.468,
+            "agents_active": 5
+          },
+          {
+            "iteration": 4,
+            "avg_score": 0.605,
+            "agents_active": 5
+          }
+        ]
+      },
+      {
+        "clan_id": "clan-compliance-25223ce6",
+        "iterations": 5,
+        "final_score": 0.605,
+        "results": [
+          {
+            "iteration": 0,
+            "avg_score": 0.144,
+            "agents_active": 0
+          },
+          {
+            "iteration": 1,
+            "avg_score": 0.238,
+            "agents_active": 0
+          },
+          {
+            "iteration": 2,
+            "avg_score": 0.346,
+            "agents_active": 5
+          },
+          {
+            "iteration": 3,
+            "avg_score": 0.468,
+            "agents_active": 5
+          },
+          {
+            "iteration": 4,
+            "avg_score": 0.605,
+            "agents_active": 5
+          }
+        ]
+      },
+      {
+        "clan_id": "clan-general-25223ce6",
+        "iterations": 5,
+        "final_score": 0.605,
+        "results": [
+          {
+            "iteration": 0,
+            "avg_score": 0.144,
+            "agents_active": 0
+          },
+          {
+            "iteration": 1,
+            "avg_score": 0.238,
+            "agents_active": 0
+          },
+          {
+            "iteration": 2,
+            "avg_score": 0.346,
+            "agents_active": 5
+          },
+          {
+            "iteration": 3,
+            "avg_score": 0.468,
+            "agents_active": 5
+          },
+          {
+            "iteration": 4,
+            "avg_score": 0.605,
+            "agents_active": 5
+          }
+        ]
+      }
+    ],
+    "bft_decision": {
+      "best_clan": "clan-reasoning-25223ce6",
+      "best_score": 0.605,
+      "tally": {
+        "approve": 19,
+        "amend": 7,
+        "reject": 7
+      },
+      "quorum_met": false,
+      "all_scores": {
+        "clan-reasoning-25223ce6": 0.605,
+        "clan-sovereign-25223ce6": 0.605,
+        "clan-code-25223ce6": 0.605,
+        "clan-math-25223ce6": 0.605,
+        "clan-compliance-25223ce6": 0.605,
+        "clan-general-25223ce6": 0.605
+      },
+      "timestamp": "2026-07-27T05:18:44.891538+00:00"
+    },
+    "status": "active",
+    "timestamp": "2026-07-27T05:18:44.890030+00:00"
+  },
+  "timestamp": "2026-07-27T05:18:44.891627+00:00"
+}

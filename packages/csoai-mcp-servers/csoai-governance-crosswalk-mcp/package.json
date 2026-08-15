@@ -1,0 +1,40 @@
+{
+  "name": "csoai-governance-crosswalk-mcp",
+  "version": "1.0.0",
+  "description": "Csoai Governance Crosswalk MCP server. Tools: query crosswalk, crosswalk bridge, compliance gap analysis. Built by MEOK AI Labs.",
+  "main": "server.py",
+  "mcp": {
+    "name": "csoai-governance-crosswalk",
+    "vendor": "MEOK AI Labs / CSOAI",
+    "homepage": "https://meok.ai",
+    "repository": "https://github.com/CSOAI-ORG/csoai-governance-crosswalk-mcp",
+    "runtime": "python",
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "csoai",
+      "governance",
+      "compliance",
+      "eu-ai-act",
+      "nist",
+      "ai-safety",
+      "crosswalk"
+    ]
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs",
+    "csoai",
+    "governance",
+    "compliance",
+    "crosswalk"
+  ],
+  "author": "MEOK AI Labs / CSOAI <nicholas@meok.ai>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/csoai-governance-crosswalk-mcp"
+  }
+}

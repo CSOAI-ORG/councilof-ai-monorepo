@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.CSOAI-ORG/ai-bom-mcp",
+  "version": "1.2.20",
+  "description": "AI Bill of Materials (AI-BOM) generator + auditor MCP — CycloneDX ML-BOM, SPDX 3.0 AI profile, E...",
+  "repository": {
+    "url": "https://github.com/CSOAI-ORG/ai-bom-mcp",
+    "source": "github",
+    "id": "1218721998"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "ai-bom-mcp",
+      "version": "1.2.20",
+      "runtimeHint": "python",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

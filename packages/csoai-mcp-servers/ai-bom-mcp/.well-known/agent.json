@@ -1,0 +1,59 @@
+{
+  "name": "ai-bom-mcp",
+  "description": "AI Bill of Materials (AI-BOM) generator + auditor MCP \u2014 CycloneDX ML-BOM, SPDX 3.0 AI profile, E...",
+  "url": "https://proofof.ai/scorecard/ai-bom-mcp.html",
+  "version": "1.2.14",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "generate_ai_bom",
+      "name": "Generate Ai Bom",
+      "description": "generate_ai_bom via ai-bom-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "audit_ai_bom_completeness",
+      "name": "Audit Ai Bom Completeness",
+      "description": "audit_ai_bom_completeness via ai-bom-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "map_to_regulation",
+      "name": "Map To Regulation",
+      "description": "map_to_regulation via ai-bom-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "required_fields",
+      "name": "Required Fields",
+      "description": "required_fields via ai-bom-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

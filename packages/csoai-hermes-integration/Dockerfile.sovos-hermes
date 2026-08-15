@@ -1,0 +1,70 @@
+# Dockerfile.sovos-hermes
+# Produces csoai/governed-hermes:latest — Hermes Agent + SOV governance plugin.
+#
+# Build:    docker build -f Dockerfile.sovos-hermes -t csoai/governed-hermes:v1.0 .
+# Tag:      docker tag csoai/governed-hermes:v1.0 csoai/governed-hermes:latest
+# Push:     docker push csoai/governed-hermes:v1.0
+# Run:      docker run -it --rm -e SOV_SIGNAL_API_KEY=$SOV_SIGNAL_API_KEY csoai/governed-hermes:latest
+#
+# Architecture:
+#   Base image: NousResearch's published Hermes image (assumed at nousresearch/hermes-agent:0.20)
+#   Adds:        SOVOS governance plugin (this repo) + audit key + minimal config
+#   Exposes:    Hermes API (8000) + SOV governance audit log volume
+#
+# Tagging for trust:
+#   - SBOM generated via syft in CI
+#   - Cosign signature applied at push
+#   - SLSA provenance attached
+#
+FROM nousresearch/hermes-agent:0.20
+
+LABEL org.opencontainers.image.title="csoai/governed-hermes"
+LABEL org.opencontainers.image.description="Hermes Agent (228K stars, MIT) with SOVOS governance plugin: GSPC 4-axis scoring, Ed25519 audit trail, optional C2PA manifests."
+LABEL org.opencontainers.image.source="https://github.com/CSOAI-ORG/sov-hermes-integration"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.authors="CSOAI Ltd (UK 16939677)"
+LABEL org.opencontainers.image.vendor="csoai"
+
+# Install SOVOS governance Python deps.
+# pynacl for Ed25519 signing, httpx for SOV Signal API calls.
+# sov-governance-crosswalk-mcp is the CSOAI MCP that maps model outputs
+# to the EU AI Act / NIST AI RMF cross-walk the GSPC engine uses.
+RUN pip install --no-cache-dir \
+        "pynacl>=1.5" \
+        "httpx>=0.25" \
+        "c2pa-python>=0.10" \
+        "sov-governance-crosswalk-mcp>=0.4"
+
+# Copy the governance plugins into Hermes's plugin directory.
+# Hermes auto-discovers anything under plugins/<category>/<plugin_name>/
+COPY plugins/observability/sov_governance /app/plugins/observability/sov_governance
+COPY plugins/model-providers/sov_signal_scorer /app/plugins/model-providers/sov_signal_scorer
+
+# Copy the canonical governance config. Operators can override via env vars
+# (SOV_GOVERNANCE_THRESHOLD_*, SOV_SIGNAL_API_KEY, etc.) at run-time.
+COPY sov-config.yaml /app/.hermes/sov-config.yaml
+
+# Create the audit directory (mounted as a volume for persistence).
+RUN mkdir -p /app/.hermes/sov_audit && chmod 700 /app/.hermes/sov_audit
+
+# Expose the Hermes API port (default 8000).
+EXPOSE 8000
+
+# Default entrypoint: enable the plugin and start the Hermes server.
+# Production deployments should set:
+#   SOV_SIGNAL_API_KEY  (bearer token for signal.csoai.org)
+#   SOV_GOVERNANCE_THRESHOLD_G / SOV_GOVERNANCE_THRESHOLD_S  (per-deployment gates)
+#   SOV_GOVERNANCE_HOLD_MODE  (block | log | escalate — default block)
+ENV HERMES_PLUGIN_AUTOLOAD=1 \
+    HERMES_SOV_GOVERNANCE_ENABLED=1 \
+    SOV_SIGNAL_API_URL=https://signal.csoai.org
+
+# Volume for the audit log. Mount this on a persistent volume in production.
+VOLUME ["/app/.hermes/sov_audit"]
+
+# Healthcheck: ensure the Hermes API is alive (proxy health endpoint).
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+    CMD curl -fsS http://localhost:8000/health || exit 1
+
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["hermes plugins enable observability/sov_governance && hermes plugins enable model-providers/sov_signal_scorer && exec hermes server"]

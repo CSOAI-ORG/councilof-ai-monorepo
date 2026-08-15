@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "ai-bom-mcp": {
+      "command": "uvx",
+      "args": [
+        "ai-bom-mcp"
+      ]
+    }
+  }
+}

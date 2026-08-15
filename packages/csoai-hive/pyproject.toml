@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csoai-hive"
+version = "0.1.0"
+description = "SOVOS Fractal Monotric Hive — Ring-0 AI governance kernel (Rust + Python)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Nicholas Templeman"}]
+license = {text = "Proprietary"}
+classifiers = [
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["optional-dependencies"]
+
+[project.optional-dependencies]
+build = ["maturin>=1.5", "setuptools-rust"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["csoai_hive*"]
+
+[tool.setuptools.package-data]
+"csoai_hive" = ["modelfiles/*.Modelfile", "rust-kernel/SOVOS_MEMORY.md"]
+
+[tool.setuptools.data-files]
+"csoai_hive/data" = ["data/*.jsonl"]

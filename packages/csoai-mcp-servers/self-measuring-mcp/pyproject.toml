@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "council-signal-mcp"
+version = "0.1.0"
+description = "Signed AI measurement (13-axis, deterministic judge). Measurement, not certification; monitored containment; UNMEASURED is never wrong."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Council of AI", email = "hello@councilof.ai" }]
+keywords = ["mcp", "mcp-server", "ai-measurement", "compliance", "signed-measurement", "agent-tools", "mcp-registry"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.scripts]
+council-signal-mcp = "self_measuring_mcp:main"
+
+[project.urls]
+Homepage = "https://councilof.ai"
+Repository = "https://github.com/CSOAI-ORG/csoai-static-deploy2"
+Documentation = "https://councilof.ai/methodology"
+
+# MCP Registry ownership marker (PyPI path)
+# The MCP registry metadata is published via server.json + mcp-publisher;
+# this marker is the PyPI-side ownership signal per the publishing guidance.
+mcp-name = "io.github.csoai-org/council-signal-mcp"
+
+[tool.setuptools]
+packages = ["self_measuring_mcp"]
+package-dir = { self_measuring_mcp = "src/self_measuring_mcp" }

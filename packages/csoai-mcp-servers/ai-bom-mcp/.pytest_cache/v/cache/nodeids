@@ -1,0 +1,16 @@
+[
+  "tests/test_server.py::test_main_function",
+  "tests/test_server.py::test_mcp_object_exists",
+  "tests/test_server.py::test_no_hardcoded_secrets",
+  "tests/test_server.py::test_server_module_imports",
+  "tests/test_server.py::test_tools_are_callable",
+  "tests/test_tools.py::TestAuth::test_auth_return_structure",
+  "tests/test_tools.py::TestAuth::test_bad_key_gets_denied_or_passthrough",
+  "tests/test_tools.py::TestAuth::test_no_api_key_returns_free",
+  "tests/test_tools.py::TestRateLimiting::test_multiple_calls_dont_crash",
+  "tests/test_tools.py::TestServerIntegrity::test_license_exists",
+  "tests/test_tools.py::TestServerIntegrity::test_mcp_object_exists",
+  "tests/test_tools.py::TestServerIntegrity::test_pyproject_valid",
+  "tests/test_tools.py::TestServerIntegrity::test_readme_exists",
+  "tests/test_tools.py::TestServerIntegrity::test_server_imports_cleanly"
+]

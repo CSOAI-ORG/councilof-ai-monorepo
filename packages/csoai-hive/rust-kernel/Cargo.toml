@@ -1,0 +1,20 @@
+[package]
+name = "sov_hive"
+version = "0.1.0"
+edition = "2021"
+description = "SOVOS Fractal Monotric Hive — Ring-0 AI governance kernel"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+rand = "0.8"
+tokio = { version = "1", features = ["full"] }
+
+[lib]
+name = "sov_hive"
+path = "src/lib.rs"
+
+[[bin]]
+name = "sov-hive-cli"
+path = "src/main.rs"

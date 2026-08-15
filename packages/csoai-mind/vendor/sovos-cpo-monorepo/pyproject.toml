@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sovos-cpo"
+version = "0.1.0"
+description = "SOVOS CPO Monorepo — One Mind, Layer 0, Photonic Fabric"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "torch>=2.3",
+    "httpx>=0.27",
+    "pydantic>=2.7",
+    "pyyaml>=6.0",
+    "anyio>=4.4",
+    "pennylane>=0.36",
+    "qiskit>=1.0",
+    "gdsfactory>=7.0",
+    "perceval-quandela>=0.11",
+    "strawberryfields>=0.23",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "black", "ruff", "mypy"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sovos*", "mcp_servers*"]

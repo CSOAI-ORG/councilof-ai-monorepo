@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csoai-invariants"
+version = "0.1.0"
+description = "Sovereign substrate invariants: NAME/OWEM normalization, CARE floor, SIGIL sign+verify, tally validation"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Nicholas Templeman"}]
+dependencies = [
+    "cryptography>=42",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["csoai_invariants*"]

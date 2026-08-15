@@ -1,0 +1,57 @@
+# csoai-governance-crosswalk-mcp
+# **CSOAI Governance Crosswalk MCP Server**
+
+## Install
+```bash
+pip install csoai-governance-crosswalk-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `query_crosswalk`
+Query the CSOAI crosswalk mapping for a specific framework.
+
+### `crosswalk_bridge`
+Bridge two frameworks through CSOAI — the killer feature.
+
+### `compliance_gap_analysis`
+Identify compliance gaps across multiple frameworks.
+
+### `get_unified_crosswalk`
+Return the CSOAI Master Unified Crosswalk showing all 12 frameworks mapped together.
+
+### `search_by_topic`
+Search across all crosswalks by topic.
+
+### `list_frameworks`
+List all supported frameworks with metadata.
+
+### `generate_compliance_report`
+Generate a compliance requirements report for an organization.
+
+### `get_partnership_charter`
+Return the CSOAI Partnership Charter information.
+
+### `predict_risk_neural`
+Neural network-based risk prediction that improves from every compliance check.
+
+### `neural_insights`
+Get aggregate learning insights from the neural compliance model.
+
+### `quick_compare`
+Instant comparison of two AI governance frameworks. No API key needed.
+
+### `supported_frameworks`
+Lists all supported AI governance frameworks with descriptions. No parameters needed.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's governed governance MCP fleet (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

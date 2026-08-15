@@ -1,0 +1,29 @@
+name: sov_signal_scorer
+version: 0.1.0
+description: >
+  Exposes the SOV Signal scoring API as a Hermes model provider. Hermes tools
+  and skills can call sov_signal_scorer just like any other model (e.g. via
+  bridge_think or chain-of-thought) to get governance / safety / provenance /
+  care scores for any text. Compatible with Hermes 0.20.0+.
+category: model-providers
+tags:
+  - sov
+  - governance
+  - scoring
+author: CSOAI Ltd (UK 16939677)
+license: MIT
+homepage: https://csoai.org/governance/hermes
+repository: https://github.com/CSOAI-ORG/sov-hermes-integration
+entry_point: __init__.py:register
+required_python_packages:
+  - sov-governance-crosswalk-mcp >= 0.4.0
+  - httpx >= 0.25
+required_env:
+  SOV_SIGNAL_API_URL:
+    description: SOV Signal API endpoint
+    required: false
+    default: https://signal.csoai.org
+  SOV_SIGNAL_API_KEY:
+    description: API key for the SOV Signal service
+    required: false
+hermes_min_version: 0.20.0

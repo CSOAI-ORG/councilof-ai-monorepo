@@ -1,0 +1,39 @@
+name: sov_audit_query
+description: Query the SOV governance audit log. Returns signed audit records matching the filter criteria (event type, decision, axis below threshold, etc).
+version: 0.1.0
+inputs:
+  audit_path:
+    type: string
+    default: /app/.hermes/sov_audit/sov_audit.jsonl
+  event_filter:
+    type: string
+    default: ""           # e.g. "pre_llm_call"
+  decision_filter:
+    type: string
+    default: ""           # e.g. "fail"
+  axis_filter:
+    type: string
+    default: ""           # e.g. "G" (records where that axis was below threshold)
+  limit:
+    type: integer
+    default: 100
+outputs:
+  records:
+    type: array
+    items:
+      type: object
+impl: |
+  import json, os
+  path = inputs.audit_path
+  if not os.path.exists(path):
+      return {"records": []}
+  out = []
+  with open(path) as f:
+      lines = f.readlines()[-inputs.limit:]
+  for line in lines:
+      rec = json.loads(line)
+      if inputs.event_filter and rec.get("event") != inputs.event_filter: continue
+      if inputs.decision_filter and rec.get("decision") != inputs.decision_filter: continue
+      if inputs.axis_filter and rec.get("score", {}).get(inputs.axis_filter, 1.0) >= 0.5: continue
+      out.append(rec)
+  return {"records": out}

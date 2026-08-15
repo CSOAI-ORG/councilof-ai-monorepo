@@ -1,0 +1,8 @@
+{
+  "name": "self-measuring-mcp",
+  "description": "Signed self-measurement MCP server — an agent calls self_measure on its own metrics and gets an Ed25519-verifiable card (license, provenance/Art 50, logging/Art 12, oversight/Art 14, openness).",
+  "mcp_endpoints": ["https://councilof.ai/mcp/self-measuring"],
+  "agent_card": "../agent-card.json",
+  "llms": "../llms.txt",
+  "measured": true
+}

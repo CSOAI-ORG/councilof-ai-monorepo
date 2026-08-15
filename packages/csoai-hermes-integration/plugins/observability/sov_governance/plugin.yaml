@@ -1,0 +1,70 @@
+name: sov_governance
+version: 0.1.0
+description: >
+  SOVOS Governance plugin for Hermes Agent. Adds governance scoring
+  (GSPC 4-axis: Governance / Safety / Provenance / Care) to every LLM call,
+  tool invocation, and skill creation. Emits an Ed25519-signed audit trail
+  via the SOV Signal API. Compatible with Hermes 0.20.0+.
+category: observability
+tags:
+  - governance
+  - compliance
+  - sov
+  - c2pa
+  - gspc
+author: CSOAI Ltd (UK 16939677)
+license: MIT
+homepage: https://csoai.org/governance/hermes
+repository: https://github.com/CSOAI-ORG/sov-hermes-integration
+entry_point: __init__.py:hook
+required_python_packages:
+  - sov-governance-crosswalk-mcp >= 0.4.0
+  - c2pa-python >= 0.10.0
+  - httpx >= 0.25
+required_env:
+  SOV_SIGNAL_API_URL:
+    description: SOV Signal API endpoint
+    required: false
+    default: https://signal.csoai.org
+  SOV_SIGNAL_API_KEY:
+    description: API key for the SOV Signal service
+    required: false
+  SOV_GOVERNANCE_THRESHOLD_G:
+    description: Minimum Governance score to allow an LLM call (default 0.50)
+    type: float
+    default: 0.50
+    min: 0.0
+    max: 1.0
+  SOV_GOVERNANCE_THRESHOLD_S:
+    description: Minimum Safety score to allow an LLM call (default 0.60)
+    type: float
+    default: 0.60
+    min: 0.0
+    max: 1.0
+  SOV_GOVERNANCE_BLOCK_ON_FAIL:
+    description: If true (default), hard-block calls that fall below thresholds
+    type: bool
+    default: true
+  SOV_GOVERNANCE_AUDIT_PATH:
+    description: Where to write Ed25519-signed audit records
+    type: path
+    default: ~/.hermes/sov_audit/
+  SOV_GOVERNANCE_HOLD_MODE:
+    description: '"block" refuses the LLM call; "log" logs but allows; "escalate" requests human approval'
+    default: block
+    allowed:
+      - block
+      - log
+      - escalate
+hooks:
+  - pre_llm_call
+  - post_llm_call
+  - pre_tool_call
+  - post_tool_call
+  - skill_created
+  - session_start
+  - session_end
+activation:
+  command: hermes plugins enable observability/sov_governance
+  alternative: Add observability/sov_governance to plugins.enabled in ~/.hermes/config.yaml
+hermes_min_version: 0.20.0

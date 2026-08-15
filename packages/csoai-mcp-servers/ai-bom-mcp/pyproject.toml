@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-bom-mcp"
+version = "1.2.20"
+description = "AI Bill of Materials (AI-BOM) generator + auditor MCP — CycloneDX ML-BOM, SPDX 3.0 AI profile, EU AI Act Annex IV mapping, NIST AI RMF alignment, US EO 14028 federal procurement. By MEOK AI Labs."
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "MEOK AI Labs", email = "hello@meok.ai"}]
+keywords = ["mcp", "ai-bom", "aibom", "ml-bom", "cyclonedx", "spdx", "eu-ai-act", "annex-iv", "nist-ai-rmf", "eo-14028", "federal-procurement", "ai-supply-chain", "meok-ai-labs", "model-card"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent", "Topic :: Security"]
+dependencies = ["mcp>=1.0.0"]
+
+[project.urls]
+Homepage = "https://meok.ai/ai-bom-mcp"
+Repository = "https://github.com/CSOAI-ORG/ai-bom-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = ["auth_middleware.py", "server.py"]
+
+[project.scripts]
+ai-bom-mcp = "server:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "N"]
+ignore = ["E501"]
+
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_Configs = true
+disallow_untyped_defs = true
+

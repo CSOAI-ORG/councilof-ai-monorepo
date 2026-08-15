@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csoai-city"
+version = "0.1.0"
+description = "SOV City — a governed multi-agent arena that emits signed, deterministically-labelled governance data"
+requires-python = ">=3.9"
+dependencies = ["cryptography>=41"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

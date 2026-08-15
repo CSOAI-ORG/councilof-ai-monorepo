@@ -1,0 +1,7 @@
+[
+  "test_integration_with_zip.py::test_01_sync_mind_think",
+  "test_integration_with_zip.py::test_02_async_mind",
+  "test_integration_with_zip.py::test_03_async_mind_think",
+  "test_integration_with_zip.py::test_04_both_minds_produce_decisions",
+  "test_integration_with_zip.py::test_05_cpo_savings_consistent"
+]

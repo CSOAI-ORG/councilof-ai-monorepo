@@ -1,0 +1,35 @@
+name: sov_block_list
+description: Manage the SOV governance banned-tools list at runtime. Add/remove tools that should be blocked pre_tool_call.
+version: 0.1.0
+inputs:
+  action:
+    type: string
+    required: true
+    allowed: [add, remove, list]
+  tool_name:
+    type: string
+    required: false
+outputs:
+  block_list:
+    type: array
+    items:
+      type: string
+impl: |
+  # The canonical block list lives in the sov-governance plugin config
+  # (SOV_GOVERNANCE_AUDIT_PATH/block_list.json). This skill proxies edits.
+  import json, os
+  path = os.environ.get("SOV_GOVERNANCE_BLOCK_LIST_PATH",
+                       os.path.join(os.environ.get("SOV_GOVERNANCE_AUDIT_PATH","/app/.hermes/sov_audit/"),
+                                    "block_list.json"))
+  current = []
+  if os.path.exists(path):
+      current = json.loads(open(path).read())
+  if inputs.action == "list":
+      return {"block_list": current}
+  if inputs.action == "add" and inputs.tool_name and inputs.tool_name not in current:
+      current.append(inputs.tool_name)
+  if inputs.action == "remove" and inputs.tool_name in current:
+      current.remove(inputs.tool_name)
+  os.makedirs(os.path.dirname(path), exist_ok=True)
+  open(path,"w").write(json.dumps(sorted(set(current)), indent=2))
+  return {"block_list": sorted(set(current))}

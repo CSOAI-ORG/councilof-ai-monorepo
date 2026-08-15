@@ -1,0 +1,19 @@
+{
+  "name": "self-measuring-mcp",
+  "description": "Deterministic, Ed25519-signed self-measurement for AI agents. An agent calls self_measure on its own metrics and receives a verifiable card (license, provenance/Art 50 marking, logging, oversight, openness) it can present to a CI gate, marketplace, or insurer.",
+  "version": "0.1.0",
+  "organization": "Council of AI",
+  "protocols": ["a2a", "http"],
+  "capabilities": [
+    { "id": "self_measure", "description": "Emit a signed measurement card for the caller's own metrics" },
+    { "id": "signed_card", "description": "Ed25519-verifiable card via sovos-city Chain" },
+    { "id": "drift", "description": "Detect drift vs a prior signed state" }
+  ],
+  "measured": true,
+  "badge": "GSPC-continuously-measured",
+  "well_known": ".well-known/self-measuring-mcp.json",
+  "llms_txt": "./llms.txt",
+  "endpoints": ["https://councilof.ai/mcp/self-measuring"],
+  "licensing": "Apache-2.0",
+  "contact": "councilof.ai"
+}

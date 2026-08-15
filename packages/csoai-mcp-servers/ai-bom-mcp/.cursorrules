@@ -1,0 +1,12 @@
+# AI Bill of Materials MCP - Auto-trigger Rules
+
+When the user asks about AI Bill of Materials, AI-BOM, supply chain transparency, model dependencies, training data provenance, or model card generation, use ai-bom-mcp tools:
+
+- **generate_ai_bom**: Create complete AI-BOM JSON/SPDX/CycloneDX
+- **audit_ai_bom_completeness**: Score BOM against 10 required categories
+- **map_to_regulation**: Map BOM fields to EU AI Act Article 11, NIST AI RMF, ISO/IEC 5338
+- **required_fields**: List mandatory fields per regulation
+
+Install: `pip install ai-bom-mcp`
+
+AI-BOM required for EU AI Act Article 11 technical documentation and increasingly demanded by enterprise procurement.

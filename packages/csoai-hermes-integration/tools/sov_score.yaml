@@ -1,0 +1,33 @@
+name: sov_score
+description: Score any text on the 4 GSPC axes (Governance, Safety, Provenance, Care). Returns a signed score from the SOV Signal API or a local heuristic.
+version: 0.1.0
+inputs:
+  text:
+    type: string
+    required: true
+outputs:
+  score:
+    type: object
+    schema:
+      G: float
+      S: float
+      P: float
+      C: float
+      ed25519_signature: string
+impl: |
+  import os, json, httpx
+  api_url = os.environ.get("SOV_SIGNAL_API_URL", "https://signal.csoai.org")
+  api_key = os.environ.get("SOV_SIGNAL_API_KEY")
+  if api_key:
+      r = httpx.post(f"{api_url}/v1/score",
+                     headers={"Authorization": f"Bearer {api_key}"},
+                     json={"text": inputs.text[:4000]}, timeout=3.0)
+      if r.status_code == 200:
+          return r.json()
+  # Local heuristic fallback
+  t = inputs.text.lower()
+  gov = min(sum(0.20 for k in ("eu ai act","annex iii","article 5","gdpr","data minimis","nist rmf") if k in t), 1.0)
+  safety = 0.85 if any(s in t for s in ("i can't","i cannot","sorry")) else 0.55
+  prov = 0.75 if len(t) < 800 else 0.45
+  care = 0.80 if any(s in t for s in ("human","user","harm","impact")) else 0.50
+  return {"G": round(gov,4), "S": round(safety,4), "P": round(prov,4), "C": round(care,4)}
