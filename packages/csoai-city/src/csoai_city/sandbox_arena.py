@@ -24,6 +24,7 @@ Honesty (kept from rce_sandbox):
 from __future__ import annotations
 
 import json
+import hashlib
 import shutil
 import subprocess
 import tempfile
@@ -32,6 +33,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from .chain import Chain
+from .keystone import load_signing_key
 from .rainbow_gate import RainbowGate, Operation, SecurityLayer
 
 # rce_sandbox lives at the repo root (sibling to the SOVOS packages dir).
@@ -48,6 +50,7 @@ class DuelResult:
     contestants: List[str]
     verdicts: Dict[str, Any]  # model -> {bench, escape, backend, rainbow}
     signature: Optional[str] = None
+    pubkey: Optional[str] = None
 
     def to_json(self) -> Dict[str, Any]:
         return {
@@ -134,9 +137,23 @@ class SandboxArena:
 
         result = DuelResult(scenario=scenario, winner=winner or "NO_WINNER",
                             contestants=list(contestants), verdicts=verdicts)
-        body = result.to_json()
-        self.chain.append(self._epoch + 1, body)
-        result.signature = "signed-via-chain"
+        body = result.to_json()  # dict — canonical form for signing + chain
+        # Real Ed25519 signature over the canonical body (was placeholder "signed-via-chain").
+        # Uses the keystone key via the same loader as Chain — fail-closed: if no key,
+        # signature stays None and the record is UNSIGNED (never faked).
+        try:
+            from cryptography.hazmat.primitives import serialization
+            key = load_signing_key(None)
+            if key is not None:
+                canonical = json.dumps(body, sort_keys=True, separators=(",", ":")).encode()
+                cid = hashlib.sha256(canonical).hexdigest()
+                result.signature = key.sign(cid.encode()).hex()
+                result.pubkey = key.public_key().public_bytes(
+                    encoding=serialization.Encoding.Raw,
+                    format=serialization.PublicFormat.Raw).hex()
+        except Exception:
+            result.signature = None  # UNSIGNED — never a fake
+        self.chain.append(self._epoch + 1, dict(body, sig=result.signature))
         return result
 
     def to_markdown(self, r: DuelResult) -> str:
