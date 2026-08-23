@@ -82,7 +82,17 @@ AXES = {
     "conformance": ("mcpbench-tool-conformance",          "tool"),
     "openness":    ("ossbench-licence-vs-use",            "case"),
     "continuity":  ("pqcbench-postquantum-continuity",    "item"),
+    # ── EUNOMIA financial axes (the "New Nerves") — bridge domains into one measurement frame ──
+    "bond-router":      ("eunomia-bond-cobol-copybook",       "record"),      # COBOL COPYBOOK -> A2A attestation
+    "insurance":        ("eunomia-risk-pool-underwriting",    "policy"),      # risk pooling, claims, fraud
+    "stock-market":     ("eunomia-equity-index-derivative",   "position"),    # equities, indices, derivatives
+    "east-west":        ("eunomia-tc260-nist-crosswalk",      "regulation"),  # TC260<->NIST, China<->EU<->US
+    "sme-fractional":   ("eunomia-micro-issuance",            "instrument"),  # micro-issuance, retail access
+    "agent-economy":    ("eunomia-npc-wallet-staking",        "agent"),       # NPC wallets, staking, survival
+    "data-dao":         ("eunomia-arena-trace-data",          "datum"),       # data generation
+    "eunomia-token":    ("eunomia-energy-currency",           "token"),       # ATP
 }
+
 
 
 # ── ProvBench standard, ported ────────────────────────────────────────────────────
