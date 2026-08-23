@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evolve"
+version = "0.1.0"
+description = "The 90/10 router as a frozen split-conformal predicate — deterministic, distribution-free, no LLM-as-judge. Crown-jewel gate of the COAI self-improving loop."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Nicholas Templeman"}]
+license = {text = "Apache-2.0"}
+keywords = [
+    "conformal-prediction",
+    "conformal-risk-control",
+    "split-conformal",
+    "distribution-free",
+    "router",
+    "self-improving",
+    "mape-k",
+]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Science/Research",
+]
+dependencies = ["numpy>=1.22"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["evolve*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
