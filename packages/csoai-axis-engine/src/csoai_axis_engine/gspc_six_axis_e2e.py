@@ -91,6 +91,8 @@ AXES = {
     "agent-economy":    ("eunomia-npc-wallet-staking",        "agent"),       # NPC wallets, staking, survival
     "data-dao":         ("eunomia-arena-trace-data",          "datum"),       # data generation
     "eunomia-token":    ("eunomia-energy-currency",           "token"),       # ATP
+    "climate-transition": ("eunomia-climate-transition",      "transition"),  # EU Taxonomy / ISSB / PCAF
+    "privacy-risk":       ("eunomia-privacy-risk",            "risk"),        # GDPR art 9/33
 }
 
 
