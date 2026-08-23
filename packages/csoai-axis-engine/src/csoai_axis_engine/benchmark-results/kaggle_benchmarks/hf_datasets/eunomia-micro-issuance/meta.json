@@ -1,0 +1,11 @@
+{
+  "axis": "sme-fractional",
+  "folder": "eunomia-micro-issuance",
+  "field": "instrument",
+  "labels": [
+    "ELIGIBLE",
+    "INELIGIBLE"
+  ],
+  "n": 10,
+  "canary": "GSPC-EUNOMIA-CANARY a1f2c3d4-55aa-4b7e-88ab-eunomia-2026"
+}

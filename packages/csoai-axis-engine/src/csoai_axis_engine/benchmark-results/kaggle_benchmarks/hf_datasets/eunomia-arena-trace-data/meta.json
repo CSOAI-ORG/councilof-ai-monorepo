@@ -1,0 +1,11 @@
+{
+  "axis": "data-dao",
+  "folder": "eunomia-arena-trace-data",
+  "field": "datum",
+  "labels": [
+    "COMPLIANT",
+    "NON_COMPLIANT"
+  ],
+  "n": 10,
+  "canary": "GSPC-EUNOMIA-CANARY a1f2c3d4-55aa-4b7e-88ab-eunomia-2026"
+}

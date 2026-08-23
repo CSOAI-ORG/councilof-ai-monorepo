@@ -1,0 +1,11 @@
+{
+  "axis": "agent-economy",
+  "folder": "eunomia-npc-wallet-staking",
+  "field": "agent",
+  "labels": [
+    "PERMITTED",
+    "PROHIBITED"
+  ],
+  "n": 10,
+  "canary": "GSPC-EUNOMIA-CANARY a1f2c3d4-55aa-4b7e-88ab-eunomia-2026"
+}

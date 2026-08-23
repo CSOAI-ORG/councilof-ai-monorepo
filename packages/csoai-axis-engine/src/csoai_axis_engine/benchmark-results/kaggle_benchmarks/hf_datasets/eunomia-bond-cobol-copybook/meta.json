@@ -1,0 +1,11 @@
+{
+  "axis": "bond-router",
+  "folder": "eunomia-bond-cobol-copybook",
+  "field": "record",
+  "labels": [
+    "ATTESTABLE",
+    "NOT_ATTESTABLE"
+  ],
+  "n": 12,
+  "canary": "GSPC-EUNOMIA-CANARY a1f2c3d4-55aa-4b7e-88ab-eunomia-2026"
+}
