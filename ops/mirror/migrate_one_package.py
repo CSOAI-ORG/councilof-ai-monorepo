@@ -76,6 +76,7 @@ MIGRATION_MAP = {
     "sovos-hermes-integration": "csoai-hermes-integration",
     "sovos-cpo-calculator": "csoai-cpo-calculator",
     "sovos-jspace-move": "csoai-jspace-move",
+    "sovos-engine": "csoai-engine",
 }
 
 def _rename_in_file(path: pathlib.Path, old_name: str, new_name: str, dry: bool) -> bool:
@@ -137,11 +138,12 @@ def do_migrate(old_name: str, dry: bool = False):
     print(f"  Dest:   {dst}")
     changed = _migrate_dir(src, dst, old_name, new_name, dry)
     print(f"  Files changed: {len(changed)}")
-    if changed and not dry:
-        # Record migration
+    if not dry:
+        # Record migration (even when 0 text files changed — dir copy still happened)
         REGISTRY.parent.mkdir(parents=True, exist_ok=True)
         state = json.loads(REGISTRY.read_text()) if REGISTRY.exists() else {"migrated": []}
-        state["migrated"].append({"old": old_name, "new": new_name, "files_changed": len(changed)})
+        n_files = sum(1 for _ in dst.rglob("*") if _.is_file()) if dst.exists() else 0
+        state["migrated"].append({"old": old_name, "new": new_name, "files_changed": len(changed), "total_files": n_files})
         REGISTRY.write_text(json.dumps(state, indent=2))
         print(f"  Migration recorded in {REGISTRY}")
     print(f"  {'(dry run — no files written)' if dry else 'DONE'}")
