@@ -3,7 +3,7 @@ name = "csoai-axis-engine"
 version = "0.1.0"
 description = "The automated CSOAI GSPC axis measurement engine — frozen items, live LLM generation, exact-label grading, Wilson CI, control-arm, signed evidence."
 requires-python = ">=3.10"
-dependencies = []
+dependencies = ["cryptography"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -8,6 +8,7 @@ import json, hashlib, sys
 from datetime import datetime, timezone
 from pathlib import Path
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
 
 def canonical(v):
     if isinstance(v, dict):
@@ -27,7 +28,7 @@ def sign_result(result_path, key_path, out_path=None, signer="did:web:csoai.org#
     content_id = hashlib.sha256(cbody.encode()).hexdigest()
     key = Ed25519PrivateKey.from_private_bytes(Path(key_path).read_bytes()[:32])
     sig = key.sign(cbody.encode()).hex()
-    pub = key.public_key().public_bytes_raw().hex()
+    pub = key.public_key().public_bytes(Encoding.Raw, PublicFormat.Raw).hex()
     card = dict(body,
                 content_id=content_id,
                 signature="ed25519:" + sig,
