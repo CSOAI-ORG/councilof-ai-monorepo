@@ -1,0 +1,9 @@
+[project]
+name = "eunomia-east-west-bridge"
+version = "0.1.0"
+description = "The east-west alignment bridge (Bridge 6). Crosswalks east/west AI-governance framing for the east-west axis."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,9 @@
+[project]
+name = "eunomia-insurance-engine"
+version = "0.1.0"
+description = "The insurance axis bridge (Bridge 2). Risk-probes the insurance-axis measurement set and attests coverage posture."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,9 @@
+[project]
+name = "eunomia-agent-economy"
+version = "0.1.0"
+description = "The agent-economy axis bridge (Bridge 4). Models agent-to-agent economic activity and attestation within the EUNOMIA weave."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
