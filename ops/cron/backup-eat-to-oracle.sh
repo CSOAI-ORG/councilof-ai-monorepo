@@ -12,7 +12,7 @@ A100_SRC=/workspace/axis-engine
 ORACLE_USER=ubuntu
 ORACLE_HOSTS=(141.147.73.85 145.241.232.16)   # micro-2, micro
 ORACLE_KEY=~/.ssh/id_ed25519
-ORACLE_DEST=$HOME/csoai-eat-backup
+ORACLE_DEST=/home/ubuntu/csoai-eat-backup
 STAGE=${STAGE:-/tmp/csoai-eat-stage}
 LOG=${LOG:-$HOME/csoai-eat-backup.log}
 
