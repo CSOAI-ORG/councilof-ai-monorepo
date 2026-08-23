@@ -1,0 +1,9 @@
+[project]
+name = "eunomia-bond-router"
+version = "0.1.0"
+description = "The COBOL <-> A2A bridge (Bridge 1). Reads COBOL COPYBOOK, emits attestable JSON + A2A agent card, signed by the estate Ed25519 key. The $130T proof of weave."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
