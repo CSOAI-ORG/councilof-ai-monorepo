@@ -83,7 +83,17 @@ print(b)" "$f" 2>/dev/null || echo '?')
   debug "AUDIT $(basename "$f") — $n rows, $bad missing-verdict"
 done
 
-# 4. IMPROVE hook: publish/flag. (Add your promote-gate / corrections-ledger wiring here.)
+# 4. IMPROVE + SIGN (EAT box 3): sign every result into an Ed25519 card, then publish/flag.
+SIGN_KEY="$HOME/clawd/sovereign-temple-public/data/sigil_ed25519.key"
+SIGNER="$HOME/clawd/councilof-ai-monorepo/packages/csoai-axis-engine/src/csoai_axis_engine/sign_result.py"
+for f in "$LOCAL_OUT"/result-*.jsonl; do
+  [ -f "$f" ] || continue
+  if [ -f "$SIGN_KEY" ] && [ -f "$SIGNER" ]; then
+    python3 "$SIGNER" "$f" "$SIGN_KEY" "$f.signed.json" 2>/dev/null && debug "SIGNED $(basename "$f")"
+  else
+    debug "WARN signing skipped ($SIGN_KEY or $SIGNER missing)"
+  fi
+done
 debug "AXIS-LOOP cycle complete. Results at $LOCAL_OUT"
 
 # 5. RESCHEDULE: the LaunchAgent (StartInterval) re-fires this script. Manual run returns now.
