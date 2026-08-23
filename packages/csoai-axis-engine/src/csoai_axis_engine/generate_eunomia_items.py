@@ -24,7 +24,7 @@ CANARY = "GSPC-EUNOMIA-CANARY a1f2c3d4-55aa-4b7e-88ab-eunomia-2026"
 # (folder, prompt_field, [labels], [items: (prompt, expected, source)])
 AXES_DEF: dict[str, tuple[str, str, list[str], list[tuple[str, str, str]]]] = {
     "bond-router": ("eunomia-bond-cobol-copybook", "record",
-        ["ATTESTABLE", "NOT_ATTESTABLE"],
+        ["ATTESTABLE", "PARTIAL", "NOT_ATTESTABLE"],
         # A2A bond settlement record: complete+schema-valid -> ATTESTABLE; missing/invalid -> NOT
         [
             ("A 9(12)V99 COBOL record with all required fields (ISIN, notional, settle date, counterparty, signer) populated and a valid 64-hex Ed25519 signature header.", "ATTESTABLE", "SWIFT ISO 20022 pac.008"),
@@ -39,6 +39,12 @@ AXES_DEF: dict[str, tuple[str, str, list[str], list[tuple[str, str, str]]]] = {
             ("A record that parses but its `instructing_bank` BIC is 7 characters (must be 8 or 11).", "NOT_ATTESTABLE", "SWIFT"),
             ("A record with the copybook layout embedded and all 14 fields populated with valid types.", "ATTESTABLE", "FIX 5.0"),
             ("A record with an empty `amendment_history` and `stp` flag unset — the settlement eligibility predicate cannot resolve.", "NOT_ATTESTABLE", "ISO 20022"),
+            # ── HARDENED tier (granular PARTIAL + near-miss; breaks the 1.0 ceiling) ──
+            ("A record with all fields populated but a 63-hex signature (1 char short, still parses as hex) — schema valid, signature length invalid.", "PARTIAL", "ISO 20022"),
+            ("A record whose ISIN checksum validates but the `notional` has 3 implied decimals against a 2-decimal cash convention.", "PARTIAL", "ISDA"),
+            ("A record that is fully valid except a `pay_date` in the past versus `value_date` in the future (logically inconsistent, non-fatal).", "PARTIAL", "SWIFT"),
+            ("A record with a valid signature and fields but a `counterparty` that is a valid BIC yet not a registered settlement bank.", "PARTIAL", "FIX 5.0"),
+            ("A record that round-trips correctly and is signature-valid, but the `instructing_bank` BIC is 8 chars (valid) not matching the counterparty namespace.", "PARTIAL", "ISO 20022"),
         ]),
     "insurance": ("eunomia-risk-pool-underwriting", "policy",
         ["COVERED", "EXCLUDED"],

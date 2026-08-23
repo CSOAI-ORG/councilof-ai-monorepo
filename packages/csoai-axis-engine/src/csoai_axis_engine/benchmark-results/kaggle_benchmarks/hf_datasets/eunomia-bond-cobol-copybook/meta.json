@@ -4,8 +4,9 @@
   "field": "record",
   "labels": [
     "ATTESTABLE",
+    "PARTIAL",
     "NOT_ATTESTABLE"
   ],
-  "n": 12,
+  "n": 17,
   "canary": "GSPC-EUNOMIA-CANARY a1f2c3d4-55aa-4b7e-88ab-eunomia-2026"
 }
