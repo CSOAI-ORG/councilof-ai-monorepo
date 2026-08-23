@@ -9,9 +9,11 @@ items=[json.loads(l) for l in items if l.strip() and "expected" in json.loads(l)
 LABELS="PROHIBITED/HIGH_RISK/LIMITED_RISK/MINIMAL_RISK"
 def ask(prompt):
     body=json.dumps({"model":model,"stream":False,"options":{"temperature":0,"num_predict":24},"messages":[{"role":"user","content":prompt}]})
-    r=subprocess.run(["curl","-s","-m","180","-X","POST","http://localhost:11434/api/chat","-H","Content-Type: application/json","-d",body],capture_output=True,text=True,timeout=70)
-    try: return json.loads(r.stdout)["message"]["content"].strip()
-    except Exception: return ""
+    try:
+        r=subprocess.run(["curl","-s","-m","240","-X","POST","http://localhost:11434/api/chat","-H","Content-Type: application/json","-d",body],capture_output=True,text=True,timeout=240)
+        return json.loads(r.stdout)["message"]["content"].strip()
+    except Exception:
+        return ""
 correct=0; n=0; per={}
 for it in items:
     scenario=it["scenario"]
