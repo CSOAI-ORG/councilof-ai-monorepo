@@ -45,7 +45,8 @@ open('$dst','w').write('\\n'.join(out)+'\\n')
 print(len(out))
 \"" 2>&1 >> "$LOG"
   debug "RUN axis=$axis"
-  ssh -o BatchMode=yes "$POD" "cd $RUN_DIR && nohup python3 gspc_six_axis_e2e.py --axes '$axis' --models '$MODELS' --control '$CONTROL' --out $RUN_DIR/result-$axis.jsonl > $RUN_DIR/$axis.log 2>&1 & echo started" 2>&1 >> "$LOG"
+  # Reliable persistent launch: setsid detaches from the ssh session so the GPU job survives.
+  ssh -o BatchMode=yes "$POD" "cd $RUN_DIR && setsid python3 axis_measure.py '$MODELS' '$dst' '$RUN_DIR/result-$axis.json' > $RUN_DIR/$axis.log 2>&1 < /dev/null & echo started" 2>&1 >> "$LOG"
 done
 
 # 2. Wait for the batch to finish (poll for the .jsonl output, then a settle period).

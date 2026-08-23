@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 import json, subprocess, sys, math
 from pathlib import Path
-items=Path("/workspace/axis-run/benchmark-results/kaggle_benchmarks/hf_datasets/govbench-eu-ai-act-risk-tier/items.jsonl").read_text().splitlines()
+items=Path(items_path).read_text().splitlines()
 items=[json.loads(l) for l in items if l.strip() and "expected" in json.loads(l)]
 model=sys.argv[1] if len(sys.argv)>1 else "qwen3:4b"
+items_path=sys.argv[2] if len(sys.argv)>2 else "/workspace/axis-run/benchmark-results/kaggle_benchmarks/hf_datasets/govbench-eu-ai-act-risk-tier/items.jsonl"
+out_path=sys.argv[3] if len(sys.argv)>3 else "/workspace/axis-run/gov-result.json"
 LABELS="PROHIBITED/HIGH_RISK/LIMITED_RISK/MINIMAL_RISK"
 def ask(prompt):
     body=json.dumps({"model":model,"stream":False,"options":{"temperature":0,"num_predict":24},"messages":[{"role":"user","content":prompt}]})
@@ -22,5 +24,5 @@ for it in items:
     print(str(it.get("source_index","?"))+" expected="+exp+" got="+repr(ans[:30])+" "+("OK" if ok else "X"), flush=True)
 p=correct/n; z=1.96; d=1+z*z/n; c=(p+z*z/(2*n))/d; hw=z*math.sqrt(p*(1-p)/n+z*z/(4*n*n))/d
 out={"model":model,"axis":"governance","n":n,"accuracy":round(p,3),"wilson":[round(max(0.0,c-hw),3),round(min(1.0,c+hw),3)],"per_label":{k:[round(v[0]/v[1],3),v[1]] for k,v in per.items()},"signed":False}
-Path("/workspace/axis-run/gov-result.json").write_text(json.dumps(out,indent=2))
+Path(out_path).write_text(json.dumps(out,indent=2))
 print("RESULT:",json.dumps(out),flush=True)
