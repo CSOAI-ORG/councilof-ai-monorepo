@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import json, subprocess, sys, math
 from pathlib import Path
-items=Path(items_path).read_text().splitlines()
-items=[json.loads(l) for l in items if l.strip() and "expected" in json.loads(l)]
 model=sys.argv[1] if len(sys.argv)>1 else "qwen3:4b"
 items_path=sys.argv[2] if len(sys.argv)>2 else "/workspace/axis-run/benchmark-results/kaggle_benchmarks/hf_datasets/govbench-eu-ai-act-risk-tier/items.jsonl"
 out_path=sys.argv[3] if len(sys.argv)>3 else "/workspace/axis-run/gov-result.json"
+items=Path(items_path).read_text().splitlines()
+items=[json.loads(l) for l in items if l.strip() and "expected" in json.loads(l)]
 LABELS="PROHIBITED/HIGH_RISK/LIMITED_RISK/MINIMAL_RISK"
 def ask(prompt):
     body=json.dumps({"model":model,"stream":False,"options":{"temperature":0,"num_predict":24},"messages":[{"role":"user","content":prompt}]})
