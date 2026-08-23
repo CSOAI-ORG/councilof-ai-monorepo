@@ -24,7 +24,7 @@ echo "[$(date -u +%FT%TZ)] backup start $TAR" >> "$LOG"
 
 # 1. tar the EAT evidence on the A100.
 ssh -i "$A100_KEY" -o StrictHostKeyChecking=no -p "$A100_PORT" "$A100_HOST" \
-  "cd $A100_SRC && tar czf /tmp/$TAR card-*.signed.json eat-board.json eat-mirror 2>/dev/null && echo ok" \
+  "cd $A100_SRC && tar czf /tmp/$TAR card-*.signed.json strong-card-*.signed.json eat-board.json strong-eat-board.json eat-mirror strong-eat-mirror 2>/dev/null && echo ok" \
   | grep -q ok && echo "[$(date -u +%FT%TZ)] tarballed on A100" >> "$LOG" \
   || { echo "[$(date -u +%FT%TZ)] A100 tar FAILED" >> "$LOG"; exit 1; }
 
