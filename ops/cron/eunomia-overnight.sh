@@ -15,6 +15,12 @@ LOG=${LOG:-$HOME/eunomia-overnight.log}
 STAMP=$(date -u +%Y%m%d-%H%M%S)
 
 echo "[$(date -u +%FT%TZ)] overnight cycle $STAMP start" >> "$LOG"
+# If the A100 is unreachable, skip the A100 steps this cycle (no error spam);
+# the Oracle durable store already holds the evidence. Resume when it returns.
+if ! ssh -i "$A100_KEY" -o StrictHostKeyChecking=no -o ConnectTimeout=8 -o BatchMode=yes -p "$A100_PORT" "$A100" 'echo ok' >/dev/null 2>&1; then
+  echo "[$(date -u +%FT%TZ)] A100 unreachable — skipping grind/sign/backup (retrying next cycle)" >> "$LOG"
+  exit 0
+fi
 
 # 1) Ensure the 0.5b EUNOMIA axis grind is running on the A100 (reliable tire).
 ssh -i "$A100_KEY" -o StrictHostKeyChecking=no -o ConnectTimeout=15 -p "$A100_PORT" "$A100" '
