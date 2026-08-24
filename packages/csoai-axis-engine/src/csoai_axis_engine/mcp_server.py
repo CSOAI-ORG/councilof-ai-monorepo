@@ -110,26 +110,27 @@ if HAVE_MCP:
                 "signer": card.get("signer"), "status": "OK" if match else "MISMATCH"}
 
     @mcp.tool()
-    def eunomia_crosswalk_articles(ai_system: str, model: str) -> dict:
-        """Map a deployed AI system to EU AI Act articles + measure which axes it triggers."""
-        axes = _load_axes()
-        mapped = []
-        for art, ax in ARTICLE_AXES.items():
-            if ax in axes:
-                mapped.append({"article": art, "axis": ax, "status": "MEASURABLE"})
-        # Optionally measure a representative axis (governance) as a sample.
+    def eunomia_crosswalk_articles(ai_system: str, model: str, domain_hints: str = "") -> dict:
+        """Map a deployed AI system to EU AI Act articles (Art 1-55) + measure exposure.
+
+        domain_hints: comma-separated Annex III areas (hiring, credit, critical-infra,
+        biometric, law-enforcement, education, essential-services, migration, justice).
+        Returns the article exposure list (axis, requirement, penalty) + a signed sample."""
+        from csoai_axis_engine.eu_ai_act_crosswalk import crosswalk
+        hints = [h.strip() for h in domain_hints.split(",") if h.strip()]
+        articles = crosswalk(ai_system, hints)
         sample = None
-        if "governance" in axes:
-            try:
-                from csoai_axis_engine.gspc_six_axis_e2e import load_axis, score_axis
-                items, field, labels = load_axis("governance")
-                sample = score_axis(model, items, field, labels)
-                sample["axis"] = "governance"
-            except Exception:
-                sample = {"axis": "governance", "note": "measurement unavailable"}
+        try:
+            from csoai_axis_engine.gspc_six_axis_e2e import load_axis, score_axis
+            items, field, labels = load_axis("governance")
+            sample = score_axis(model, items, field, labels)
+            sample["axis"] = "governance"
+        except Exception:
+            sample = {"axis": "governance", "note": "measurement unavailable"}
         return {"client": CLIENT, "ai_system": ai_system, "model": model,
-                "articles": mapped, "sample_measurement": sample,
-                "gate": {"pay_url": PAY_URL, "402": bool(PAY_URL)}}
+                "articles": articles, "n_articles": len(articles),
+                "sample_measurement": sample,
+                "gate": {"pay_url": PAY_URL, "402": bool(PAY_URL), "licence": "white-label"}}
 
     def run() -> int:
         mcp.run(transport="stdio", host="127.0.0.1", port=int(os.environ.get("EUNOMIA_PORT", "8786")))
