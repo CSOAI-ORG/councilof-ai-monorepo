@@ -130,7 +130,24 @@ if HAVE_MCP:
         return {"client": CLIENT, "ai_system": ai_system, "model": model,
                 "articles": articles, "n_articles": len(articles),
                 "sample_measurement": sample,
-                "gate": {"pay_url": PAY_URL, "402": bool(PAY_URL), "licence": "white-label"}}
+                "gate": {"lane": "watchdog-R8", "402": False, "licence": "white-label", "note": "R8: regulators/public get signed streams free forever; x402 is commercial-data-only, never scores."}}
+
+    @mcp.tool()
+    def eunomia_enforcement_record() -> dict:
+        """[R8 · FREE] Signed, machine-readable coverage of the public AI/AI-adjacent
+        enforcement record: reported fines + the compliance-deadline calendar + Art 73
+        penalty windows. Regulators and the public get this free forever (R8). This is
+        systematic signed coverage, not certification and not an estimate."""
+        from csoai_axis_engine.enforcement_corpus import enforcement_record
+        return enforcement_record()
+
+    @mcp.tool()
+    def eunomia_first_fine_watch() -> dict:
+        """[R8 · FREE] The signed first-fine counter: EU AI Act fines collected (EUR) +
+        days since Art 101 GPAI fining powers switched on (2 Aug 2026). The live page
+        every AI-compliance journalist needs."""
+        from csoai_axis_engine.enforcement_corpus import first_fine_watch
+        return first_fine_watch()
 
     def run() -> int:
         mcp.run(transport="stdio", host="127.0.0.1", port=int(os.environ.get("EUNOMIA_PORT", "8786")))
