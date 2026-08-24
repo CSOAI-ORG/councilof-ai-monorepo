@@ -23,7 +23,7 @@ ENFORCEMENT = [
   {"actor": "FTC (US)", "jurisdiction": "US", "regime": "FTC Act/ECOA", "amount": 85, "currency": "USD", "cif": "headline order; largely suspended/offset", "status": "order (partly suspended)", "date": "2024"},
   {"actor": "UK ICO", "jurisdiction": "UK", "regime": "UK GDPR/DPA", "amount": 17, "currency": "GBP", "cif": "AI-adjacent enforcement (approx.)", "status": "collected", "date": "2024-2025"},
   {"actor": "OpenAI", "jurisdiction": "IT", "regime": "GDPR", "amount": 15, "currency": "EUR", "cif": "ANNULLED on appeal (Mar 2025)", "status": "annulled", "date": "2024-03-2025-03"},
-  {"actor": "EU AI Act (Art 101 GPAI)", "jurisdiction": "EU", "regime": "EU AI Act", "amount": 0, "currency": "EUR", "cif": "enforcement powers switched ON 2 Aug 2026; up to €35M/7%", "status": "FIRST-FINE WATCH (no reported fine yet)", "date": "2026-08-02"},
+  {"actor": "EU AI Act (GPAI / Art 101)", "jurisdiction": "EU", "regime": "EU AI Act", "amount": 0, "currency": "EUR", "cif": "enforcement powers switched ON 2 Aug 2026; GPAI non-compliance = up to 3%/€15M (prohibited/high-risk = up to 7%/€35M)", "status": "FIRST-FINE WATCH (no reported fine yet)", "date": "2026-08-02"},
 ]
 
 # Deadlines = the product hook. Signed, machine-readable.
