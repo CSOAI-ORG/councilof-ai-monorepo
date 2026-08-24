@@ -17,3 +17,5 @@ Append-only. move-ID · URL · commit SHA · timestamp · verification evidence.
 | N5-10/11 | DEFERRED | mcp-publisher publish = GitHub device-flow OAuth (interactive, Nick/browser) |
 | N5-01..06 | DEFERRED | HF datasets/DOIs/Space — needs HF org-write token (hf auth whoami not yet run) |
 | N5-15..19 | DEFERRED | a2aagentlist.com + artinet.io = web forms; Google Cloud Agent Registry = conditional (no GCP account); awesome-a2a PR pending |
+| N5-02/04 | DONE | csoai/gspc-board dataset + card, HTTP 200 (commit 455849ea) |
+| N5-03 | DONE | csoai/gspc-bench-results dataset + card, HTTP 200 (commit 74e56796) |
