@@ -1,0 +1,18 @@
+{
+  "schema": "csoai.eunomia-board/0.2",
+  "note": "Consolidated EUNOMIA financial-verification board. Measurement, not certification. Exact-label, Wilson CI, Ed25519-signed, recompute-able. 10 axes x 2 model tiers. Only a MEASURED axis earns a number.",
+  "signer": "did:web:csoai.org#estate-chain-1",
+  "measured_on": "2026-08-24",
+  "axes": [
+    {"axis":"bond-router","bench":"eunomia-bond-cobol-copybook","n":12,"labels":["ATTESTABLE","PARTIAL","NOT_ATTESTABLE"],"tiers":{"0.5b":{"acc":0.583,"ci":[0.320,0.807]},"7b":{"acc":1.0,"ci":[0.758,1.0]}}},
+    {"axis":"insurance","bench":"eunomia-risk-pool-underwriting","n":10,"labels":["COVERED","EXCLUDED"],"tiers":{"0.5b":{"acc":0.5,"ci":[0.237,0.763]},"7b":{"acc":1.0,"ci":[0.722,1.0]}}},
+    {"axis":"stock-market","bench":"eunomia-equity-index-derivative","n":10,"labels":["COMPLIANT","NON_COMPLIANT"],"tiers":{"0.5b":{"acc":0.5,"ci":[0.237,0.763]},"7b":{"acc":0.9,"ci":[0.596,0.982]}}},
+    {"axis":"east-west","bench":"eunomia-tc260-nist-crosswalk","n":10,"labels":["ALIGNED","DIVERGENT"],"tiers":{"0.5b":{"acc":0.5,"ci":[0.237,0.763]},"7b":{"acc":1.0,"ci":[0.722,1.0]}}},
+    {"axis":"sme-fractional","bench":"eunomia-micro-issuance","n":10,"labels":["ELIGIBLE","INELIGIBLE"],"tiers":{"0.5b":{"acc":0.5,"ci":[0.237,0.763]},"7b":{"acc":0.9,"ci":[0.596,0.982]}}},
+    {"axis":"agent-economy","bench":"eunomia-npc-wallet-staking","n":10,"labels":["PERMITTED","PROHIBITED"],"tiers":{"0.5b":{"acc":0.6,"ci":[0.313,0.832]},"7b":{"acc":1.0,"ci":[0.722,1.0]}}},
+    {"axis":"data-dao","bench":"eunomia-arena-trace-data","n":10,"labels":["COMPLIANT","NON_COMPLIANT"],"tiers":{"0.5b":{"acc":0.5,"ci":[0.237,0.763]},"7b":{"acc":1.0,"ci":[0.722,1.0]}}},
+    {"axis":"eunomia-token","bench":"eunomia-energy-currency","n":10,"labels":["COMPLIANT","NON_COMPLIANT"],"tiers":{"0.5b":{"acc":0.5,"ci":[0.237,0.763]},"7b":{"acc":0.778,"ci":[0.453,0.937]}}},
+    {"axis":"climate-transition","bench":"eunomia-climate-transition","n":10,"labels":["COMPLIANT","NON_COMPLIANT"],"tiers":{"0.5b":{"acc":0.6,"ci":[0.313,0.832]},"7b":{"acc":1.0,"ci":[0.722,1.0]}}},
+    {"axis":"privacy-risk","bench":"eunomia-privacy-risk","n":10,"labels":["COMPLIANT","NON_COMPLIANT"],"tiers":{"0.5b":{"acc":0.6,"ci":[0.313,0.832]},"7b":{"acc":1.0,"ci":[0.722,1.0]}}}
+  ]
+}
