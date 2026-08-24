@@ -74,3 +74,18 @@ def test_verify_card_is_deterministic():
     d = {"axis": "bond-router", "accuracy": 1.0, "n_items": 12}
     c1 = hashlib.sha256(_canon(d).encode()).hexdigest()
     assert c1 == hashlib.sha256(_canon(d).encode()).hexdigest()  # recompute-able
+
+
+def test_claimguard_rejects_absolutist_and_accepts_canonical():
+    from csoai_axis_engine.claimguard import guard
+    good = guard("Systematic signed coverage of the public enforcement record. Measurement, not certification.", "did:web:csoai.org#estate-chain-1")
+    bad = guard("We find every problem for every AI company and guarantee 100% compliance.", "did:web:csoai.org#estate-chain-1")
+    assert good["pass"] is True
+    assert bad["pass"] is False
+    assert any("every" in f for f in bad["forbidden"])  # absolutist caught
+
+
+def test_claimguard_untrusted_signer_rejected():
+    from csoai_axis_engine.claimguard import guard
+    r = guard("Systematic signed coverage.", "did:web:someone-else#key")
+    assert r["pass"] is False  # non-estate signer white-labels the trust root -> reject

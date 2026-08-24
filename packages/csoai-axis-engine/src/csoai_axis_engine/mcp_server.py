@@ -160,6 +160,15 @@ if HAVE_MCP:
             return {"error": f"unknown sector {sector!r}; choose {sorted(SECTOR_TILES)}"}
         return sector_tile(sector)
 
+    @mcp.tool()
+    def eunomia_claimguard_check(statement: str) -> dict:
+        """[publish gate] Check a public headline/page/quote against the ClaimGuard
+        grammar law (SOVOS Part IX). Rejects absolutist over-claiming ('every problem',
+        'guaranteed', 'certified') and requires the canonical 'signed coverage' framing +
+        the estate signer. Only PASS statements may be published."""
+        from csoai_axis_engine.claimguard import guard
+        return guard(statement, "did:web:csoai.org#estate-chain-1")
+
     def run() -> int:
         mcp.run(transport="stdio", host="127.0.0.1", port=int(os.environ.get("EUNOMIA_PORT", "8786")))
         return 0
