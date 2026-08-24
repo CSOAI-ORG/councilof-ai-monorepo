@@ -149,6 +149,17 @@ if HAVE_MCP:
         from csoai_axis_engine.enforcement_corpus import first_fine_watch
         return first_fine_watch()
 
+    @mcp.tool()
+    def eunomia_sector_tile(sector: str) -> dict:
+        """[white-label] Return a sector tile — the measurement axes + EU AI Act article
+        exposure for a given end party (regulator / insurer / bond-desk / cobol / vendor),
+        mapped to the signed measurement lanes. Regulators are R8-free; insurers/bond/vendor
+        are the commercial x402-data lane (never scores, never ranked)."""
+        from csoai_axis_engine.sector_tiles import sector_tile, SECTOR_TILES
+        if sector not in SECTOR_TILES:
+            return {"error": f"unknown sector {sector!r}; choose {sorted(SECTOR_TILES)}"}
+        return sector_tile(sector)
+
     def run() -> int:
         mcp.run(transport="stdio", host="127.0.0.1", port=int(os.environ.get("EUNOMIA_PORT", "8786")))
         return 0

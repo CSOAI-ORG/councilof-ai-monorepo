@@ -16,6 +16,9 @@ not a model opinion. Recompute-able via the published harness.
 """
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 # Publicly reported AI/AI-adjacent enforcement (verifiable, noted as reported).
 # fields: actor, jurisdiction, regime, amount, currency, notes, status, date
 ENFORCEMENT = [
@@ -57,6 +60,25 @@ def enforcement_record() -> dict:
             "note": "Systematic signed coverage of the public AI/AI-adjacent enforcement record. Not certification.",
             "fines": ENFORCEMENT, "deadlines": DEADLINES, "art73_windows": ART73_WINDOWS}
 
+
+
+def signed_record(key_path: str = None) -> dict:
+    """EAT-attest the enforcement record (box 3): canonicalise, content_id, sign."""
+    import hashlib, hmac
+    from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+    rec = enforcement_record()
+    body = {k: rec[k] for k in sorted(rec)}
+    canon = json.dumps(body, sort_keys=True, separators=(",", ":"))
+    cid = hashlib.sha256(canon.encode()).hexdigest()
+    sig = None
+    if key_path:
+        key = Ed25519PrivateKey.from_private_bytes(Path(key_path).read_bytes()[:32])
+        sig = "ed25519:" + key.sign(canon.encode()).hex()
+    rec.update({"content_id": cid, "signature": sig or UNVERIFIED, "signer": SIGNER})
+    return rec
+
+
+UNVERIFIED = "UNSIGNED-UNVERIFIED"
 
 if __name__ == "__main__":
     import json
