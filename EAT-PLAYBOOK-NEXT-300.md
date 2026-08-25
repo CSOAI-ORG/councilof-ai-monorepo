@@ -59,5 +59,20 @@
   is `signed:false` (EAT) and the playbook itself gates signing behind WAVE 3 legal (moves 111–120)
   + owner. These are **MEASURED, not signed** — do NOT claim signed cards yet. Counsel + sign rail
   before any "measured verdict" on a named issuer. (GSPC_ATTESTATION_BUILD_PLAN §0 is the binding boundary.)
+- **Gates CLEARED (2026-08-25):** `status_overnight` flipped honestly `gates: FAIL → PASS` — the disk
+  guard was the only FAIL at prior run (0Gi free); now 4Gi free, every doctrine gate PASS
+  (rebuild/check/lint, unit, properties, align audit, ci 0-dead, TEA walk, MCP 22/22).
+- **New (round 2):** `feeds/distribution_register.json` — doctrine-clean 364-venue distribution MAP
+  (FREE 128 / REVIEW 83 / OWNER 62 / PERMISSIONLESS 39; 67 owner-gated signup stack). Registry MAP,
+  no listing claim, 0 codenames. Surfaces WAVE 4 distribution venues for the owner-morning sheet.
+  Commits: master-harness 7941ed7, monorepo d342b76.
+- **Reconciled (round 3):** the public catalog count drift is corrected to ground truth — master-harness
+  catalog.json carries 662 items = **638 public / 24 internal** (the prior "650 public / 12 internal"
+  figures were stale from before round-2's internal-estate flagging). Rebuilt the handoff pack's
+  `public/catalog.json` from master-harness to **filter out the 24 internal-estate artifacts** (MEOK/OWEM/
+  SOV-Space/SOV SIGNAL/SOVOS/AURUM/silica-capillary), so the pack's public catalog is 638 items, 0 leaks,
+  counts self-consistent. Same fix applied to `about.html` (+ HANDOFF/ESTATE_MINE count lines) so the
+  public board (638) and the about page (638) match. **SIGN RAIL STILL NOT SENT:** all measures remain
+  measured, not signed; the pack carries no "certified"/"signed boards" claim.
 
 *Canon: scores never sold · regulators free (R8) · x402 data-only · no token · ClaimGuard gated · codenames never public · white-label (they brand it, we sign it). Deliverable: a clean EAT playbook with 300 numbered moves, executable across measurement/product/legal/distribution/infra waves.*

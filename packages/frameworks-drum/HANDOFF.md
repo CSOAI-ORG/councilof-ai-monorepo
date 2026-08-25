@@ -19,7 +19,7 @@ certifier. The measured trust gauge is a separate, measured instrument.
 | articles | 139 |
 | sectors | 9 |
 | benchmarks | 36 |
-| **total** | **662** (650 public, 12 internal — internal excluded everywhere) |
+| **total** | **662** (638 public, 24 internal — internal excluded everywhere) |
 
 Canary: `drum-canary-7f3a9c2e`.
 
@@ -31,7 +31,7 @@ Canary: `drum-canary-7f3a9c2e`.
 
 ## Contents
 ```
-public/catalog.json      doctrine-clean public catalog (650 items, canary inside)
+public/catalog.json      doctrine-clean public catalog (638 items, canary inside)
 site/                    doctrine-clean static board (index + frameworks/charters/
                          regulations/articles/sectors/benchmarks + about/pricing/findings)
 feeds/                   honest measured surfaces:
