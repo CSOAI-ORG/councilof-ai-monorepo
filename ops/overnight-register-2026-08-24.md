@@ -20,3 +20,4 @@ Append-only. move-ID · URL · commit SHA · timestamp · verification evidence.
 | N5-02/04 | DONE | csoai/gspc-board dataset + card, HTTP 200 (commit 455849ea) |
 | N5-03 | DONE | csoai/gspc-bench-results dataset + card, HTTP 200 (commit 74e56796) |
 | N5-06 | DONE | csoai/gspc-governance-leaderboard Space (static) HTTP 200 — first-of-niche; Gradio blocked on org plan (owner) |
+| N5-17 | DONE | awesome-a2a PR #157 (Council of AI, A2A card) — PR opened, merge maintainer-gated |
