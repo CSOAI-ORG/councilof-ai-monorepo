@@ -48,4 +48,16 @@
 281–290. E2E the full product (5-device) after every distribution wave; auto-downgrade on any dead link.
 291–300. **Retro + re-plan** — the register + this playbook re-issued every cycle; the index compounds by accretion.
 
+## ✅ PROGRESS (2026-08-25 — lane, honest)
+- **Moves 21–30 MEASUREMENT DONE (partial):** RWA on-chain measurement engine + feed
+  (`knowledge/frameworks-drum/ops/measure_rwa.py` → `feeds/rwa_xrpl_measured.json`, commit 8fc1a2e).
+  6 XRPL instruments measured via `gateway_balances`: OUSG **1,830,842.44** · RLUSD **962,777,095.75**
+  (full figure now confirmed — resolves prior page-cap gap) · TBILL **9,921,270,056.13** ·
+  USDB **21,722,284.65** · BBRL **41,683,441.74** · Archax/abrdn **no outstanding**.
+  Aviva (Licuido) + Justoken JMWH = **CITED, no verified r-address** (do NOT guess).
+- **SIGNING NOT DONE (honest gate):** moves 21–30 say "sign each as Ed25519 cards," but the sign rail
+  is `signed:false` (EAT) and the playbook itself gates signing behind WAVE 3 legal (moves 111–120)
+  + owner. These are **MEASURED, not signed** — do NOT claim signed cards yet. Counsel + sign rail
+  before any "measured verdict" on a named issuer. (GSPC_ATTESTATION_BUILD_PLAN §0 is the binding boundary.)
+
 *Canon: scores never sold · regulators free (R8) · x402 data-only · no token · ClaimGuard gated · codenames never public · white-label (they brand it, we sign it). Deliverable: a clean EAT playbook with 300 numbered moves, executable across measurement/product/legal/distribution/infra waves.*
