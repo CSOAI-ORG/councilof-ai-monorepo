@@ -1,0 +1,185 @@
+{
+ "asset": "rwa-xrpl-measurement",
+ "generated": "2026-08-25",
+ "method": "public XRPL RPC (s1.ripple.com:51234); account_info + account_lines; no aggregator, no API key",
+ "doctrine": "measurement, not certification. Measures on-chain state; does NOT sign/certify/tokenize/confer rights.",
+ "status_legend": {
+  "MEASURED": "verified on-chain this sweep via gateway_balances.obligations (authoritative issuer total)",
+  "PARTIAL": "verified but account_lines trust-line sweep page-capped (marker present)",
+  "CITED": "no independently verified r-address; sourced from dossier \u2014 do NOT treat as on-chain fact",
+  "UNMEASURED": "could not be measured on-chain"
+ },
+ "instruments": {
+  "Ondo OUSG": {
+   "status": "MEASURED",
+   "data": {
+    "name": "Ondo OUSG",
+    "kind": "tokenized treasuries",
+    "issuer": "Ondo Finance",
+    "currency": "OUSG",
+    "r_address": "rHuiXXjHLpMP8ZE9sSQU5aADQVWDwv6h5p",
+    "account_exists": true,
+    "owner_count": 9,
+    "xrp_balance_unit": 9.999564,
+    "ledger": null,
+    "supply_by_currency": {
+     "OUSG": 1830842.44
+    },
+    "obligations": 1,
+    "gateway_asset_balances": {},
+    "trust_lines_returned": 23,
+    "has_more_trust_lines": false,
+    "holders_distinct_positive": 3,
+    "instrument": {
+     "currency": "OUSG",
+     "positive_holders": 3,
+     "top_1_holder_share": 0.7215,
+     "top_5_holder_share": 1.0
+    }
+   }
+  },
+  "Ripple RLUSD": {
+   "status": "PARTIAL",
+   "data": {
+    "name": "Ripple RLUSD",
+    "kind": "stablecoin",
+    "issuer": "Ripple",
+    "currency": "RLUSD",
+    "r_address": "rMxCKbEDwqr76QuheSUMdEGf4B9xJ8m5De",
+    "account_exists": true,
+    "owner_count": 19,
+    "xrp_balance_unit": 99.85126,
+    "ledger": null,
+    "supply_by_currency": {
+     "RLUSD": 962777095.75
+    },
+    "obligations": 1,
+    "gateway_asset_balances": {},
+    "trust_lines_returned": 400,
+    "has_more_trust_lines": true,
+    "holders_distinct_positive": 122,
+    "instrument": {
+     "currency": "RLUSD",
+     "positive_holders": 122,
+     "top_1_holder_share": 0.949,
+     "top_5_holder_share": 0.996
+    }
+   }
+  },
+  "Archax x abrdn USD Liquidity Fund": {
+   "status": "MEASURED",
+   "data": {
+    "name": "Archax x abrdn USD Liquidity Fund",
+    "kind": "tokenized money-market fund",
+    "issuer": "Archax / abrdn",
+    "currency": "USD",
+    "r_address": "rKCu4CucpepQ6N89c8T5GuX2jkxzCST18Q",
+    "account_exists": true,
+    "owner_count": 1,
+    "xrp_balance_unit": 2.092506,
+    "ledger": null,
+    "supply_by_currency": {},
+    "obligations": 0,
+    "gateway_asset_balances": {},
+    "trust_lines_returned": 31,
+    "has_more_trust_lines": false,
+    "holders_distinct_positive": 0
+   }
+  },
+  "OpenEden TBILL": {
+   "status": "MEASURED",
+   "data": {
+    "name": "OpenEden TBILL",
+    "kind": "tokenized treasuries",
+    "issuer": "OpenEden",
+    "currency": "TBL",
+    "r_address": "rJNE2NNz83GJYtWVLwMvchDWEon3huWnFn",
+    "account_exists": true,
+    "owner_count": 6,
+    "xrp_balance_unit": 59.990292,
+    "ledger": null,
+    "supply_by_currency": {
+     "TBL": 9921270056.13
+    },
+    "obligations": 1,
+    "gateway_asset_balances": {},
+    "trust_lines_returned": 43,
+    "has_more_trust_lines": false,
+    "holders_distinct_positive": 3,
+    "instrument": {
+     "currency": "TBL",
+     "positive_holders": 3,
+     "top_1_holder_share": 0.9974,
+     "top_5_holder_share": 1.0
+    }
+   }
+  },
+  "Braza USDB": {
+   "status": "MEASURED",
+   "data": {
+    "name": "Braza USDB",
+    "kind": "stablecoin",
+    "issuer": "Braza Group",
+    "currency": "USDB",
+    "r_address": "rB3y9EPnq1ZrZP3aXgfyfdXQThzdXMrLMc",
+    "account_exists": true,
+    "owner_count": 0,
+    "xrp_balance_unit": 499.613798,
+    "ledger": null,
+    "supply_by_currency": {
+     "USDB": 21722284.65
+    },
+    "obligations": 1,
+    "gateway_asset_balances": {},
+    "trust_lines_returned": 127,
+    "has_more_trust_lines": false,
+    "holders_distinct_positive": 24,
+    "instrument": {
+     "currency": "USDB",
+     "positive_holders": 24,
+     "top_1_holder_share": 0.5996,
+     "top_5_holder_share": 0.9999
+    }
+   }
+  },
+  "Braza BBRL": {
+   "status": "MEASURED",
+   "data": {
+    "name": "Braza BBRL",
+    "kind": "stablecoin",
+    "issuer": "Braza Group",
+    "currency": "BBRL",
+    "r_address": "rH5CJsqvNqZGxrMyGaqLEoMWRYcVTAPZMt",
+    "account_exists": true,
+    "owner_count": 0,
+    "xrp_balance_unit": 487.788998,
+    "ledger": null,
+    "supply_by_currency": {
+     "BBRL": 41683441.74
+    },
+    "obligations": 1,
+    "gateway_asset_balances": {},
+    "trust_lines_returned": 394,
+    "has_more_trust_lines": false,
+    "holders_distinct_positive": 61,
+    "instrument": {
+     "currency": "BBRL",
+     "positive_holders": 61,
+     "top_1_holder_share": 0.5958,
+     "top_5_holder_share": 0.9994
+    }
+   }
+  },
+  "Aviva Investors USD Liquidity Fund": {
+   "status": "CITED",
+   "note": "XRPL via Licuido, LIVE 29 Jul 2026 (CBI-approved); r-address NOT independently verified",
+   "r_address": "NOT VERIFIED \u2014 resolve then re-measure"
+  },
+  "Justoken JMWH": {
+   "status": "CITED",
+   "note": "CAUTION \u2014 represented ~$2.23B, issuer-held; r-address NOT independently verified",
+   "r_address": "NOT VERIFIED \u2014 resolve then re-measure"
+  }
+ },
+ "hard_gates": "SIGN RAIL NOT WIRED \u2014 EAT box 'signed'=false; these are measured facts, not signed attestations.\nLEGAL \u2014 publishing any 'measured verdict' on a named security requires counsel (GSPC build plan \u00a70/\u00a74-B).\nAviva + Justoken r-addresses NOT verified; CITED only, do not guess."
+}
