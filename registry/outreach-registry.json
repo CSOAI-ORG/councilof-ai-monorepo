@@ -1,0 +1,83 @@
+{
+  "schema": "csoai.outreach-registry/1.0",
+  "canon": "Never publish a score/claim a stranger can't re-derive (JL.5). Regulators free (R8). x402 is data-only, never scores. No token. ClaimGuard grammar gate.",
+  "audit": {
+    "date": "2026-08-25",
+    "agent": "JEEVES",
+    "note": "Living registry — single source of truth for outward outreach + connections so all agents map/track in one place. Verified = HTTP 200 or confirmed in-repo. Re-audit before any publish."
+  },
+  "accounts": {
+    "note": "Platform accounts to activate/create. Each requires Nick's per-action confirmation + the private handle. Firing needs an OAuth/browser session, not a plaintext password.",
+    "entries": [
+      { "id": "acct-hf-org", "platform": "Hugging Face", "handle": "csoai", "status": "LIVE", "owner_gate": "Dataset DOIs need owner web-UI (locks rename/visibility).", "verified": "csoai/gspc-board, csoai/gspc-bench-results, csoai/gspc-governance-leaderboard all 200" },
+      { "id": "acct-gh-org", "platform": "GitHub", "handle": "CSOAI-ORG", "status": "LIVE", "owner_gate": "PR-merge is the deploy gate; MCP publish needs owner OAuth.", "verified": "PR #645 mergeable; councilof-ai master live" },
+      { "id": "acct-hf-space", "platform": "Hugging Face Space", "handle": "csoai/gspc-governance-leaderboard", "status": "LIVE", "owner_gate": "Gradio blocked on csoai org plan (needs Team/Enterprise).", "verified": "200" },
+      { "id": "acct-mcp", "platform": "MCP Registry (mcp-publisher)", "handle": "io.github.CSOAI-ORG/gspc", "status": "GATED", "owner_gate": "GitHub OAuth device-flow; package csoai-governance-mcp 0.1.1 vs registry name", "verified": "published name mismatch — fix then publish 1.0.2" },
+      { "id": "acct-a2a", "platform": "A2A directories", "handle": "agent-card.json", "status": "LIVE", "owner_gate": "a2aagentlist/artinet are web-forms (owner submit); awesome-a2a PR #157 open", "verified": ".well-known/agent-card.json 200" },
+      { "id": "acct-datarade", "platform": "Datarade", "handle": "—", "status": "PREP", "owner_gate": "Approval + owner data-room", "verified": "not published" },
+      { "id": "acct-snowflake", "platform": "Snowflake Marketplace", "handle": "—", "status": "PREP", "owner_gate": "ORGADMIN + owner", "verified": "not published" },
+      { "id": "acct-adx", "platform": "AWS Data Exchange (AMMP)", "handle": "—", "status": "PREP", "owner_gate": "AMMP + owner", "verified": "not published" },
+      { "id": "acct-kaggle", "platform": "Kaggle", "handle": "—", "status": "PLANNED", "owner_gate": "If a lane uses it", "verified": "not published" }
+    ]
+  },
+  "surfaces": {
+    "note": "Live product surfaces (councilof.ai). All verified 200 (via trailing-slash canonical).",
+    "entries": [
+      { "id": "surf-eunomia", "path": "/eunomia", "status": "LIVE", "verified": "200" },
+      { "id": "surf-ffw", "path": "/first-fine-watch", "status": "LIVE", "verified": "200" },
+      { "id": "surf-data", "path": "/eunomia-data", "status": "LIVE", "verified": "200" },
+      { "id": "surf-sectors", "path": "/sectors", "status": "LIVE", "verified": "200" },
+      { "id": "surf-registers", "path": "/registers", "status": "LIVE", "verified": "200" },
+      { "id": "api-data", "path": "/api/eunomia-data", "status": "LIVE", "verified": "200", "gate": "x402 0.02 USD/query, data-only" },
+      { "id": "api-registers", "path": "/api/registers", "status": "LIVE", "verified": "200", "note": "10 signed axes CAT F6 REAL; 3 aspirational UNMEASURED (PR #645)" },
+      { "id": "a2a-card", "path": "/.well-known/agent-card.json", "status": "LIVE", "verified": "200" }
+    ]
+  },
+  "integrations": {
+    "note": "Protocol bridges of the measurement instrument into the monorepo & out.",
+    "entries": [
+      { "id": "int-mcp-server", "kind": "MCP", "pkg": "csoai-axis-engine", "tools": ["eunomia_axes","eunomia_measure_axis","eunomia_verify_card","eunomia_crosswalk_articles","eunomia_enforcement_record","eunomia_first_fine_watch","eunomia_sector_tile","eunomia_claimguard_check"], "status": "READY", "owner_gate": "publish csoai-governance-mcp 1.0.2" },
+      { "id": "int-a2a-swarm", "kind": "A2A", "pkg": "csoai-a2a-swarm", "status": "PRESENT" },
+      { "id": "int-x402-gate", "kind": "x402", "pkg": "csoai-x402-gate", "status": "READY", "note": "commercial_data; never_scores" },
+      { "id": "int-capability-registry", "kind": "registry", "pkg": "csoai-capability-registry", "status": "PRESENT" },
+      { "id": "int-signal-index", "kind": "index", "pkg": "csoai-signal-index", "status": "PRESENT", "note": "SOV Signal indexing lane" },
+      { "id": "int-crosswalk", "kind": "regulatory", "pkg": "csoai-crosswalk", "status": "PRESENT", "note": "EU AI Act Art 1-55 -> axis -> requirement -> penalty" }
+    ]
+  },
+  "outreach_contacts": {
+    "note": "External counterparties staged for outreach. PREP-ONLY — none sent (owner-gated).",
+    "entries": [
+      { "id": "oc-aiuc1", "name": "AIUC-1 (Schellman)", "kind": "assurance", "status": "PREP", "owner_gate": "Schellman audit 4-8 wks; fees not public. Doc: ops/aiuc1-prep.md", "sent": false },
+      { "id": "oc-armilla", "name": "Armilla", "kind": "insurance", "status": "PREP", "owner_gate": ">=90-day prep, broker-distributed, hello@armilla.ai. Doc: ops/armilla-prep.md", "sent": false },
+      { "id": "oc-aisure", "name": "Munich Re aiSure", "kind": "insurance", "status": "PREP", "owner_gate": "via Mosaic / Lloyd's Syndicate 1609, broker. Doc: ops/aisure-prep.md", "sent": false },
+      { "id": "oc-testudo", "name": "Testudo", "kind": "legal-AI-risk", "status": "PREP", "owner_gate": "broker; indication in days; no code access. Doc: ops/testudo-prep.md", "sent": false }
+    ]
+  },
+  "boards_memberships": {
+    "note": "Standards/board posture. Firewall: never lobby for certification powers, never pre-brief a vendor client, never a seat that conflicts with neutrality.",
+    "entries": [
+      { "id": "bm-c2pa", "name": "C2PA Contributor Member (LF)", "status": "ACTIVE", "verified": "docusign 7C9592DB" },
+      { "id": "bm-ossf", "name": "OpenSSF model-signing", "status": "PENDING", "owner_gate": "application" },
+      { "id": "bm-x402", "name": "LF x402 Foundation", "status": "PENDING", "owner_gate": "application" },
+      { "id": "bm-owasp", "name": "OWASP AI/MCP", "status": "PENDING", "owner_gate": "application" },
+      { "id": "bm-aiverify", "name": "AI Verify Foundation", "status": "PENDING", "owner_gate": "application" },
+      { "id": "bm-bsi", "name": "BSI ART/1 seat", "status": "GATED", "owner_gate": "UK mirror of ISO/IEC SC 42; £0; pack at SOVOS/BSI_ART1_SEAT_2026-08-15.md" }
+    ]
+  },
+  "infra": {
+    "note": "Compute / measurement supply. Cost-sensitive; offload to RunPod/Oracle.",
+    "entries": [
+      { "id": "inf-a100", "name": "RunPod A100", "id_pod": "l7g747oivyq6ab", "status": "DOWN", "owner_gate": "console restart (owner)", "note": "sovos-light-master-mine-20260816" },
+      { "id": "inf-oracle", "name": "Oracle Always Free micros", "hosts": ["141.147.73.85","145.241.232.16"], "status": "LIVE", "note": "~/csoai-eat-backup, 25+ cards, 2 EAT boards" },
+      { "id": "inf-overnight", "name": "launchd com.csoai.eunomia-overnight", "status": "LIVE", "note": "30-min, graceful A100 guard, auto-resume" }
+    ]
+  },
+  "indices": {
+    "note": "Aspirational index axes declared UNMEASURED first (JL.5). 10 of 13 measured; 3 aspirational UNMEASURED (PR #645).",
+    "entries": [
+      { "id": "idx-ai-economy", "axis": "ai-economy-index", "status": "UNMEASURED", "note": "AI-economy / agent-payments index" },
+      { "id": "idx-human-labour", "axis": "human-labour", "status": "UNMEASURED", "note": "human-labour displacement index" },
+      { "id": "idx-humanoid", "axis": "humanoid-labour", "status": "UNMEASURED", "note": "humanoid-labour index" }
+    ]
+  }
+}
