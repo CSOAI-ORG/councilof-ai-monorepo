@@ -1,0 +1,1267 @@
+{
+ "generated": "2026-08-25",
+ "note": "DORADO reg-bank sync source + SOV SIGNAL regulatory-pressure feature channel",
+ "count": 126,
+ "events": [
+  {
+   "regulation": "Australia Voluntary AI Safety Standard",
+   "id": "australia-voluntary-ai-standard",
+   "region": "AU",
+   "pole": "east",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "Sept 2024",
+   "source": "clawd/csoai-dashboard-master (frameworks/australia-voluntary-ai-standard)"
+  },
+  {
+   "regulation": "Argentina Personal Data Protection Law 25.326",
+   "id": "argentina-personal-data-protection-law-25-326",
+   "region": "Argentina",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#130)"
+  },
+  {
+   "regulation": "Australia Privacy Act 1988 (incl. 2024 amendments)",
+   "id": "australia-privacy-act-1988-incl-2024-amendments",
+   "region": "Australia",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#98)"
+  },
+  {
+   "regulation": "Bahrain Personal Data Protection Law 2018",
+   "id": "bahrain-personal-data-protection-law-2018",
+   "region": "Bahrain",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#117)"
+  },
+  {
+   "regulation": "China GenAI & Algorithm Rules",
+   "id": "china-genai-measures",
+   "region": "CN",
+   "pole": "east",
+   "binding": true,
+   "status": "in force",
+   "effective": "GenAI 15 Aug 2023 · Deep Synthesis 10 Jan 2023 · Algorithm Recs 1 Mar 2022",
+   "source": "clawd/csoai-dashboard-master (frameworks/china-genai-measures)"
+  },
+  {
+   "regulation": "China PIPL",
+   "id": "china-pipl",
+   "region": "CN",
+   "pole": "east",
+   "binding": true,
+   "status": "in force",
+   "effective": "1 Nov 2021",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "China Algorithm Recommendation Provisions (2022)",
+   "id": "china-algorithm-recommendation-provisions-2022",
+   "region": "China",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#72)"
+  },
+  {
+   "regulation": "China Cybersecurity Law (CSL)",
+   "id": "china-cybersecurity-law-csl",
+   "region": "China",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#70)"
+  },
+  {
+   "regulation": "China Interim Measures for Generative AI Services (2023)",
+   "id": "china-interim-measures-for-generative-ai-services-2023",
+   "region": "China",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#71)"
+  },
+  {
+   "regulation": "China Synthetic Content Identification Provisions (2024)",
+   "id": "china-synthetic-content-identification-provisions-2024",
+   "region": "China",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#73)"
+  },
+  {
+   "regulation": "Indonesia AI Ethics Circular",
+   "id": "indonesia-ai-ethics",
+   "region": "ID",
+   "pole": "east",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "19 Dec 2023",
+   "source": "clawd/csoai-dashboard-master (frameworks/indonesia-ai-ethics)"
+  },
+  {
+   "regulation": "India IT Rules — Synthetic Content",
+   "id": "india-it-synthetic-rules",
+   "region": "IN",
+   "pole": "east",
+   "binding": true,
+   "status": "in force",
+   "effective": "20 Feb 2026",
+   "source": "clawd/csoai-dashboard-master (frameworks/india-it-synthetic-rules)"
+  },
+  {
+   "regulation": "India Digital Personal Data Protection Act 2023",
+   "id": "india-digital-personal-data-protection-act-2023",
+   "region": "India",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#95)"
+  },
+  {
+   "regulation": "Indonesia Personal Data Protection Law 2022",
+   "id": "indonesia-personal-data-protection-law-2022",
+   "region": "Indonesia",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#93)"
+  },
+  {
+   "regulation": "Japan AI Promotion Act",
+   "id": "japan-ai-promotion-act",
+   "region": "JP",
+   "pole": "east",
+   "binding": false,
+   "status": "in force (non-punitive)",
+   "effective": "4 Jun 2025",
+   "source": "clawd/csoai-dashboard-master (frameworks/japan-ai-promotion-act)"
+  },
+  {
+   "regulation": "Korea AI Basic Act",
+   "id": "korea-ai-basic-act",
+   "region": "KR",
+   "pole": "east",
+   "binding": true,
+   "status": "in force",
+   "effective": "22 Jan 2026",
+   "source": "clawd/csoai-org-v2 (frameworks/korea-ai-basic-act)"
+  },
+  {
+   "regulation": "Malaysia AI Governance & Ethics",
+   "id": "malaysia-ai-guidelines",
+   "region": "MY",
+   "pole": "east",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "20 Sep 2024",
+   "source": "clawd/csoai-dashboard-master (frameworks/malaysia-ai-guidelines)"
+  },
+  {
+   "regulation": "New Zealand Algorithm Charter",
+   "id": "nz-algorithm-charter",
+   "region": "NZ",
+   "pole": "east",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "2020",
+   "source": "clawd/csoai-dashboard-master (frameworks/new-zealand-algorithm-charter)"
+  },
+  {
+   "regulation": "Philippines AI Bills",
+   "id": "philippines-ai-bills",
+   "region": "PH",
+   "pole": "east",
+   "binding": false,
+   "status": "pending",
+   "effective": "—",
+   "source": "clawd/csoai-dashboard-master (frameworks/philippines-ai-bills)"
+  },
+  {
+   "regulation": "Saudi Arabia Personal Data Protection Law (PDPL) 2024",
+   "id": "saudi-arabia-personal-data-protection-law-pdpl-2024",
+   "region": "Saudi Arabia",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#113)"
+  },
+  {
+   "regulation": "Singapore Cybersecurity Act 2018",
+   "id": "singapore-cybersecurity-act-2018",
+   "region": "Singapore",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#82)"
+  },
+  {
+   "regulation": "Singapore Digital Services Act 2024",
+   "id": "singapore-digital-services-act-2024",
+   "region": "Singapore",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#84)"
+  },
+  {
+   "regulation": "Singapore Online Safety (Class Licence) 2023",
+   "id": "singapore-online-safety-class-licence-2023",
+   "region": "Singapore",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#83)"
+  },
+  {
+   "regulation": "Singapore Personal Data Protection Act 2012",
+   "id": "singapore-personal-data-protection-act-2012",
+   "region": "Singapore",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#81)"
+  },
+  {
+   "regulation": "South Africa POPIA (Protection of Personal Information Act) 2013",
+   "id": "south-africa-popia-protection-of-personal-information-act-2013",
+   "region": "South Africa",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#122)"
+  },
+  {
+   "regulation": "South Korea Personal Information Protection Act (PIPA)",
+   "id": "south-korea-personal-information-protection-act-pipa",
+   "region": "South Korea",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#79)"
+  },
+  {
+   "regulation": "Thailand Draft AI Law",
+   "id": "thailand-draft-ai",
+   "region": "TH",
+   "pole": "east",
+   "binding": false,
+   "status": "draft",
+   "effective": "—",
+   "source": "clawd/csoai-dashboard-master (frameworks/thailand-ai-draft)"
+  },
+  {
+   "regulation": "Taiwan AI Basic Act",
+   "id": "taiwan-ai-basic-act",
+   "region": "TW",
+   "pole": "east",
+   "binding": true,
+   "status": "in force",
+   "effective": "14 Jan 2026",
+   "source": "clawd/csoai-dashboard-master (frameworks/taiwan-ai-basic-act)"
+  },
+  {
+   "regulation": "Thailand Personal Data Protection Act 2019",
+   "id": "thailand-personal-data-protection-act-2019",
+   "region": "Thailand",
+   "pole": "east",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#91)"
+  },
+  {
+   "regulation": "Thailand Royal Decree on AI Ethics 2025",
+   "id": "thailand-royal-decree-on-ai-ethics-2025",
+   "region": "Thailand",
+   "pole": "east",
+   "binding": false,
+   "status": "PROPOSED",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#92)"
+  },
+  {
+   "regulation": "Vietnam Law on AI",
+   "id": "vietnam-ai-law",
+   "region": "VN",
+   "pole": "east",
+   "binding": true,
+   "status": "in force (grace)",
+   "effective": "1 Mar 2026 (grace to 1 Mar 2027)",
+   "source": "clawd/csoai-dashboard-master (frameworks/vietnam-ai-law)"
+  },
+  {
+   "regulation": "UAE AI Charter & Strategy",
+   "id": "uae-ai-charter",
+   "region": "AE",
+   "pole": "global",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "Charter 2024",
+   "source": "clawd/csoai-dashboard-master (frameworks/uae-ai-charter)"
+  },
+  {
+   "regulation": "Brazil AI Bill (PL 2338/2023)",
+   "id": "brazil-pl2338",
+   "region": "BR",
+   "pole": "global",
+   "binding": false,
+   "status": "pending",
+   "effective": "—",
+   "source": "clawd/csoai-dashboard-master (frameworks/brazil-pl2338)"
+  },
+  {
+   "regulation": "Brazil LGPD (Lei Geral de Proteção de Dados) 2018",
+   "id": "brazil-lgpd-lei-geral-de-prote-o-de-dados-2018",
+   "region": "Brazil",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#128)"
+  },
+  {
+   "regulation": "Chile AI Bill",
+   "id": "chile-ai-bill",
+   "region": "CL",
+   "pole": "global",
+   "binding": false,
+   "status": "pending",
+   "effective": "—",
+   "source": "clawd/csoai-dashboard-master (frameworks/chile-ai-bill)"
+  },
+  {
+   "regulation": "Colombia Personal Data Protection Law 1581/2012",
+   "id": "colombia-personal-data-protection-law-1581-2012",
+   "region": "Colombia",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#132)"
+  },
+  {
+   "regulation": "Egypt Responsible-AI Charter",
+   "id": "egypt-ai-charter",
+   "region": "EG",
+   "pole": "global",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "Charter 2023",
+   "source": "clawd/csoai-dashboard-master (frameworks/egypt-ai-charter)"
+  },
+  {
+   "regulation": "Ecuador Data Protection Law 2021",
+   "id": "ecuador-data-protection-law-2021",
+   "region": "Ecuador",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#135)"
+  },
+  {
+   "regulation": "Egypt Personal Data Protection Law 151/2020",
+   "id": "egypt-personal-data-protection-law-151-2020",
+   "region": "Egypt",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#118)"
+  },
+  {
+   "regulation": "IMO MASS Code (Maritime Autonomous Surface Ships)",
+   "id": "imo-mass-code-maritime-autonomous-surface-ships",
+   "region": "Global (IMO)",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#168)"
+  },
+  {
+   "regulation": "Hong Kong AI Personal Data (Privacy) Ordinance 2025",
+   "id": "hong-kong-ai-personal-data-privacy-ordinance-2025",
+   "region": "Hong Kong",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#88)"
+  },
+  {
+   "regulation": "Israel AI Policy & Ethics",
+   "id": "israel-ai-policy",
+   "region": "IL",
+   "pole": "global",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "18 Dec 2023",
+   "source": "clawd/csoai-dashboard-master (frameworks/israel-ai-policy)"
+  },
+  {
+   "regulation": "Iceland Data Protection Act 2000",
+   "id": "iceland-data-protection-act-2000",
+   "region": "Iceland",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#107)"
+  },
+  {
+   "regulation": "Israel Privacy Protection Law 1981",
+   "id": "israel-privacy-protection-law-1981",
+   "region": "Israel",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#108)"
+  },
+  {
+   "regulation": "Jordan Personal Data Protection Law 2023",
+   "id": "jordan-personal-data-protection-law-2023",
+   "region": "Jordan",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#119)"
+  },
+  {
+   "regulation": "Kenya National AI Strategy",
+   "id": "kenya-ai-strategy",
+   "region": "KE",
+   "pole": "global",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "27 Mar 2025",
+   "source": "clawd/csoai-dashboard-master (frameworks/kenya-ai-strategy)"
+  },
+  {
+   "regulation": "Mexico LFPDPPP (Federal Personal Data Protection Law)",
+   "id": "mexico-lfpdppp-federal-personal-data-protection-law",
+   "region": "Mexico",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#127)"
+  },
+  {
+   "regulation": "Nigeria National AI Strategy",
+   "id": "nigeria-ai-strategy",
+   "region": "NG",
+   "pole": "global",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "Aug 2024",
+   "source": "clawd/csoai-dashboard-master (frameworks/nigeria-ai-strategy)"
+  },
+  {
+   "regulation": "New Zealand Privacy Act 2020",
+   "id": "new-zealand-privacy-act-2020",
+   "region": "New Zealand",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#102)"
+  },
+  {
+   "regulation": "Nigeria Data Protection Regulation 2019 (NDPR)",
+   "id": "nigeria-data-protection-regulation-2019-ndpr",
+   "region": "Nigeria",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#123)"
+  },
+  {
+   "regulation": "Peru AI Law + Regulation",
+   "id": "peru-ai-law",
+   "region": "PE",
+   "pole": "global",
+   "binding": true,
+   "status": "in force (phased)",
+   "effective": "Reg. effective 22 Jan 2026",
+   "source": "clawd/csoai-dashboard-master (frameworks/peru-ai-law)"
+  },
+  {
+   "regulation": "Pakistan National AI Policy",
+   "id": "pakistan-ai-policy",
+   "region": "PK",
+   "pole": "global",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "30 Jul 2025",
+   "source": "clawd/csoai-dashboard-master (frameworks/pakistan-ai-policy)"
+  },
+  {
+   "regulation": "Peru Personal Data Protection Law 29733",
+   "id": "peru-personal-data-protection-law-29733",
+   "region": "Peru",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#133)"
+  },
+  {
+   "regulation": "Qatar Personal Data Privacy Law 2016",
+   "id": "qatar-personal-data-privacy-law-2016",
+   "region": "Qatar",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#116)"
+  },
+  {
+   "regulation": "Rwanda National AI Policy",
+   "id": "rwanda-ai-policy",
+   "region": "RW",
+   "pole": "global",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "20 Apr 2023",
+   "source": "clawd/csoai-dashboard-master (frameworks/rwanda-ai-policy)"
+  },
+  {
+   "regulation": "Saudi SDAIA AI Ethics",
+   "id": "saudi-sdaia-ai-ethics",
+   "region": "SA",
+   "pole": "global",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "Sept 2023",
+   "source": "clawd/csoai-dashboard-master (frameworks/saudi-sdaia-ai-ethics)"
+  },
+  {
+   "regulation": "Switzerland Revised Data Protection Act 2023 (revDSG)",
+   "id": "switzerland-revised-data-protection-act-2023-revdsg",
+   "region": "Switzerland",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#104)"
+  },
+  {
+   "regulation": "Turkey Draft AI Law",
+   "id": "turkey-draft-ai-law",
+   "region": "TR",
+   "pole": "global",
+   "binding": false,
+   "status": "draft",
+   "effective": "—",
+   "source": "clawd/csoai-dashboard-master (frameworks/turkey-ai-bill)"
+  },
+  {
+   "regulation": "Taiwan Personal Data Protection Act",
+   "id": "taiwan-personal-data-protection-act",
+   "region": "Taiwan",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#87)"
+  },
+  {
+   "regulation": "Turkey Personal Data Protection Law (KVKK) 6698",
+   "id": "turkey-personal-data-protection-law-kvkk-6698",
+   "region": "Turkey",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#121)"
+  },
+  {
+   "regulation": "UAE Personal Data Protection Law 2021",
+   "id": "uae-personal-data-protection-law-2021",
+   "region": "UAE",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#110)"
+  },
+  {
+   "regulation": "UN Regulation 157 (Automated Lane Keeping)",
+   "id": "un-regulation-157-automated-lane-keeping",
+   "region": "UNECE",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#169)"
+  },
+  {
+   "regulation": "Uruguay Personal Data Protection Law 18.331",
+   "id": "uruguay-personal-data-protection-law-18-331",
+   "region": "Uruguay",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#134)"
+  },
+  {
+   "regulation": "Vietnam Decree on AI 2025",
+   "id": "vietnam-decree-on-ai-2025",
+   "region": "Vietnam",
+   "pole": "global",
+   "binding": false,
+   "status": "PROPOSED",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#89)"
+  },
+  {
+   "regulation": "Vietnam Personal Data Protection Decree 13/2023",
+   "id": "vietnam-personal-data-protection-decree-13-2023",
+   "region": "Vietnam",
+   "pole": "global",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#90)"
+  },
+  {
+   "regulation": "South Africa AI Policy Framework",
+   "id": "south-africa-ai-policy",
+   "region": "ZA",
+   "pole": "global",
+   "binding": false,
+   "status": "draft",
+   "effective": "Draft 2024",
+   "source": "clawd/csoai-dashboard-master (frameworks/south-africa-ai-policy)"
+  },
+  {
+   "regulation": "Canada AIDA",
+   "id": "canada-aida",
+   "region": "CA",
+   "pole": "west",
+   "binding": false,
+   "status": "lapsed",
+   "effective": "—",
+   "source": "clawd/csoai-dashboard-master (frameworks/canada-aida)"
+  },
+  {
+   "regulation": "Quebec Law 25 — Automated Decisions",
+   "id": "quebec-law-25",
+   "region": "CA-QC",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "22 Sep 2023 (ADM provisions)",
+   "source": "clawd/csoai-dashboard-master (frameworks/quebec-law-25-adm)"
+  },
+  {
+   "regulation": "Switzerland AI Approach",
+   "id": "switzerland-ai-approach",
+   "region": "CH",
+   "pole": "west",
+   "binding": false,
+   "status": "active (sectoral)",
+   "effective": "12 Feb 2025 decision",
+   "source": "clawd/csoai-dashboard-master (frameworks/switzerland-ai-approach)"
+  },
+  {
+   "regulation": "Canada PIPEDA",
+   "id": "canada-pipeda",
+   "region": "Canada",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#125)"
+  },
+  {
+   "regulation": "Chile Data Protection Law 19.628",
+   "id": "chile-data-protection-law-19-628",
+   "region": "Chile",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#131)"
+  },
+  {
+   "regulation": "Cyber Resilience Act (CRA)",
+   "id": "cra",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force (phased)",
+   "effective": "Active-exploitation reporting 11 Sep 2026 · full 11 Dec 2027",
+   "source": "clawd/csoai-org-v2 (frameworks/cra)"
+  },
+  {
+   "regulation": "DORA",
+   "id": "dora",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "17 Jan 2025",
+   "source": "clawd/csoai-org-v2 (frameworks/dora)"
+  },
+  {
+   "regulation": "EMIR (European Market Infrastructure Regulation)",
+   "id": "emir-european-market-infrastructure-regulation",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#143)"
+  },
+  {
+   "regulation": "EU AI Act",
+   "id": "eu-ai-act",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force (phased)",
+   "effective": "Prohibitions 2 Feb 2025 · GPAI 2 Aug 2025 · Annex III high-risk 2 Dec 2027 · Annex I 2 Aug 2028",
+   "source": "clawd/csoai-org-v2 (frameworks/eu-ai-act)"
+  },
+  {
+   "regulation": "EU AI Liability Directive",
+   "id": "eu-ai-liability-directive",
+   "region": "EU",
+   "pole": "west",
+   "binding": false,
+   "status": "proposed",
+   "effective": "—",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "EU AI Pact (voluntary pledges)",
+   "id": "eu-ai-pact-2",
+   "region": "EU",
+   "pole": "west",
+   "binding": false,
+   "status": "voluntary",
+   "effective": "2023",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "EU CSRD / ESRS",
+   "id": "eu-csrd",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2022/2464 (phased)",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "EU Data Act",
+   "id": "eu-data-act",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2023 (applies Sep 2025)",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "EU Digital Markets Act",
+   "id": "eu-dma",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2022/1925",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "EU Digital Omnibus (2025–2026)",
+   "id": "eu-digital-omnibus-2025-2026",
+   "region": "EU",
+   "pole": "west",
+   "binding": false,
+   "status": "PROPOSED",
+   "effective": null,
+   "source": "`clawd/_compintel/regulators-matrix.md` (§3)"
+  },
+  {
+   "regulation": "EU Digital Services Act",
+   "id": "eu-dsa",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2022/2065",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "EU GMP Annex 11 (computerised systems)",
+   "id": "eu-gmp-annex-11-computerised-systems",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#153)"
+  },
+  {
+   "regulation": "EU Medical Device Regulation 2017/745 (MDR)",
+   "id": "eu-medical-device-regulation-2017-745-mdr",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#149)"
+  },
+  {
+   "regulation": "EU Product Liability Directive (revised)",
+   "id": "eu-pl-directive",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2024/2853",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "EU Space Law / EU Space Act (proposal)",
+   "id": "eu-space-law",
+   "region": "EU",
+   "pole": "west",
+   "binding": false,
+   "status": "proposed (Council compromise text 2026; still in legislative process)",
+   "effective": "2025 proposal · Council compromise 2026 · not yet adopted (verified 2026-08-21)",
+   "source": "web (European Commission; kratosspace.com; space.commerce.gov May-2026 update)"
+  },
+  {
+   "regulation": "EU Space Programme Regulation (EU) 2021/696",
+   "id": "eu-space-programme",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2021",
+   "source": "web (EUR-Lex)"
+  },
+  {
+   "regulation": "MiFID II 2014/65/EU",
+   "id": "mifid-ii-2014-65-eu",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#137)"
+  },
+  {
+   "regulation": "MiFIR 2014/600/EU",
+   "id": "mifir-2014-600-eu",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#144)"
+  },
+  {
+   "regulation": "NIS2",
+   "id": "nis2",
+   "region": "EU",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "18 Oct 2024",
+   "source": "clawd/csoai-org-v2 (frameworks/nis2)"
+  },
+  {
+   "regulation": "GDPR / UK GDPR",
+   "id": "gdpr",
+   "region": "EU/UK",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "25 May 2018",
+   "source": "clawd/csoai-org-v2 (frameworks/gdpr)"
+  },
+  {
+   "regulation": "Lebanon Law on Data Protection 2024",
+   "id": "lebanon-law-on-data-protection-2024",
+   "region": "Lebanon",
+   "pole": "west",
+   "binding": false,
+   "status": "PROPOSED",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#120)"
+  },
+  {
+   "regulation": "Norway AI (EEA)",
+   "id": "norway-ai-eea",
+   "region": "NO",
+   "pole": "west",
+   "binding": false,
+   "status": "pending",
+   "effective": "—",
+   "source": "clawd/csoai-dashboard-master (frameworks/norway-ai-eea)"
+  },
+  {
+   "regulation": "UK Data Protection Act 2018",
+   "id": "uk-dpa-2018",
+   "region": "UK",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2018",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "UK FCA Handbook",
+   "id": "uk-fca-handbook",
+   "region": "UK",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#138)"
+  },
+  {
+   "regulation": "UK MHRA Software as a Medical Device 2024",
+   "id": "uk-mhra-software-as-a-medical-device-2024",
+   "region": "UK",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#150)"
+  },
+  {
+   "regulation": "UK Online Safety Act 2023",
+   "id": "uk-online-safety-act",
+   "region": "UK",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2023 (phased)",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "UK Outer Space Act 1986",
+   "id": "uk-outer-space-act",
+   "region": "UK",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "1986",
+   "source": "web (legislation.gov.uk)"
+  },
+  {
+   "regulation": "UK PRA Rulebook",
+   "id": "uk-pra-rulebook",
+   "region": "UK",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#145)"
+  },
+  {
+   "regulation": "UK Pro-Innovation AI Approach",
+   "id": "uk-ai-approach",
+   "region": "UK",
+   "pole": "west",
+   "binding": false,
+   "status": "active (non-statutory)",
+   "effective": "White Paper Mar 2023",
+   "source": "clawd/csoai-dashboard-master (frameworks/uk-ai-approach)"
+  },
+  {
+   "regulation": "UK Space Industry Act 2018",
+   "id": "uk-space-industry-act",
+   "region": "UK",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2018 (regulations phased)",
+   "source": "web (legislation.gov.uk)"
+  },
+  {
+   "regulation": "HIPAA",
+   "id": "hipaa",
+   "region": "US",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "1996",
+   "source": "clawd/csoai-org-v2 (frameworks/hipaa)"
+  },
+  {
+   "regulation": "US Commercial Space Launch Act + FAA Part 450",
+   "id": "us-commercial-space-launch",
+   "region": "US",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "1984 (Part 450 2021)",
+   "source": "web (FAA)"
+  },
+  {
+   "regulation": "US Executive Order 14110 (AI Safety)",
+   "id": "us-eo-14110",
+   "region": "US",
+   "pole": "west",
+   "binding": true,
+   "status": "revoked",
+   "effective": "Oct 2023 → revoked 2025",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "US Executive Order 14179 (AI Action Plan)",
+   "id": "us-eo-14179",
+   "region": "US",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "Jan 2025",
+   "source": "clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md"
+  },
+  {
+   "regulation": "California AI Transparency Act (SB 942)",
+   "id": "california-sb942",
+   "region": "US-State",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "2 Aug 2026 (delayed by AB 853)",
+   "source": "clawd/csoai-dashboard-master (frameworks/california-sb942-transparency)"
+  },
+  {
+   "regulation": "California Bot Disclosure (SB 1001)",
+   "id": "california-sb1001",
+   "region": "US-State",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "1 Jul 2019",
+   "source": "clawd/csoai-dashboard-master (frameworks/california-sb1001-bots)"
+  },
+  {
+   "regulation": "California GenAI Training-Data Transparency (AB 2013)",
+   "id": "california-ab2013",
+   "region": "US-State",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "1 Jan 2026",
+   "source": "clawd/csoai-dashboard-master (frameworks/california-ab2013-training-data)"
+  },
+  {
+   "regulation": "Colorado AI Act (SB24-205)",
+   "id": "colorado-ai-act",
+   "region": "US-State",
+   "pole": "west",
+   "binding": true,
+   "status": "enacted (amended)",
+   "effective": "1 Jan 2027",
+   "source": "clawd/csoai-dashboard-master (frameworks/colorado-ai-act)"
+  },
+  {
+   "regulation": "Illinois AI in Employment (HB 3773)",
+   "id": "illinois-hb3773",
+   "region": "US-State",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "1 Jan 2026",
+   "source": "clawd/csoai-dashboard-master (frameworks/illinois-hb3773-employment)"
+  },
+  {
+   "regulation": "Illinois Biometric Privacy (BIPA)",
+   "id": "illinois-bipa",
+   "region": "US-State",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "3 Oct 2008",
+   "source": "clawd/csoai-dashboard-master (frameworks/illinois-bipa)"
+  },
+  {
+   "regulation": "NYC Automated Employment Tools (Local Law 144)",
+   "id": "nyc-local-law-144",
+   "region": "US-State",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "Enforced 5 Jul 2023",
+   "source": "clawd/csoai-dashboard-master (frameworks/nyc-local-law-144)"
+  },
+  {
+   "regulation": "Texas Responsible AI Governance Act (TRAIGA)",
+   "id": "texas-traiga",
+   "region": "US-State",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "1 Jan 2026",
+   "source": "clawd/csoai-dashboard-master (frameworks/texas-traiga)"
+  },
+  {
+   "regulation": "Utah AI Policy Act (SB 149)",
+   "id": "utah-ai-policy-act",
+   "region": "US-State",
+   "pole": "west",
+   "binding": true,
+   "status": "in force",
+   "effective": "1 May 2024 (sunset ext. to 1 Jul 2027)",
+   "source": "clawd/csoai-dashboard-master (frameworks/utah-ai-policy-act)"
+  },
+  {
+   "regulation": "FDA 21 CFR Part 11 (electronic records)",
+   "id": "fda-21-cfr-part-11-electronic-records",
+   "region": "USA",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#147)"
+  },
+  {
+   "regulation": "FINRA Rule 3110 (US broker-dealer supervision)",
+   "id": "finra-rule-3110-us-broker-dealer-supervision",
+   "region": "USA",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#142)"
+  },
+  {
+   "regulation": "HIPAA Security Rule NPRM 2025",
+   "id": "hipaa-security-rule-nprm-2025",
+   "region": "USA",
+   "pole": "west",
+   "binding": false,
+   "status": "PROPOSED",
+   "effective": null,
+   "source": "`clawd/_compintel/regulators-matrix.md` (§11)"
+  },
+  {
+   "regulation": "HITECH Act (US)",
+   "id": "hitech-act-us",
+   "region": "USA",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#154)"
+  },
+  {
+   "regulation": "ITAR (US International Traffic in Arms Regulations)",
+   "id": "itar-us-international-traffic-in-arms-regulations",
+   "region": "USA",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#165)"
+  },
+  {
+   "regulation": "US Dodd-Frank 2010",
+   "id": "us-dodd-frank-2010",
+   "region": "USA",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#141)"
+  },
+  {
+   "regulation": "US Executive Order 11 Dec 2025 (national AI policy + pre-emption)",
+   "id": "us-executive-order-11-dec-2025-national-ai-policy-pre-emption",
+   "region": "USA",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/_compintel/regulators-matrix.md` (§10, §12)"
+  },
+  {
+   "regulation": "US Executive Order 2 Jun 2026 (Promoting Advanced AI Innovation and Security)",
+   "id": "us-executive-order-2-jun-2026-promoting-advanced-ai-innovation-and-security",
+   "region": "USA",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/_compintel/regulators-matrix.md` (§10)"
+  },
+  {
+   "regulation": "US Sarbanes-Oxley (SOX) 2002",
+   "id": "us-sarbanes-oxley-sox-2002",
+   "region": "USA",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#140)"
+  },
+  {
+   "regulation": "US SEC Reg S-K Item 106 (Climate + Cyber)",
+   "id": "us-sec-reg-s-k-item-106-climate-cyber",
+   "region": "USA",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/sovereign-charters/UNIVERSAL_COMPLIANCE_FRAMEWORKS_2026-07-02.md` (#139)"
+  },
+  {
+   "regulation": "California AB 853 (AI Transparency Act)",
+   "id": "california-ab-853-ai-transparency-act",
+   "region": "USA (California)",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/_compintel/regulators-matrix.md` (§12)"
+  },
+  {
+   "regulation": "California SB 53 (Transparency in Frontier AI Act)",
+   "id": "california-sb-53-transparency-in-frontier-ai-act",
+   "region": "USA (California)",
+   "pole": "west",
+   "binding": true,
+   "status": "LIVE",
+   "effective": null,
+   "source": "`clawd/_compintel/regulators-matrix.md` (§12)"
+  }
+ ]
+}

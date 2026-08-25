@@ -1,0 +1,36 @@
+{
+ "generated": "2026-08-25",
+ "slot": "frameworks-drum",
+ "mission": "measured \u2192 CI'd \u2192 signed \u2192 chained \u2192 anchored \u2192 boarded \u2192 mirrored",
+ "boxes": {
+  "measured": {
+   "ok": true,
+   "note": "662 items, deterministic counts, sources recorded"
+  },
+  "ci": {
+   "ok": true,
+   "note": "competitor/peer frameworks indexed; cross-check run (135 citations, 0 dead \u2014 VERIFIED)"
+  },
+  "signed": {
+   "ok": false,
+   "note": "no h3k cards emitted yet \u2014 signing rail is the council-sign leg"
+  },
+  "chained": {
+   "ok": "partial",
+   "note": "archive locally hash-chained (tamper-evident, ledger #29); not yet signed into the [internal] chain"
+  },
+  "anchored": {
+   "ok": false,
+   "note": "no OTS/Bitcoin anchor yet"
+  },
+  "boarded": {
+   "ok": true,
+   "note": "live at https://frameworks-drum.pages.dev \u2014 6 content pages (counts + honest-register note)"
+  },
+  "mirrored": {
+   "ok": true,
+   "note": "llms.txt + A2A card + MCP registry tile + PACK_INDEX"
+  }
+ },
+ "status": "PARTIAL \u2014 4/7 true, 1 partial, 2 false (honest register)"
+}

@@ -1,0 +1,152 @@
+{
+ "generated": "2026-08-25",
+ "purpose": "measured-compliance evidence surface \u2014 reference index + measured gauge + measured arena Elo + contamination register, fused. Anti-benchmark-gaming and EU AI Act GPAI-compliance evidence. MEASUREMENT, not certification.",
+ "index": {
+  "items": {
+   "framework": 218,
+   "charter": 134,
+   "regulation": 126,
+   "article": 139,
+   "sector": 9,
+   "benchmark": 36
+  },
+  "canary": "drum-canary-7f3a9c2e"
+ },
+ "contamination_register": {
+  "benchmarks": 36,
+  "resistant": 12,
+  "high": 5
+ },
+ "measured_arena_elo": {
+  "method": "Bradley-Terry Elo (K=32), on OUR measured GSPC pillars \u2014 NOT market Elo",
+  "head_to_head": 12,
+  "top": [
+   {
+    "model": "[internal]-unified:latest",
+    "elo": 1077
+   },
+   {
+    "model": "qwen3:8b",
+    "elo": 1057
+   },
+   {
+    "model": "[internal]-ultimate-sovereign:latest",
+    "elo": 1002
+   },
+   {
+    "model": "deepseek-r1:8b",
+    "elo": 945
+   },
+   {
+    "model": "council-[internal]:latest",
+    "elo": 926
+   }
+  ],
+  "notes": "Scores on our GSPC axes; never blended with external/market Elo."
+ },
+ "measured_gauge": {
+  "live_records": 30332,
+  "signed_cards": 97,
+  "mean_of_axes": 0.5944,
+  "axes": [
+   {
+    "axis": "accountability",
+    "records": 1809,
+    "models": 244,
+    "mean": 0.5896
+   },
+   {
+    "axis": "affect",
+    "records": 1773,
+    "models": 243,
+    "mean": 0.6019
+   },
+   {
+    "axis": "care",
+    "records": 1780,
+    "models": 244,
+    "mean": 0.6019
+   },
+   {
+    "axis": "continuity",
+    "records": 1941,
+    "models": 265,
+    "mean": 0.5904
+   },
+   {
+    "axis": "creativity",
+    "records": 1895,
+    "models": 264,
+    "mean": 0.6019
+   },
+   {
+    "axis": "efficiency",
+    "records": 1809,
+    "models": 244,
+    "mean": 0.5896
+   },
+   {
+    "axis": "fairness",
+    "records": 1946,
+    "models": 266,
+    "mean": 0.5905
+   },
+   {
+    "axis": "gov",
+    "records": 1894,
+    "models": 265,
+    "mean": 0.6019
+   },
+   {
+    "axis": "human-vs-ai",
+    "records": 1969,
+    "models": 269,
+    "mean": 0.5906
+   },
+   {
+    "axis": "jail",
+    "records": 1979,
+    "models": 276,
+    "mean": 0.5882
+   },
+   {
+    "axis": "privacy",
+    "records": 1948,
+    "models": 266,
+    "mean": 0.5905
+   },
+   {
+    "axis": "safety",
+    "records": 1809,
+    "models": 244,
+    "mean": 0.5896
+   },
+   {
+    "axis": "slot15",
+    "records": 1772,
+    "models": 243,
+    "mean": 0.6019
+   },
+   {
+    "axis": "sovereignty",
+    "records": 1812,
+    "models": 245,
+    "mean": 0.5896
+   },
+   {
+    "axis": "swarm",
+    "records": 1925,
+    "models": 265,
+    "mean": 0.6019
+   },
+   {
+    "axis": "transparency",
+    "records": 1809,
+    "models": 244,
+    "mean": 0.5896
+   }
+  ]
+ },
+ "status": "MEASURED (not certified) \u2014 the signed Ed25519 attestation lands with the #dsh rail",
+ "honest_register": "unmeasured axes stay UNMEASURED; no score inflated by contamination; anti-Goodhart register is the differentiator"
+}

@@ -1,0 +1,271 @@
+{
+ "generated": "2026-08-25",
+ "note": "anti-Goodhart contamination register — leakage evidence per benchmark; never a score inflation.",
+ "status": "12 designed-resistant",
+ "benchmarks": [
+  {
+   "benchmark": "AgentBench",
+   "id": "agentbench",
+   "designed_resistant": true,
+   "evidence": "interactive env, less static leakage",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "AGIEval",
+   "id": "agieval",
+   "evidence": "real-exam items partially in web",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "AILuminate (MLCommons AI Safety Benchmark)",
+   "id": "ailuminate",
+   "evidence": "published hazard set; re-test-set versioning ongoing",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "ARC — Abstraction and Reasoning Corpus",
+   "id": "arc",
+   "evidence": "some ARC-easy items in training; ARC-AGI harder",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "BIG-bench — Beyond the Imitation Game",
+   "id": "big-bench",
+   "evidence": "published tasks overlap common data",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "BoolQ",
+   "id": "boolq",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "Chatbot Arena (LMSYS)",
+   "id": "chatbot-arena",
+   "designed_resistant": true,
+   "evidence": "no fixed public test set (live crowd, fresh prompts)",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "CommonsenseQA",
+   "id": "commonsenseqa",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "GAIA — General AI Assistants",
+   "id": "gaia",
+   "designed_resistant": true,
+   "evidence": "real-world novel Qs; human-solvable",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "GLUE — General Language Understanding Evaluation",
+   "id": "glue",
+   "evidence": "saturated (human-baseline exceeded on most tasks)",
+   "level": "high",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "GPQA — Graduate-Level Google-Proof Q&A",
+   "id": "gpqa",
+   "designed_resistant": true,
+   "evidence": "graduate-level, google-proof design; minor residues",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "GSM8K — Grade School Math",
+   "id": "gsm8k",
+   "evidence": "heavily in training; saturated",
+   "level": "high",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "HarmBench",
+   "id": "harmbench",
+   "designed_resistant": true,
+   "evidence": "red-team behaviors; re-versioned",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "HellaSwag",
+   "id": "hellaswag",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "HELM — Holistic Evaluation of Language Models",
+   "id": "helm",
+   "evidence": "published scenarios overlap common training data",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "HumanEval",
+   "id": "humaneval",
+   "evidence": "in most coding training corpora; heavily leaked",
+   "level": "high",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "LAMBADA",
+   "id": "lambada",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "LiveBench",
+   "id": "livebench",
+   "designed_resistant": true,
+   "evidence": "contamination-resistant by design (recent Qs, monthly expiry, reference-answer rotation)",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "MATH (Hendrycks)",
+   "id": "math",
+   "evidence": "in training; competition-MATH harder",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "MathVista",
+   "id": "mathvista",
+   "designed_resistant": true,
+   "evidence": "visual math; synthetic-ish; less common",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "MMLU — Massive Multitask Language Understanding",
+   "id": "mmlu",
+   "evidence": "in most large training corpora; saturated (top models ~87-90%+)",
+   "level": "high",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "MMLU-Pro",
+   "id": "mmlu-pro",
+   "designed_resistant": true,
+   "evidence": "constructed to resist contamination (multi-choice, less common in web text)",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "MMMU — Massive Multi-discipline Multimodal Understanding",
+   "id": "mmmu",
+   "designed_resistant": true,
+   "evidence": "college-level multimodal; less common",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "OpenBookQA",
+   "id": "openbookqa",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "PIQA — Physical Interaction QA",
+   "id": "piqa",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "RACE",
+   "id": "race",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "SciQ",
+   "id": "sciq",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "SQuAD 2.0",
+   "id": "squad2",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "SuperGLUE",
+   "id": "superglue",
+   "evidence": "some tasks in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "SWE-bench",
+   "id": "swe-bench",
+   "evidence": "documented training leakage (~33% of instances in models' training data per validation)",
+   "level": "high",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "ToolBench",
+   "id": "toolbench",
+   "designed_resistant": true,
+   "evidence": "live tool-call; less static leakage",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "TruthfulQA",
+   "id": "truthfulqa",
+   "evidence": "in many training sets",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "VQA v2.0",
+   "id": "vqav2",
+   "evidence": "in vision-language training data",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "WebArena",
+   "id": "webarena",
+   "designed_resistant": true,
+   "evidence": "self-hosted env, less static leakage",
+   "level": "low",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "WinoGrande",
+   "id": "winogrande",
+   "evidence": "in training",
+   "level": "medium",
+   "status": "UNMEASURED"
+  },
+  {
+   "benchmark": "WMDP — Weapons of Mass Destruction Proxy",
+   "id": "wmdp",
+   "designed_resistant": true,
+   "evidence": "hazardous-knowledge Qs; partly uncontaminated",
+   "level": "low",
+   "status": "UNMEASURED"
+  }
+ ]
+}

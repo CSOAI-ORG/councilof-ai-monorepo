@@ -1,0 +1,134 @@
+{
+ "generated": "2026-08-25",
+ "domain": "bond markets (~$130T, 5 stacked layers)",
+ "layers": [
+  {
+   "layer": "sovereign",
+   "regulations": [
+    "Basel III/IV",
+    "N/A (self-cleared)"
+   ],
+   "indexed_in_drum": true,
+   "matched": [
+    "Basel III/IV"
+   ],
+   "measured": {
+    "gauge": "gauge covers the axis (provenance/liquidity/opacity)",
+    "status": "REFERENCE-INDEXED (measured where a signed attestation exists)"
+   },
+   "gap": "live E-W pairing is [LANE] (DORADO); signed bond attestation is [GATE #dsh]"
+  },
+  {
+   "layer": "corporate",
+   "regulations": [
+    "Basel III/IV",
+    "MiFID II",
+    "EMIR",
+    "Dodd-Frank"
+   ],
+   "indexed_in_drum": true,
+   "matched": [
+    "Basel III/IV",
+    "MiFID II",
+    "EMIR",
+    "Dodd-Frank"
+   ],
+   "measured": {
+    "gauge": "gauge covers the axis (provenance/liquidity/opacity)",
+    "status": "REFERENCE-INDEXED (measured where a signed attestation exists)"
+   },
+   "gap": "live E-W pairing is [LANE] (DORADO); signed bond attestation is [GATE #dsh]"
+  },
+  {
+   "layer": "high-yield",
+   "regulations": [
+    "Basel III/IV",
+    "MiFID II",
+    "Dodd-Frank",
+    "SEC/financial"
+   ],
+   "indexed_in_drum": true,
+   "matched": [
+    "Basel III/IV",
+    "MiFID II",
+    "Dodd-Frank"
+   ],
+   "measured": {
+    "gauge": "gauge covers the axis (provenance/liquidity/opacity)",
+    "status": "REFERENCE-INDEXED (measured where a signed attestation exists)"
+   },
+   "gap": "live E-W pairing is [LANE] (DORADO); signed bond attestation is [GATE #dsh]"
+  },
+  {
+   "layer": "municipal",
+   "regulations": [
+    "SEC MSRB",
+    "Dodd-Frank",
+    "regulatory"
+   ],
+   "indexed_in_drum": true,
+   "matched": [
+    "Dodd-Frank"
+   ],
+   "measured": {
+    "gauge": "gauge covers the axis (provenance/liquidity/opacity)",
+    "status": "REFERENCE-INDEXED (measured where a signed attestation exists)"
+   },
+   "gap": "live E-W pairing is [LANE] (DORADO); signed bond attestation is [GATE #dsh]"
+  },
+  {
+   "layer": "structured-ABS",
+   "regulations": [
+    "Basel III/IV",
+    "EMIR",
+    "Dodd-Frank",
+    "SEC Reg AB"
+   ],
+   "indexed_in_drum": true,
+   "matched": [
+    "Basel III/IV",
+    "EMIR",
+    "Dodd-Frank"
+   ],
+   "measured": {
+    "gauge": "gauge covers the axis (provenance/liquidity/opacity)",
+    "status": "REFERENCE-INDEXED (measured where a signed attestation exists)"
+   },
+   "gap": "live E-W pairing is [LANE] (DORADO); signed bond attestation is [GATE #dsh]"
+  }
+ ],
+ "router": {
+  "name": "eunomia-bond-router (Bridge 1)",
+  "phase": "Phase 0 (measured+signed, no token)",
+  "pipeline": "COBOL COPYBOOK → JSON → Ed25519-signed → A2A agent card",
+  "signing": "did:web:csoai.org#estate-chain-1"
+ },
+ "east_west": {
+  "east": [
+   "China (PFAS/bond market rules)",
+   "Japan (JGB)",
+   "Korea",
+   "Singapore",
+   "Hong Kong"
+  ],
+  "west": [
+   "US (SEC/CFTC)",
+   "EU (MiFID II/EMIR)",
+   "UK (FCA/PRA)"
+  ],
+  "thesis": "the cross-border compliance 'corpus callosum' — a Chinese insurer can underwrite a UK SME bond only when both trust the CSOAI attestation; measured, not market. East↔West data is the DORADO [LANE] (over-the-wire, never fused).",
+  "measured": "UNMEASURED until live East/West bond pairing (DORADO lane), honest"
+ },
+ "gpai_lens": {
+  "applies": "EU AI Act GPAI obligations apply where AI is used in bond pricing/credit risk (a high-risk deployment)",
+  "mapped": [
+   "Art 50 transparency (AI-generated pricing/compliance outputs)",
+   "Art 53 training-data summary (credit models)",
+   "Art 55 systemic-risk (systemically-important bank models)"
+  ],
+  "evidence": "feeds/gpai_compliance_map.json (2/5 READY/MEASURED today)"
+ },
+ "measured_compliance": "gauge + contamination register + GPAI map (the compliance evidence the attestation consumes)",
+ "phase2_gate": "tokenization / atomic-DvP / smart-contract settlement — compliance-gated, NOT built",
+ "honest": "measurement, not certification; the market is a REFERENCE + MEASURED layer, never a trading signal"
+}

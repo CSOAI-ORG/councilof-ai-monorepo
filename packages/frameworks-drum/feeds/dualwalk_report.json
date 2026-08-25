@@ -1,0 +1,25 @@
+{
+ "walk": "TEA (backward)",
+ "ts": "2026-08-25T08:13:32Z",
+ "archive": {
+  "walked": 6,
+  "content_id_drift": [],
+  "signed_label_drift": [],
+  "chain_drift": [],
+  "unparseable": 0
+ },
+ "forward": {
+  "canary_ok": true,
+  "cards_ok": true,
+  "card_content_ok": true,
+  "card_content_drift": [],
+  "items": 662,
+  "missing_cards": 0,
+  "stale_cards": 0
+ },
+ "trust_marker": {
+  "trusted": false,
+  "note": ""
+ },
+ "verdict": "EAT meets TEA \u2014 claim REAL"
+}

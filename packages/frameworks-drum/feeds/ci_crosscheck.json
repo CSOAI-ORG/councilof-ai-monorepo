@@ -1,0 +1,136 @@
+{
+ "generated": "2026-08-25",
+ "checked": 135,
+ "resolved": 110,
+ "bot_blocked": [
+  {
+   "item": "centaureval-benchmarking-human-in-the-loop-value-in-agentic-coding",
+   "url": "www.semanticscholar.org/paper/CentaurEval%3A-Benchmarking-Human-in-the-Loop-Value-Luo-Ni/21098ab48850cc50d5c0a7df18f9525cb925266e",
+   "code": "202"
+  },
+  {
+   "item": "chimera-rl-an-end-to-end-autonomous-red-teaming-framework-for-llm-applications",
+   "url": "ieeexplore.ieee.org/abstract/document/11368884",
+   "code": "418"
+  },
+  {
+   "item": "human-ai-collaboration-across-decision-support-autonomous-systems-and-llm-agents",
+   "url": "www.mdpi.com/2071-1050/18/11/5313",
+   "code": "403"
+  },
+  {
+   "item": "iso-iec-42001-2023-information-technology-artificial-intelligence-management-sys",
+   "url": "www.iso.org/standard/81230.html",
+   "code": "403"
+  },
+  {
+   "item": "learning-robot-safety-from-sparse-human-feedback-using-conformal-prediction",
+   "url": "www.semanticscholar.org/paper/Learning-Robot-Safety-from-Sparse-Human-Feedback-Feldman-Vincent/c87f358a63d2d5cb81db280ac33ce5a4b0a63881",
+   "code": "202"
+  },
+  {
+   "item": "council-of-europe-framework-convention-on-artificial-intelligence-cets-225",
+   "url": "www.coe.int/en/web/conventions/full-list?module=treaty-detail&treatynum=225",
+   "code": "403"
+  },
+  {
+   "item": "g20-ai-principles",
+   "url": "www.mofa.go.jp/policy/economy/g20_summit/osaka19/pdf/documents/en/annex_08.pdf",
+   "code": "403"
+  },
+  {
+   "item": "g7-hiroshima-process-international-guiding-principles-code-of-conduct-for-advanc",
+   "url": "www.mofa.go.jp/ecm/ec/page5e_000076.html",
+   "code": "403"
+  },
+  {
+   "item": "uae-charter-for-the-development-and-use-of-ai",
+   "url": "uaelegislation.gov.ae/en/policy/details/the-uae-charter-for-the-development-and-use-of-artificial-intelligence",
+   "code": "403"
+  },
+  {
+   "item": "un-global-digital-compact",
+   "url": "www.un.org/global-digital-compact/en",
+   "code": "403"
+  },
+  {
+   "item": "etsi-isg-sai-securing-artificial-intelligence-gr-sai-series",
+   "url": "www.etsi.org/technologies/artificial-intelligence",
+   "code": "403"
+  },
+  {
+   "item": "gsma-responsible-ai-maturity-roadmap",
+   "url": "www.gsma.com/newsroom/press-release/gsma-launches-maturity-roadmap-as-telecoms-industry-leads-the-way-in-the-deployment-of-responsible-ai/",
+   "code": "403"
+  },
+  {
+   "item": "iso-iec-23894-2023-ai-risk-management-guidance",
+   "url": "www.iso.org/standard/77304.html",
+   "code": "403"
+  },
+  {
+   "item": "iso-iec-25059",
+   "url": "webstore.ansi.org/standards/incits/INCITSISOIEC250592023",
+   "code": "403"
+  },
+  {
+   "item": "iso-iec-42005-2025-ai-system-impact-assessment",
+   "url": "www.iso.org/standard/42005",
+   "code": "403"
+  },
+  {
+   "item": "iso-iec-42006-2025-requirements-for-bodies-auditing-and-certifying-ai-management",
+   "url": "www.iso.org/standard/44546.html",
+   "code": "403"
+  },
+  {
+   "item": "iso-iec-5338-2023-ai-system-life-cycle-processes",
+   "url": "www.iso.org/standard/81464.html",
+   "code": "403"
+  },
+  {
+   "item": "iso-iec-5339",
+   "url": "webstore.ansi.org/standards/iso/isoiec53392024",
+   "code": "403"
+  },
+  {
+   "item": "japan-ai-guidelines-for-business-ai-business-guidelines",
+   "url": "www.meti.go.jp/english/press/2024/0419_002.html",
+   "code": "403"
+  },
+  {
+   "item": "openai-preparedness-framework",
+   "url": "openai.com/safety/preparedness/",
+   "code": "403"
+  },
+  {
+   "item": "singapore-model-ai-governance-framework-for-agentic-ai",
+   "url": "www.mddi.gov.sg/newsroom/singapore-launches-new-model-ai-governance-framework-for-agentic-ai--/",
+   "code": "403"
+  },
+  {
+   "item": "world-economic-forum-ai-governance-alliance-incl-presidio-framework-recommendati",
+   "url": "www.weforum.org/publications/ai-governance-alliance-briefing-paper-series/",
+   "code": "403"
+  }
+ ],
+ "unreachable": [
+  {
+   "item": "rfc-3-agent-card-spec",
+   "url": "docs.astropods.com/agent-card-spec",
+   "code": "000"
+  },
+  {
+   "item": "chai-blueprint-for-trustworthy-ai-implementation-guidance-and-assurance-for-ai-i",
+   "url": "www.coalitionforhealthai.org/papers/blueprint-for-trustworthy-ai-v1.pdf",
+   "code": "000"
+  },
+  {
+   "item": "universal-guidelines-for-artificial-intelligence-ugai",
+   "url": "thepublicvoice.org/ai-universal-guidelines/",
+   "code": "500"
+  }
+ ],
+ "dead": [],
+ "verdict": "ALL RESOLVE"
+}

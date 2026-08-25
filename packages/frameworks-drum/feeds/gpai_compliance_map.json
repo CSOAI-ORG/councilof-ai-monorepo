@@ -1,0 +1,39 @@
+{
+ "generated": "2026-08-25",
+ "regulation": "EU AI Act (Regulation (EU) 2024/1689) — General Purpose AI (GPAI) obligations",
+ "enforcement_started": "2026-08-02",
+ "product": "measured compliance evidence pack — gauge + contamination register + arena Elo (fusEd)",
+ "obligations": [
+  {
+   "article": "Art 50 — transparency",
+   "obligation": "disclose AI-generated content + that output is AI",
+   "evidence": "signed measured cards / model disclosures",
+   "status": "PARTIAL — the #dsh signing rail gates the signed cards"
+  },
+  {
+   "article": "Art 53 — training-data summary",
+   "obligation": "publish a sufficiently detailed summary of training data (copyright)",
+   "evidence": "contamination register: 36 benchmarks (12 designed-resistant)",
+   "status": "READY — feeds/benchmark_contamination.json (anti-Goodhart leakage evidence)"
+  },
+  {
+   "article": "Art 53 — copyright respect",
+   "obligation": "respect copyright in training (policy + transparency)",
+   "evidence": "contamination register + provenance per benchmark",
+   "status": "PARTIAL — register built; per-model provenance is [LANE]"
+  },
+  {
+   "article": "Art 55 — systemic-risk (GPAI w/ systemic risk)",
+   "obligation": "adversarial testing, incident reporting, risk/mitigation cycle",
+   "evidence": "measured gauge: 30332 live records, 97 signed cards, 16 axes + jailbreak/fleet instrument",
+   "status": "PARTIAL — measured + adversarial instrument exist; signing + incident channel [GATE #dsh]"
+  },
+  {
+   "article": "Art 55 — model evaluation for systemic risk",
+   "obligation": "adequate model evaluation, adversarial testing",
+   "evidence": "measured gauge axis scores + arena Elo (own pillars)",
+   "status": "MEASURED (not certified) — signed attestation pending"
+  }
+ ],
+ "honest_register": "measurement, not certification; UNMEASURED stays UNMEASURED; the signed Ed25519 attestation lands with the #dsh rail"
+}

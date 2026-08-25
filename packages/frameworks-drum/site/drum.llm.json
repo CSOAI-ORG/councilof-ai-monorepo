@@ -1,0 +1,23 @@
+{
+ "title": "FRAMEWORKS DRUM \u2014 the reference index",
+ "type": "LLMPageSummary",
+ "summary": "650 public items across 6 kinds, 9 sectors; doctrine-clean; MCP/A2A queryable; content pages: index + frameworks/charters/regulations/articles/sectors",
+ "counts": {
+  "article": 131,
+  "benchmark": 36,
+  "charter": 130,
+  "framework": 218,
+  "regulation": 126,
+  "sector": 9
+ },
+ "sector_count": 9,
+ "pages": [
+  "index.html",
+  "frameworks.html",
+  "charters.html",
+  "regulations.html",
+  "articles.html",
+  "sectors.html",
+  "benchmarks.html"
+ ]
+}
