@@ -42,6 +42,7 @@ feeds/                   honest measured surfaces:
    dualwalk_report.json       TEA self-audit (EAT meets TEA — claim REAL)
    ci_crosscheck.json         135 citations, 0 dead
    rwa_xrpl_measured.json     RWA on-chain measurement (6 XRPL instruments measured on mainnet; MEASURED / PARTIAL / CITED / UNMEASURED — measurement, never certification)
+   distribution_register.json  364-venue distribution MAP (tier rollup FREE 128 / REVIEW 83 / OWNER 62 / PERMISSIONLESS 39; 67 owner-gated signup stack) — registry MAP, no listing claim, 0 codenames
    findings.json / gpai_compliance_map.json / bond_market_map.json / arena_runs.json
 mcp/                      frameworks_drum_server.py (stdlib MCP, 9 tools, selftest 22/22)
                          + manifest.json
