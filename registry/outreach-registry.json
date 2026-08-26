@@ -39,7 +39,7 @@
         "handle": "io.github.CSOAI-ORG/gspc",
         "status": "GATED",
         "owner_gate": "GitHub OAuth device-flow; package csoai-governance-mcp 0.1.1 vs registry name",
-        "verified": "published name mismatch — fix then publish 1.0.2"
+        "verified": "published name mismatch \u2014 fix then publish 1.0.2"
       },
       {
         "id": "acct-a2a",
@@ -52,7 +52,7 @@
       {
         "id": "acct-datarade",
         "platform": "Datarade",
-        "handle": "—",
+        "handle": "\u2014",
         "status": "PREP",
         "owner_gate": "Approval + owner data-room",
         "verified": "not published"
@@ -60,7 +60,7 @@
       {
         "id": "acct-snowflake",
         "platform": "Snowflake Marketplace",
-        "handle": "—",
+        "handle": "\u2014",
         "status": "PREP",
         "owner_gate": "ORGADMIN + owner",
         "verified": "not published"
@@ -68,7 +68,7 @@
       {
         "id": "acct-adx",
         "platform": "AWS Data Exchange (AMMP)",
-        "handle": "—",
+        "handle": "\u2014",
         "status": "PREP",
         "owner_gate": "AMMP + owner",
         "verified": "not published"
@@ -76,7 +76,7 @@
       {
         "id": "acct-kaggle",
         "platform": "Kaggle",
-        "handle": "—",
+        "handle": "\u2014",
         "status": "PLANNED",
         "owner_gate": "If a lane uses it",
         "verified": "not published"
@@ -206,7 +206,7 @@
     ]
   },
   "outreach_contacts": {
-    "note": "External counterparties staged for outreach. PREP-ONLY — none sent (owner-gated).",
+    "note": "External counterparties staged for outreach. PREP-ONLY \u2014 none sent (owner-gated).",
     "entries": [
       {
         "id": "oc-aiuc1",
@@ -279,7 +279,7 @@
         "id": "bm-bsi",
         "name": "BSI ART/1 seat",
         "status": "GATED",
-        "owner_gate": "UK mirror of ISO/IEC SC 42; £0; pack at SOVOS/BSI_ART1_SEAT_2026-08-15.md"
+        "owner_gate": "UK mirror of ISO/IEC SC 42; \u00a30; pack at SOVOS/BSI_ART1_SEAT_2026-08-15.md"
       }
     ]
   },
@@ -334,5 +334,14 @@
         "note": "humanoid-labour index"
       }
     ]
-  }
+  },
+  "audit_findings": [
+    {
+      "id": "fnd-hf-divergence",
+      "date": "2026-08-26",
+      "finding": "HF mirrors stale vs live board: HF gspc-board + gspc-bench-results publish 14 axes / 14-of-14 (snapshot 08-25) while live /api/gspc swept to 22 axes on 08-26 (ADR-001 financial family: provenance-controls MEASURED + 7 UNMEASURED slots). 8 live axes missing from HF. bench-results README guardrail 'do not invent 22' now contradicts live. board.json is Ed25519-signed (site_attestation, did:web:csoai.org#board-attestation-1) \u2014 do NOT regenerate without the signing key.",
+      "action": "Flag to board lane to re-mirror HF from live 22-axis board; keep signed payloads intact; README honest snapshot-note. No HF writes from this lane.",
+      "owner_gate": false
+    }
+  ]
 }
