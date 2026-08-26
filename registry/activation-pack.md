@@ -1,63 +1,81 @@
-# CSOAI Owner Fire-Book — activation & sends (fire-ready)
+# CSOAI Owner Fire-Book — activation & sends (fire-ready, v2)
 
-> **2026-08-26 status:** HF DOIs DONE · PR #645 + #788 merged (deploy in flight) · RunPod pods ALL down (need console restart) · browser-only items below.
+> **2026-08-26 status:** HF DOIs DONE · PR #645 + #788 merged + LIVE · RunPod pods ALL down (console restart) ·
+> browser-only items below, each with exact URL + steps (research-verified 2026-08-26).
+> Full research brief: `csoai-static-deploy2/SOVOS/DISTRIBUTION_FIREBOOK_2026-08-26.md`.
 
-**How this works (per your direction):** Nick opens an authenticated browser session for each account below.
-I prepare the exact step + content + what I'll verify after; Nick submits. **No plaintext password used; no bulk
-blast; no duplicate send.** Re-audit `registry/outreach-registry.json` before any step.
-
-Every step is ordered so nothing re-builds an already-live surface. All verified URLs below are current (2026-08-25).
+**How this works:** Nick opens each session; I prepare the exact content + verify before/after. No plaintext
+password; no bulk blast; no duplicate send (living DB = `outreach-registry.json`).
 
 ---
 
-## 1 · Hugging Face (owner web-UI) — the ONE cost item
-- [x] **Dataset DOIs** — **DONE** (`10.57967/hf/10114` + `10.57967/hf/10116`, verified in READMEs).
-- [ ] **Space `gspc-governance-leaderboard`**: current org plan blocks Gradio. If we need the interactive app
-  live, upgrade to **Team/Enterprise** (this is the only hard cost I can see). Else it stays a static Space.
-- [ ] After: **I verify** both datasets still 200 + the Space 200. Confirm no duplicate Space/dataset.
+## 1 · MCP Registry publish — £0 (the name fix is now known)
+The mismatch fix: npm package name stays `csoai-governance-mcp`; add **`"mcpName": "io.github.CSOAI-ORG/gspc"`**
+to package.json — they are decoupled.
+1. package.json: add `mcpName` (snippet in `fire-ready/mcp-package.json.snippet`).
+2. `npm publish` (npm account, free).
+3. `brew install mcp-publisher` → `mcp-publisher init` → server.json (see `fire-ready/mcp-server.json`).
+4. `mcp-publisher login github` → GitHub device-flow (https://github.com/login/device + code).
+5. `mcp-publisher publish` → verify via `https://registry.modelcontextprotocol.io/v0.1/servers?search=gspc`.
+- [ ] Nick: run the device-flow + publish (or I drive the CLI if he grants a session). Verify after.
 
-## 2 · MCP Registry publish (owner OAuth)
-- [ ] Fix the name mismatch in-repo: package `csoai-governance-mcp` **0.1.1** vs registry name
-  `io.github.CSOAI-ORG/gspc`. Align package.json `name` to the registry name, bump to **1.0.2**.
-- [ ] Nick runs the **mcp-publisher GitHub OAuth device-flow** (paste the one-time device code in your browser).
-- [ ] Publish `csoai-governance-mcp@1.0.2`.
-- [ ] **I verify** the registry page returns the tool set + 0.4xx.
+## 2 · A2A directories — £0
+- **a2aagentlist.com** (NOT .ai): submission is an **email to gal6111@gmail.com**, subject "A2A Agent Submission",
+  incl. agent details + card URL. Draft ready: `fire-ready/a2aagentlist-email.md`. ⚠️ personal gmail, community-run.
+- **a2a-registry.org**: submit (no account, /submit) or publish (auth, /console/agents, STAGE→ACTIVE).
+- **artinet**: NOT a directory (open-source A2A platform, the-artinet-project/artinet) — skip listing.
+- [ ] Nick: send the a2aagentlist email + submit to a2a-registry.org.
 
-## 3 · A2A directories + agent-card
-- [ ] `agent-card.json` already live (200). Submit to **a2aagentlist** + **artinet** web-forms (owner).
-- [ ] **awesome-a2a PR #157** is open — Nick merges (or re-confirms the PR is clean).
-- [ ] **I verify** agent-card.json 200 + directory listings resolve.
+## 3 · awesome-a2a — £0
+- Canonical repo is **github.com/ai-boost/awesome-a2a** (goatapi/awesome-a2a does NOT exist — the earlier
+  PR #157 was likely on the wrong repo; re-target). Entry format: `*   🔗 [Resource Title](link) - one-sentence description`;
+  add to README section AND mirror in README_zh.md; fork→branch→commit (`✨ Add: ...`)→PR.
+- Draft entry ready: `fire-ready/awesome-a2a-entry.md`.
+- [ ] Nick (or I via API with his GH session): fork, add entry, PR.
 
-## 4 · Marketplaces (owner / ORGADMIN / approval)
-- [ ] **AWS Data Exchange (AMMP)** — initiate AMMP listing of the signed data asset.
-- [ ] **Snowflake Marketplace** — needs **ORGADMIN**; publish the data product.
-- [ ] **Datarade** — complete approval + upload the data-room pack (signed record + deadline calendar).
-- [ ] **I verify** each listing/screenshot AFTER publish; record in registry as LIVE + verified URL.
+## 4 · Datarade — £0 entry (30% commission on free tier)
+- Apply: **https://providers.datarade.ai/apply** (3-min form) → review 1–2 business days → Provider Studio.
+- Publishing policies: datarade.ai/company/publishing-policies. Free tier = $0/yr + 30% commission; Bronze $6k/yr + 20%.
+- [ ] Nick: complete the apply form (copy ready in registry drafts).
 
-## 5 · Outreach sends (the 4 drafts — submit via the correct channel)
-- [ ] **AIUC-1 / Schellman** — formal scoping + SoA. Use `outreach-drafts/aiuc1.md`. Submit via their portal/
-      scheme process, not cold email. ≥ feedback in weeks; fees not public.
-- [ ] **Armilla** — broker-distributed, hello@armilla.ai. Use `outreach-drafts/armilla.md`. ≥90-day prep.
-- [ ] **Munich Re aiSure** — via Mosaic / Lloyd's Syndicate 1609 (broker). Use `outreach-drafts/aisure.md`.
-- [ ] **Testudo** — broker. Use `outreach-drafts/testudo.md` (one-pager; no code access needed).
-- [ ] **I verify** nothing was sent twice (registry `sent:false` for each before send), and mark `sent:true`
-      after each — the living DB is the anti-duplicate guard.
+## 5 · AWS Data Exchange — £0 to list (+ referral fee on paid)
+- "AMMP" = AWS Marketplace Management Portal: aws.amazon.com/marketplace/management.
+- Steps: AWS account → AMMP "Register now" → public profile → (paid: W-8/VAT/US bank/Hyperwallet) → open AWS
+  Support case requesting Data Exchange qualification → create product/revision/dataset/offer.
+- [ ] Nick: AMMP register + support case.
 
-## 6 · Board memberships (applications)
-- OpenSSF model-signing · LF x402 Foundation · OWASP AI/MCP · AI Verify Foundation.
-- [ ] Nick submits each application (or I prepare it in-browser for submission).
-- [ ] Firewall: never lobby for certification powers, never pre-brief a vendor client, never a seat that
-      conflicts with measurement neutrality.
-- [ ] **BSI ART/1** — UK mirror of ISO/IEC SC 42, £0. Pack at `SOVOS/BSI_ART1_SEAT_2026-08-15.md` (gated).
+## 6 · Snowflake Marketplace — £0 to list (+ fees on paid, ~15%)
+- No web form — **Snowsight** (app.snowflake.com) → Marketplace → Provider Studio → Create Listing.
+- Prereqs: FULL account (not trial); **ACCOUNTADMIN or custom role (ORGADMIN delegates privileges to ACCOUNTADMIN first)**;
+  accept Provider & Consumer Terms; approved provider profile; paid listings need Stripe Express.
+- [ ] Nick: provider profile approval + listing.
 
-## 7 · A100 restart (measurement volume) — owner console
-- [ ] RunPod console restart of pod `l7g747oivyq6ab` (`sovos-light-master-mine-20260816`).
-- [ ] **I verify** inference is healthy before re-running the grind (SSH + `ollama list` works ≠ inference works).
+## 7 · Boards/standards memberships — free-contribute is the £0 path
+- **OpenSSF model-signing (AI/ML Security WG)**: participate FREE (Slack/GitHub/open meetings, openssf.org/community).
+  Formal membership: General $5–10k; Associate $0 (nonprofit only — CSOAI LTD doesn't qualify). → **Join WG free**.
+- **LF x402 Foundation**: technical participation £0 (Slack slack.x402.org, GitHub x402-foundation/x402, open WGs).
+  Formal: Premier $200k; General fee-bearing; Associate $0 (nonprofit). → **Participate free**.
+- **OWASP MCP Top-10**: contribute free (fork → PR, "even a line counts"); leadership needs ~$50/yr OWASP membership.
+- **AI Verify Foundation (IMDA)**: community £0 (aiverifyfoundation.sg/community); General fee unpublished (contact form).
+- **BSI ART/1** (UK mirror ISO/IEC SC 42): committee seat £0, BUT **BSI membership required first** (subscription,
+  7 categories, £ varies — contact membership@bsigroup.com). Verify hcms page in browser.
+- [ ] Nick: submit WG join requests + AI Verify contact form; decide on BSI membership.
 
-## 8 · After each step (universal)
-- Re-audit `registry/outreach-registry.json`; update `status`/`verified`/`sent`; commit as the source of truth.
-- Never `git add -A`; stage by name. Multi-lane: use an isolated worktree + PR to `master`.
-- Canon gate: never claim live anything an outsider can't re-derive; x402 is data-only; no token.
+## 8 · Insurance outreach (drafts ready, none sent)
+AIUC-1/Schellman (formal) · Armilla (broker, hello@armilla.ai) · Munich Re aiSure (via Mosaic/Syndicate 1609) ·
+Testudo (broker). Drafts: `registry/outreach-drafts/*.md`.
 
-_Ordering note: cost only at step 1 (Space upgrade) + optional marketplaces; everything else £0. No step fires on
-a raw password._
+## 9 · A100 restart (measurement volume)
+RunPod console restart of pod `l7g747oivyq6ab` (`sovos-light-master-mine-20260816`). All RunPod SSH endpoints
+timed out 2026-08-26 — console-only. I verify inference before re-running the grind.
+
+## 10 · Cost cheat-sheet (research-verified)
+| Item | Cost |
+|---|---|
+| MCP registry · a2aagentlist · a2a-registry · awesome-a2a · OWASP contribute · OpenSSF WG · x402 technical | **£0** |
+| Datarade | £0 + 30% commission (free tier) |
+| AWS Data Exchange / Snowflake | £0 to list + fees on paid offers |
+| OWASP leadership / BSI membership / OpenSSF General / x402 General / AIVF General | paid (varies) |
+| HF Space upgrade (Gradio) | the only hard-money product item |
+
+_Re-audit registry before any publish; no duplicate send; canon gates (never a score sold, x402 data-only, no token)._
