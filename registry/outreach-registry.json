@@ -127,7 +127,7 @@
         "id": "api-registers",
         "path": "/api/registers",
         "status": "LIVE",
-        "verified": "200",
+        "verified": "200 \u00b7 13 axes = 10 MEASURED + 3 UNMEASURED (PR #645 live)",
         "note": "10 signed axes CAT F6 REAL; 3 aspirational UNMEASURED (PR #645)"
       },
       {
@@ -139,14 +139,14 @@
       {
         "id": "surf-catalog",
         "path": "/eunomia-catalog",
-        "status": "DEPLOYING",
-        "verified": "PR #788 merged; deploy in flight"
+        "status": "LIVE",
+        "verified": "200 (2026-08-26, post-merge deploy)"
       },
       {
         "id": "surf-crosswalk",
         "path": "/eunomia-crosswalk",
-        "status": "DEPLOYING",
-        "verified": "PR #788 merged; deploy in flight"
+        "status": "LIVE",
+        "verified": "200 (2026-08-26, post-merge deploy)"
       }
     ]
   },
