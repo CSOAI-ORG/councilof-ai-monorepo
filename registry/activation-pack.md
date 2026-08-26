@@ -1,5 +1,7 @@
 # CSOAI Owner Fire-Book — activation & sends (fire-ready)
 
+> **2026-08-26 status:** HF DOIs DONE · PR #645 + #788 merged (deploy in flight) · RunPod pods ALL down (need console restart) · browser-only items below.
+
 **How this works (per your direction):** Nick opens an authenticated browser session for each account below.
 I prepare the exact step + content + what I'll verify after; Nick submits. **No plaintext password used; no bulk
 blast; no duplicate send.** Re-audit `registry/outreach-registry.json` before any step.
@@ -9,8 +11,7 @@ Every step is ordered so nothing re-builds an already-live surface. All verified
 ---
 
 ## 1 · Hugging Face (owner web-UI) — the ONE cost item
-- [ ] **Dataset DOIs** for `csoai/gspc-board` + `csoai/gspc-bench-results` — in dataset settings → "Create DOI".
-  *Cost: £0, but a web-UI action that locks rename/visibility.*
+- [x] **Dataset DOIs** — **DONE** (`10.57967/hf/10114` + `10.57967/hf/10116`, verified in READMEs).
 - [ ] **Space `gspc-governance-leaderboard`**: current org plan blocks Gradio. If we need the interactive app
   live, upgrade to **Team/Enterprise** (this is the only hard cost I can see). Else it stays a static Space.
 - [ ] After: **I verify** both datasets still 200 + the Space 200. Confirm no duplicate Space/dataset.
