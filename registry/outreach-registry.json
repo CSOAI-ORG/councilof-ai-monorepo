@@ -290,9 +290,10 @@
         "id": "inf-a100",
         "name": "RunPod A100",
         "id_pod": "l7g747oivyq6ab",
-        "status": "DOWN",
-        "owner_gate": "console restart (owner)",
-        "note": "sovos-light-master-mine-20260816"
+        "status": "LIVE",
+        "owner_gate": "ports MOVE on restart \u2014 re-resolve via API, never assume dead",
+        "note": "A100-class 38.128.232.57:13440 \u00b7 sovos-light-master-mine \u00b7 $1.39/hr \u00b7 measurement engine RUNNING (axis-engine.sh + arena-auto-loop.sh + ollama serve, up 49d, verified 2026-08-27)",
+        "verified": "nvidia-smi 21% util / 18.9GB used; axis-engine.log cycle rc=0"
       },
       {
         "id": "inf-oracle",
@@ -302,7 +303,7 @@
           "145.241.232.16"
         ],
         "status": "LIVE",
-        "note": "~/csoai-eat-backup, 25+ cards, 2 EAT boards"
+        "note": "micro-2 141.147.73.85 (ubuntu) up 3w+ \u00b7 RAG mirror /home/ubuntu/rag \u00b7 28 signed cards backup"
       },
       {
         "id": "inf-overnight",
@@ -343,5 +344,128 @@
       "action": "Flag to board lane to re-mirror HF from live 22-axis board; keep signed payloads intact; README honest snapshot-note. No HF writes from this lane.",
       "owner_gate": false
     }
-  ]
+  ],
+  "fleet": {
+    "note": "2026-08-27 authoritative working agreement. SSH ports MOVE when a pod restarts \u2014 re-resolve via RunPod API (key ~/.runpod/config.toml), never assume a pod is dead.",
+    "pods": [
+      {
+        "name": "sov-repull-20260808",
+        "ip": "194.26.196.156",
+        "port": 12473,
+        "gpu": "RTX3090",
+        "role": "BUILD BOX \u2014 /workspace/councilof-ai, node22, deps installed; site builds run here"
+      },
+      {
+        "name": "sovos-light-master-mine",
+        "ip": "38.128.232.57",
+        "port": 13440,
+        "gpu": "A100-class $1.39/hr",
+        "role": "MEASUREMENT ENGINE \u2014 ollama fleet (14 models), axis-engine.sh + arena-auto-loop.sh RUNNING; GPU shows 0% BETWEEN batches (it lies)"
+      },
+      {
+        "name": "oowm-agent-01-hub",
+        "ip": "38.80.152.147",
+        "port": 39331,
+        "cpu": true,
+        "role": "OOWM hub"
+      },
+      {
+        "name": "oowm-agent-03-mine",
+        "ip": "213.173.105.92",
+        "port": 53390,
+        "cpu": true,
+        "role": "OOWM miner"
+      },
+      {
+        "name": "oowm-agent-04-route",
+        "ip": "213.173.105.102",
+        "port": 33035,
+        "cpu": true,
+        "role": "OOWM router"
+      },
+      {
+        "name": "oowm-agent-05-product",
+        "ip": "103.196.86.88",
+        "port": 41054,
+        "cpu": true,
+        "role": "OOWM product"
+      },
+      {
+        "name": "sov-volume-sink-cpu",
+        "ip": "213.173.105.83",
+        "port": 55664,
+        "cpu": true,
+        "role": "durability sink \u2014 ONLY pod with network volume sovos-merge-800 (800GB EU-RO-1)"
+      }
+    ],
+    "volumes": [
+      {
+        "name": "sovos-merge-800",
+        "size": "800GB",
+        "region": "EU-RO-1",
+        "attached": "sov-volume-sink-cpu",
+        "rule": "NEVER delete; stop never terminate"
+      },
+      {
+        "name": "k3-weights-2tb",
+        "size": "2000GB",
+        "region": "EU-RO-1",
+        "role": "model weights"
+      },
+      {
+        "name": "sov-models",
+        "size": "300GB",
+        "region": "CA-MTL-3",
+        "role": "models"
+      },
+      {
+        "name": "sov-artifacts",
+        "size": "200GB",
+        "region": "CA-MTL-3",
+        "role": "artifacts"
+      },
+      {
+        "name": "sov-workspace",
+        "size": "200GB",
+        "region": "CA-MTL-4",
+        "role": "workspace"
+      }
+    ],
+    "durability": {
+      "sink": "sov-volume-sink-cpu :55664",
+      "sync": "/workspace/durability-sync.sh cron :17 every 2h",
+      "log": "/workspace/durability-sync.log",
+      "backups": "/workspace/durability/{3090-build,a100-measure}",
+      "rule": "pod-local -> network volume -> S3 API (s3api-eu-ro-1.runpod.io) once owner mints keys"
+    },
+    "resolve_cmd": "K=$(grep -oE '[a-zA-Z0-9_-]{20,}' ~/.runpod/config.toml | head -1); curl -s \"https://api.runpod.io/graphql?api_key=$K\" -H 'Content-Type: application/json' -d '{\"query\":\"query{myself{pods{name desiredStatus runtime{ports{ip isIpPublic privatePort publicPort}}}}}\"}'"
+  },
+  "doctrine": {
+    "note": "Owner rulings \u2014 decisions, not bugs. DO NOT 'fix'.",
+    "owner_rulings": [
+      "public/signed/card_index.json = EXACTLY 150 rows (313 files on disk is INTENDED \u2014 do not reconcile)",
+      "public/signed/chain.json is DELIBERATELY DELETED \u2014 do not restore",
+      "scripts/signed-json-guard.mjs enforces both"
+    ],
+    "content_rules": [
+      "Never 'certification' as a thing we issue \u2014 we measure",
+      "No public prices, no popularity claims, no internal codenames",
+      "NEVER type a count \u2014 derive from GET /api/gspc or /api/state (kind + as_of); board = 22 axes \u00b7 15 measured \u00b7 7 unmeasured",
+      "unmeasured is a first-class published status \u2014 never hide/shrink/grey it",
+      "New routes MUST be in PRIMARY_PATHS (client/src/data/library-ia.ts) or they ship flagged 'archived'"
+    ],
+    "git_rules": [
+      "master is the ONLY integration branch; rebase onto origin/master first",
+      "DO NOT create worktrees \u2014 branch in the main checkout",
+      "DO NOT push in rapid bursts (starves GHA queue) \u2014 batch pushes",
+      "Stage by name; never git add -A in the main checkout",
+      "root src/ is DEAD \u2014 never edit it"
+    ],
+    "signup_boundary": [
+      "Agents may drive an ALREADY-authenticated session (Nick logs in once) and stage applications to submission",
+      "Agents must NOT create accounts, enter passwords, complete sign-ups, accept ToS, or send email without Nick's explicit go per item",
+      "Free-tier programmes to stage for Nick: NLnet NGI Zero (call opens 3 Sep, UK eligible), AIRR Rapid Access (20k free GPU hrs), NVIDIA Inception, HF org credits"
+    ],
+    "fleet_cost": "~$1.91/hr total (A100 $1.39 + 3090 + cpu pods); stale stopped pods still bill provisioned volumes \u2014 flag, don't delete"
+  }
 }
