@@ -4,7 +4,7 @@
   "audit": {
     "date": "2026-08-25",
     "agent": "JEEVES",
-    "note": "2026-08-28: EUNOMIA 13/13 axes MEASURED (3 aspirational indices graded); XRPL RWA feed 8->12 on-chain verified; runner --base bug fixed; PRs #645/#788/#811/#839 merged."
+    "note": "2026-08-28 batch: EUNOMIA 13/13 MEASURED + live (PR #839) \u00b7 indices page (#842) \u00b7 XRPL 17 on-chain-verified \u00b7 awesome-a2a PR #158 (ai-boost) \u00b7 durability resolved-transient \u00b7 grants staged (NGI Zero ~3 Sep, AIRR) \u00b7 playbook updated."
   },
   "accounts": {
     "note": "Platform accounts to activate/create. Each requires Nick's per-action confirmation + the private handle. Firing needs an OAuth/browser session, not a plaintext password.",
@@ -46,8 +46,8 @@
         "platform": "A2A directories",
         "handle": "agent-card.json",
         "status": "LIVE",
-        "owner_gate": "a2aagentlist/artinet are web-forms (owner submit); awesome-a2a PR #157 open",
-        "verified": ".well-known/agent-card.json 200"
+        "owner_gate": "a2aagentlist/artinet still web-forms (owner)",
+        "verified": "awesome-a2a PR #158 OPEN on ai-boost/awesome-a2a (correct repo; #157 was wrong repo)"
       },
       {
         "id": "acct-datarade",
