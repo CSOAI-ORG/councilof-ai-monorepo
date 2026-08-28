@@ -358,7 +358,9 @@
       "date": "2026-08-28",
       "finding": "Sink durability sync FAILING: /workspace/durability-sync.log shows '3090-build FAIL' + 'a100-measure FAIL' (06:44Z onward). Dry-run rsync from sink->A100 returns code 255 broken pipe. Likely sink SSH key not authorized on pods or busy-A100 drops. Pod-local work (47 signed cards on A100) at risk on terminate; network volume backup NOT capturing.",
       "action": "Flag to infra lane to fix sink->pod auth/rsync. Verify next cron tick logs OK. Not this lane's file \u2014 no silent fix.",
-      "owner_gate": false
+      "owner_gate": false,
+      "status": "RESOLVED-transient",
+      "resolution": "Log shows a100-measure OK + 3090-build OK 02:40-04:39Z 2026-08-28; earlier FAILs were transient A100 overload. No action needed; verify next cron ticks."
     }
   ],
   "fleet": {
