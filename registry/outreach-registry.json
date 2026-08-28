@@ -343,6 +343,13 @@
       "finding": "HF mirrors stale vs live board: HF gspc-board + gspc-bench-results publish 14 axes / 14-of-14 (snapshot 08-25) while live /api/gspc swept to 22 axes on 08-26 (ADR-001 financial family: provenance-controls MEASURED + 7 UNMEASURED slots). 8 live axes missing from HF. bench-results README guardrail 'do not invent 22' now contradicts live. board.json is Ed25519-signed (site_attestation, did:web:csoai.org#board-attestation-1) \u2014 do NOT regenerate without the signing key.",
       "action": "Flag to board lane to re-mirror HF from live 22-axis board; keep signed payloads intact; README honest snapshot-note. No HF writes from this lane.",
       "owner_gate": false
+    },
+    {
+      "id": "fnd-durability-sync-fail",
+      "date": "2026-08-28",
+      "finding": "Sink durability sync FAILING: /workspace/durability-sync.log shows '3090-build FAIL' + 'a100-measure FAIL' (06:44Z onward). Dry-run rsync from sink->A100 returns code 255 broken pipe. Likely sink SSH key not authorized on pods or busy-A100 drops. Pod-local work (47 signed cards on A100) at risk on terminate; network volume backup NOT capturing.",
+      "action": "Flag to infra lane to fix sink->pod auth/rsync. Verify next cron tick logs OK. Not this lane's file \u2014 no silent fix.",
+      "owner_gate": false
     }
   ],
   "fleet": {
