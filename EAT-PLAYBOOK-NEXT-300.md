@@ -1,4 +1,12 @@
 # CSOAI EAT Playbook — Next 300 Moves (2026-08-25)
+## ✅ STATUS 2026-08-28 (auto batch)
+- **W1**: moves 1-10 DONE (3 aspirational indices declared UNMEASURED → now **MEASURED**); moves 11-20 DONE (gold sets frozen 137 items/13 axes, canary-anchored, harness-wired); 21-30 partial (RWA/XRPL **17 on-chain-verified** instruments, sign rail pending).
+- **W2**: moves 91-100 DONE (**/eunomia-catalog**); index surfaces DONE (**/eunomia-indices**); nav + PRIMARY_PATHS wired.
+- **W3**: moves 131-140 DONE (**/eunomia-crosswalk** live EU AI Act × CRA watch).
+- **Engine**: runner `--base` routing bug fixed; tests 12/12.
+- **Owner-gated remaining**: sign rail attestation · MCP publish · A2A dirs · marketplaces · boards · grants (NGI Zero ~3 Sep, AIRR 20k GPU hrs) · HF mirror re-sync · durability-sync fix.
+
+
 
 *The clean execution plan: measurement → signed → live → distribution. Every move canon-compliant
 (scores never sold · regulators free R8 · no token · ClaimGuard gated · white-label). A100 = measurement supply.*
