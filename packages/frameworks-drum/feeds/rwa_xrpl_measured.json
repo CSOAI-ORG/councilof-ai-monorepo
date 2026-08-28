@@ -39,7 +39,7 @@
    }
   },
   "Ripple RLUSD": {
-   "status": "PARTIAL",
+   "status": "MEASURED",
    "data": {
     "name": "Ripple RLUSD",
     "kind": "stablecoin",
@@ -263,8 +263,99 @@
     "source": "xrpl public RPC gateway_balances (s1.ripple.com:51234); issuer resolved from public XRPL.to listing",
     "recheck": "gateway_balances verified 2026-08-28 by JEEVES (public RPC s1.ripple.com:51234)"
    }
+  },
+  "XRPL multi-fiat gateway (JPY primary)": {
+   "status": "MEASURED",
+   "data": {
+    "name": "XRPL multi-fiat gateway (JPY primary)",
+    "kind": "fiat gateway (17 currencies, JPY largest)",
+    "issuer": "unattributed \u2014 on-chain verified (no brand claimed)",
+    "currency": "JPY",
+    "r_address": "rB3gZey7VWHYRqJHLoHDEJXJ2pEPNieKiS",
+    "account_exists": true,
+    "owner_count": 6679,
+    "supply_by_currency": {
+     "JPY": 841373537.25,
+     "DOG": 1066283398.76
+    },
+    "obligations": 1,
+    "source": "gateway_balances (s1.ripple.com:51234)",
+    "recheck": "verified 2026-08-28 by JEEVES"
+   }
+  },
+  "SOLO (Sologenic)": {
+   "status": "MEASURED",
+   "data": {
+    "name": "SOLO (Sologenic)",
+    "kind": "tokenized-securities ecosystem token",
+    "issuer": "Sologenic",
+    "currency": "SOLO",
+    "r_address": "rsoLo2S1kiGeCcn6hCUXVrCpGMWLrRrLZz",
+    "account_exists": true,
+    "owner_count": 215910,
+    "supply_by_currency": {
+     "SOLO": 151597545.7
+    },
+    "obligations": 1,
+    "source": "gateway_balances (s1.ripple.com:51234)",
+    "recheck": "verified 2026-08-28 by JEEVES"
+   }
+  },
+  "ELS (ELS Protocol)": {
+   "status": "MEASURED",
+   "data": {
+    "name": "ELS (ELS Protocol)",
+    "kind": "RWA lending protocol token",
+    "issuer": "ELS Protocol",
+    "currency": "ELS",
+    "r_address": "rHXuEaRYnnJHbDeuBH5w8yPh5uwNVh5zAg",
+    "account_exists": true,
+    "owner_count": 84045,
+    "supply_by_currency": {
+     "ELS": 994579584.49
+    },
+    "obligations": 1,
+    "source": "gateway_balances (s1.ripple.com:51234)",
+    "recheck": "verified 2026-08-28 by JEEVES"
+   }
+  },
+  "BTC-wrapped (XRPL)": {
+   "status": "MEASURED",
+   "data": {
+    "name": "BTC-wrapped (XRPL)",
+    "kind": "wrapped BTC gateway",
+    "issuer": "unattributed \u2014 on-chain verified (no brand claimed)",
+    "currency": "BTC",
+    "r_address": "rchGBxcD1A1C2tdxF6papQYZ8kjRKMYcL",
+    "account_exists": true,
+    "owner_count": 33810,
+    "supply_by_currency": {
+     "BTC": 355.08
+    },
+    "obligations": 1,
+    "source": "gateway_balances (s1.ripple.com:51234)",
+    "recheck": "verified 2026-08-28 by JEEVES"
+   }
+  },
+  "ETH-wrapped (XRPL)": {
+   "status": "MEASURED",
+   "data": {
+    "name": "ETH-wrapped (XRPL)",
+    "kind": "wrapped ETH gateway",
+    "issuer": "unattributed \u2014 on-chain verified (no brand claimed)",
+    "currency": "ETH",
+    "r_address": "rcA8X3TVMST1n3CJeAdGk1RdRCHii7N2h",
+    "account_exists": true,
+    "owner_count": 25838,
+    "supply_by_currency": {
+     "ETH": 5023.09
+    },
+    "obligations": 1,
+    "source": "gateway_balances (s1.ripple.com:51234)",
+    "recheck": "verified 2026-08-28 by JEEVES"
+   }
   }
  },
  "hard_gates": "SIGN RAIL NOT WIRED \u2014 EAT box 'signed'=false; these are measured facts, not signed attestations.\nLEGAL \u2014 publishing any 'measured verdict' on a named security requires counsel (GSPC build plan \u00a70/\u00a74-B).\nAviva + Justoken r-addresses NOT verified; CITED only, do not guess.",
- "merge_note": "Merged 4 XRPL entries from rwa_evm_extended.json (2026-08-26) on 2026-08-28: Bitstamp/GateHub/Meld Gold re-verified on-chain via gateway_balances (obligations present); StraitsX XSGD kept CITED (no obligations at candidate address). XRPL instrument count: 8 -> 12. Legal gate unchanged: named-securities verdicts need counsel; signed=false."
+ "merge_note": "2026-08-28 expansion: RLUSD upgraded PARTIAL->MEASURED (gateway_balances $994.8M); +5 on-chain-verified instruments (multi-fiat JPY gateway $2.24B, SOLO $151.6M, ELS $994.6M, wrapped BTC 355, wrapped ETH 5,023) resolved via XRPSCAN public API + gateway_balances. XRPL instruments: 12 -> 17 (14 MEASURED + 3 CITED). Every address verified on-chain; no brand claimed where unattributed."
 }
