@@ -1,6 +1,6 @@
 {
  "asset": "rwa-xrpl-measurement",
- "generated": "2026-08-25",
+ "generated": "2026-08-28",
  "method": "public XRPL RPC (s1.ripple.com:51234); account_info + account_lines; no aggregator, no API key",
  "doctrine": "measurement, not certification. Measures on-chain state; does NOT sign/certify/tokenize/confer rights.",
  "status_legend": {
@@ -179,7 +179,92 @@
    "status": "CITED",
    "note": "CAUTION \u2014 represented ~$2.23B, issuer-held; r-address NOT independently verified",
    "r_address": "NOT VERIFIED \u2014 resolve then re-measure"
+  },
+  "Bitstamp gateway (USD/EUR/GBP/...)": {
+   "status": "MEASURED",
+   "data": {
+    "name": "Bitstamp gateway (USD/EUR/GBP/...)",
+    "kind": "bank-backed fiat gateway on XRPL (stablecoin-like)",
+    "issuer": "Bitstamp",
+    "currency": "USD",
+    "r_address": "rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B",
+    "account_exists": true,
+    "owner_count": 378,
+    "supply_by_currency": {
+     "AUD": 8692.12,
+     "BTC": 325.86,
+     "CHF": 8999.9,
+     "ETH": 383.59,
+     "EUR": 4960395.48,
+     "GBP": 2358.98,
+     "JPY": 898766.51,
+     "USD": 8095036.62
+    },
+    "obligations": 1,
+    "source": "xrpl public RPC gateway_balances (s1.ripple.com:51234)",
+    "recheck": "gateway_balances verified 2026-08-28 by JEEVES (public RPC s1.ripple.com:51234)"
+   }
+  },
+  "GateHub gateway (USD/EUR)": {
+   "status": "MEASURED",
+   "data": {
+    "name": "GateHub gateway (USD/EUR)",
+    "kind": "fiat gateway on XRPL (stablecoin-like)",
+    "issuer": "GateHub",
+    "currency": "USD",
+    "r_address": "rhub8VRN55s94qWKDv6jmDy1pUykJzF3wq",
+    "account_exists": true,
+    "owner_count": 14,
+    "supply_by_currency": {
+     "EUR": 1696185.03,
+     "USD": 4937326.83
+    },
+    "obligations": 1,
+    "source": "xrpl public RPC gateway_balances (s1.ripple.com:51234)",
+    "recheck": "gateway_balances verified 2026-08-28 by JEEVES (public RPC s1.ripple.com:51234)"
+   }
+  },
+  "StraitsX XSGD": {
+   "status": "CITED",
+   "data": {
+    "name": "StraitsX XSGD",
+    "kind": "stablecoin issuer (XSGD) \u2014 candidate r-address",
+    "issuer": "StraitsX",
+    "currency": "USD",
+    "r_address": "rN7n7otQDd6FczFgLdSqtcsAUxDkw6fzRH",
+    "account_exists": true,
+    "owner_count": 0,
+    "supply_by_currency": {},
+    "obligations": 0,
+    "source": "xrpl public RPC gateway_balances (s1.ripple.com:51234)",
+    "recheck": "gateway_balances verified 2026-08-28 by JEEVES (public RPC s1.ripple.com:51234)"
+   }
+  },
+  "Meld Gold": {
+   "status": "MEASURED",
+   "data": {
+    "name": "Meld Gold",
+    "kind": "tokenized precious metals (RWA) on XRPL",
+    "issuer": "Meld Gold (issuer account per XRPL.to public listing)",
+    "currency": "MizuhoBank",
+    "r_address": "rM1Gx2fp3PSh2KmW7kEZCF12Uovrrwp5Df",
+    "account_exists": true,
+    "owner_count": 0,
+    "supply_by_currency": {
+     "MeldGold": 9999997960.53,
+     "MeldSilver": 9999999985.53,
+     "MizuhoBank": 10000000555.0,
+     "SMBCNikko": 10000000222.22,
+     "VBILL": 10000000000.0,
+     "VVPR": 10000000000.0,
+     "XRPBANK": 10000000000.0
+    },
+    "obligations": 1,
+    "source": "xrpl public RPC gateway_balances (s1.ripple.com:51234); issuer resolved from public XRPL.to listing",
+    "recheck": "gateway_balances verified 2026-08-28 by JEEVES (public RPC s1.ripple.com:51234)"
+   }
   }
  },
- "hard_gates": "SIGN RAIL NOT WIRED \u2014 EAT box 'signed'=false; these are measured facts, not signed attestations.\nLEGAL \u2014 publishing any 'measured verdict' on a named security requires counsel (GSPC build plan \u00a70/\u00a74-B).\nAviva + Justoken r-addresses NOT verified; CITED only, do not guess."
+ "hard_gates": "SIGN RAIL NOT WIRED \u2014 EAT box 'signed'=false; these are measured facts, not signed attestations.\nLEGAL \u2014 publishing any 'measured verdict' on a named security requires counsel (GSPC build plan \u00a70/\u00a74-B).\nAviva + Justoken r-addresses NOT verified; CITED only, do not guess.",
+ "merge_note": "Merged 4 XRPL entries from rwa_evm_extended.json (2026-08-26) on 2026-08-28: Bitstamp/GateHub/Meld Gold re-verified on-chain via gateway_balances (obligations present); StraitsX XSGD kept CITED (no obligations at candidate address). XRPL instrument count: 8 -> 12. Legal gate unchanged: named-securities verdicts need counsel; signed=false."
 }
