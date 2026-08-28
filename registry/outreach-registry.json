@@ -147,6 +147,12 @@
         "path": "/eunomia-crosswalk",
         "status": "LIVE",
         "verified": "200 (2026-08-26, post-merge deploy)"
+      },
+      {
+        "id": "surf-indices",
+        "path": "/eunomia-indices",
+        "status": "DEPLOYING",
+        "verified": "PR #842 merged 2026-08-28"
       }
     ]
   },
@@ -454,7 +460,7 @@
   "doctrine": {
     "note": "Owner rulings \u2014 decisions, not bugs. DO NOT 'fix'.",
     "owner_rulings": [
-      "public/signed/card_index.json = EXACTLY 150 rows (313 files on disk is INTENDED \u2014 do not reconcile)",
+      "public/signed/card_index.json = 313 cards (OWNER RULING 2026-08-27, supersedes the 150 freeze). 150 verify against did:web:csoai.org#card-attestation-1. Index 313 != 313 verified. No agent clamps the index.",
       "public/signed/chain.json is DELIBERATELY DELETED \u2014 do not restore",
       "scripts/signed-json-guard.mjs enforces both"
     ],
