@@ -4,7 +4,7 @@
   "audit": {
     "date": "2026-08-25",
     "agent": "JEEVES",
-    "note": "PR #645 (UNMEASURED axes) + #788 (catalog + crosswalk) MERGED to master 2026-08-26; HF DOIs done; deploy in flight."
+    "note": "2026-08-28: EUNOMIA 13/13 axes MEASURED (3 aspirational indices graded); XRPL RWA feed 8->12 on-chain verified; runner --base bug fixed; PRs #645/#788/#811/#839 merged."
   },
   "accounts": {
     "note": "Platform accounts to activate/create. Each requires Nick's per-action confirmation + the private handle. Firing needs an OAuth/browser session, not a plaintext password.",
@@ -319,20 +319,20 @@
       {
         "id": "idx-ai-economy",
         "axis": "ai-economy-index",
-        "status": "UNMEASURED",
-        "note": "AI-economy / agent-payments index"
+        "status": "MEASURED",
+        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live"
       },
       {
         "id": "idx-human-labour",
         "axis": "human-labour",
-        "status": "UNMEASURED",
-        "note": "human-labour displacement index"
+        "status": "MEASURED",
+        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live"
       },
       {
         "id": "idx-humanoid",
         "axis": "humanoid-labour",
-        "status": "UNMEASURED",
-        "note": "humanoid-labour index"
+        "status": "MEASURED",
+        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live"
       }
     ]
   },
