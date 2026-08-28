@@ -127,7 +127,7 @@
         "id": "api-registers",
         "path": "/api/registers",
         "status": "LIVE",
-        "verified": "200 \u00b7 13 axes = 10 MEASURED + 3 UNMEASURED (PR #645 live)",
+        "verified": "200 \u00b7 13 axes, 13 MEASURED (deploy 1fa8d8d3)",
         "note": "10 signed axes CAT F6 REAL; 3 aspirational UNMEASURED (PR #645)"
       },
       {
@@ -320,19 +320,22 @@
         "id": "idx-ai-economy",
         "axis": "ai-economy-index",
         "status": "MEASURED",
-        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live"
+        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live",
+        "verified": "live /api/registers 13/13 (2026-08-28, deploy 1fa8d8d3 success)"
       },
       {
         "id": "idx-human-labour",
         "axis": "human-labour",
         "status": "MEASURED",
-        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live"
+        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live",
+        "verified": "live /api/registers 13/13 (2026-08-28, deploy 1fa8d8d3 success)"
       },
       {
         "id": "idx-humanoid",
         "axis": "humanoid-labour",
         "status": "MEASURED",
-        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live"
+        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live",
+        "verified": "live /api/registers 13/13 (2026-08-28, deploy 1fa8d8d3 success)"
       }
     ]
   },
