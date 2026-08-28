@@ -448,7 +448,8 @@
       "backups": "/workspace/durability/{3090-build,a100-measure}",
       "rule": "pod-local -> network volume -> S3 API (s3api-eu-ro-1.runpod.io) once owner mints keys"
     },
-    "resolve_cmd": "K=$(grep -oE '[a-zA-Z0-9_-]{20,}' ~/.runpod/config.toml | head -1); curl -s \"https://api.runpod.io/graphql?api_key=$K\" -H 'Content-Type: application/json' -d '{\"query\":\"query{myself{pods{name desiredStatus runtime{ports{ip isIpPublic privatePort publicPort}}}}}\"}'"
+    "resolve_cmd": "K=$(grep -oE '[a-zA-Z0-9_-]{20,}' ~/.runpod/config.toml | head -1); curl -s \"https://api.runpod.io/graphql?api_key=$K\" -H 'Content-Type: application/json' -d '{\"query\":\"query{myself{pods{name desiredStatus runtime{ports{ip isIpPublic privatePort publicPort}}}}}\"}'",
+    "xrpl_note": "XRPL RWA feed 12->17 (14 MEASURED + 3 CITED) on 2026-08-28; resolver recipe: XRPSCAN public API (https://api.xrpscan.com/api/v1/tokens?search=X with User-Agent) -> gateway_balances verification on s1.ripple.com:51234. Never guess addresses; RPC rejects wrong ones."
   },
   "doctrine": {
     "note": "Owner rulings \u2014 decisions, not bugs. DO NOT 'fix'.",
@@ -477,5 +478,26 @@
       "Free-tier programmes to stage for Nick: NLnet NGI Zero (call opens 3 Sep, UK eligible), AIRR Rapid Access (20k free GPU hrs), NVIDIA Inception, HF org credits"
     ],
     "fleet_cost": "~$1.91/hr total (A100 $1.39 + 3090 + cpu pods); stale stopped pods still bill provisioned volumes \u2014 flag, don't delete"
+  },
+  "grant_staging": {
+    "note": "\u00a30 programmes staged for Nick to submit (agents never submit/accept ToS). See registry/fire-ready/grant-staging-ngi-airr.md",
+    "entries": [
+      {
+        "id": "grant-ngi-zero",
+        "name": "NLnet NGI Zero Commons Fund",
+        "status": "STAGED",
+        "next": "call opens ~3 Sep 2026",
+        "url": "https://nlnet.nl/propose/",
+        "cost": "\u00a30"
+      },
+      {
+        "id": "grant-airr",
+        "name": "AIRR Rapid Access (UKRI, Isambard-AI + Dawn)",
+        "status": "STAGED",
+        "note": "20,000 free GPU hours, rolling",
+        "url": "https://www.ukri.org/opportunity/isambard-ai-and-dawn-airr-supercomputers-rapid-access-route/",
+        "cost": "\u00a30"
+      }
+    ]
   }
 }
