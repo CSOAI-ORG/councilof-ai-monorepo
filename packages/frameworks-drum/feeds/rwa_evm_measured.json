@@ -1,0 +1,107 @@
+{
+ "asset": "rwa-evm-measurement",
+ "chain": "Ethereum (public JSON-RPC, no key)",
+ "generated": "2026-08-26",
+ "method": "eth_getCode (deployed?) + eth_call (totalSupply/decimals/symbol). Positive control (USDT 88.3B) validated.",
+ "doctrine": "measurement, not certification. Reports only DEPLOYED + readable contracts as MEASURED; never fabricates an address or supply.",
+ "status_legend": {
+  "MEASURED": "contract deployed + supply read on-chain (verified)",
+  "CITED": "issuer-reported address, NOT confirmed deployed \u2014 do NOT quote as measured",
+  "UNMEASURED": "could not be read on-chain",
+  "UNVERIFIED": "no reliable address provided (EAS)"
+ },
+ "instruments": {
+  "BlackRock BUIDL": {
+   "status": "MEASURED",
+   "addr": "0x7712c34205737192402172409a8F7ccef8aA2AEc",
+   "kind": "tokenized money-market (verified RWA)",
+   "supply_by_currency": "?",
+   "total_supply_display": 210253879.66,
+   "decimals": 6
+  },
+  "Ondo OUSG": {
+   "status": "MEASURED",
+   "addr": "0x1B19C19393e2d034D8Ff31ff34c81252FcBbee92",
+   "kind": "tokenized treasuries (verified RWA)",
+   "supply_by_currency": "?",
+   "total_supply_display": 1324124.18,
+   "decimals": 18
+  },
+  "Franklin BENJI": {
+   "status": "MEASURED",
+   "addr": "0x3DDc84940Ab509C11B20B76B466933f40b750dc9",
+   "kind": "tokenized money-market (verified RWA)",
+   "supply_by_currency": "?",
+   "total_supply_display": 48066854.42,
+   "decimals": 18
+  },
+  "Ondo USDY": {
+   "status": "MEASURED",
+   "addr": "0x96F6eF951840721AdBF46Ac996b59E0235CB985C",
+   "kind": "yield-bearing stablecoin (verified RWA)",
+   "supply_by_currency": "?",
+   "total_supply_display": 1004503784.22,
+   "decimals": 18
+  },
+  "Invesco USTB": {
+   "status": "MEASURED",
+   "addr": "0x43415eB6ff9DB7E26A15b704e7A3eDCe97d31C4e",
+   "kind": "tokenized money-market (verified RWA)",
+   "supply_by_currency": "?",
+   "total_supply_display": 56767363.01,
+   "decimals": 6
+  },
+  "Circle USYC": {
+   "status": "MEASURED",
+   "addr": "0x136471a34f6ef19fE571EFFC1CA711fdb8E49f2b",
+   "kind": "tokenized money-market (verified RWA)",
+   "supply_by_currency": "?",
+   "total_supply_display": 61895668.01,
+   "decimals": 6
+  },
+  "OpenEden TBILL": {
+   "status": "MEASURED",
+   "addr": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a",
+   "kind": "tokenized treasuries (verified RWA)",
+   "supply_by_currency": "?",
+   "total_supply_display": 18321585.09,
+   "decimals": 6
+  },
+  "Paxos Gold (PAXG)": {
+   "status": "MEASURED",
+   "addr": "0x45804880de22913dafe09f4980848ece6ecbaf78",
+   "kind": "tokenized gold (verified RWA)",
+   "supply_by_currency": "?",
+   "total_supply_display": 429687.24,
+   "decimals": 18
+  },
+  "Tether Gold (XAUT)": {
+   "status": "MEASURED",
+   "addr": "0x68749665ff8d2d112fa859aa293f07a622782f38",
+   "kind": "tokenized gold (verified RWA)",
+   "supply_by_currency": "?",
+   "total_supply_display": 707747.09,
+   "decimals": 6
+  },
+  "Ondo (ONDO)": {
+   "status": "MEASURED",
+   "addr": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3",
+   "kind": "governance token (NOT the fund)",
+   "supply_by_currency": "?",
+   "total_supply_display": 10000000000.0,
+   "decimals": 18
+  },
+  "Positive control: USDT": {
+   "status": "MEASURED",
+   "addr": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+   "kind": "stablecoin (control)",
+   "supply_by_currency": "?",
+   "total_supply_display": 88306390736.35,
+   "decimals": 6
+  }
+ },
+ "eas": {
+  "status": "UNVERIFIED",
+  "note": "EAS is chain-specific; this build probes the EAS schema-registry address you supply. Guessing the canonical address risks a false UNMEASURED. UNVERIFIED \u2014 provide the chain's EAS contract address to measure, or confirm via EAS SDK before reporting a chain as EAS-enabled."
+ }
+}
