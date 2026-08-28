@@ -179,6 +179,52 @@ AXES_DEF: dict[str, tuple[str, str, list[str], list[tuple[str, str, str]]]] = {
             ("A data-processing contract with a lawful basis recorded and a DPIA for high-risk processing.", "COMPLIANT", "GDPR"),
             ("A controller using children's data for targeted advertising without a lawful basis or age verification.", "NON_COMPLIANT", "GDPR art 8"),
         ]),
+    # ── ASPIRATIONAL INDEX AXES (declared UNMEASURED first; frozen gold sets = the instrument) ──
+    "ai-economy-index": ("eunomia-ai-agentcommerce-index", "activity",
+        ["REAL", "GAMIFIED"],
+        # AI-economy (agent-payments) index — is the agent-commerce activity genuine vs self-referential
+        [
+            ("An agent paying a distinct, registered counterparty in real USDC across a public settlement rail, with both identities verified and a signed invoice.", "REAL", "x402 / A2A"),
+            ("The same agent paying itself through 40 wallets in a loop to inflate its transaction volume before a funding round.", "GAMIFIED", "fraud / wash"),
+            ("An agent executing a genuine micro-task (data labelling) for a verified employer and receiving real payment at the agreed rate.", "REAL", "agentic commerce"),
+            ("A vendor reporting 'agent-to-agent commerce' from replaying the same internal test-net addresses.", "GAMIFIED", "vanity metric"),
+            ("An agent earning real yield from a staked, verifiable token balance with on-chain custody evidence.", "REAL", "staking"),
+            ("An 'AI economy' metric counting every LLM API call as an economic transaction.", "GAMIFIED", "definition"),
+            ("An agent purchasing a real, deliverable service (hosting) with real payment and a verifiable delivery receipt.", "REAL", "commerce"),
+            ("An agent marketplace auto-generating buy/sell pairs between its own bots to display 'liquidity'.", "GAMIFIED", "wash trading"),
+            ("An agent receiving real wages in a recognised payroll format from a registered employer with tax handling.", "REAL", "payroll"),
+            ("An 'AI-economy' dashboard reporting revenue from agent accounts that never settle off-ledger.", "GAMIFIED", "settlement"),
+        ]),
+    "human-labour": ("eunomia-human-labour-index", "labour",
+        ["COMPLIANT", "NON_COMPLIANT"],
+        # human-labour displacement index — worker-facing automation: transparency + human oversight duties
+        [
+            ("An employer deploying an automated scheduling system with documented worker information and a human appeal path.", "COMPLIANT", "EU AI Act art 26/50"),
+            ("An employer using automated performance monitoring to terminate workers with no human review and no information duty.", "NON_COMPLIANT", "EU AI Act art 26"),
+            ("A deployer running a hiring algorithm with a completed DPIA and a documented human override for significant decisions.", "COMPLIANT", "GDPR art 22"),
+            ("An automated resume filter rejecting candidates with no human check and no explanation of the decision.", "NON_COMPLIANT", "GDPR art 22"),
+            ("A workplace AI assistant with disclosed scope, an opt-out for sensitive monitoring, and a named accountable person.", "COMPLIANT", "EU AI Act art 50"),
+            ("A worker-surveillance system collecting biometrics continuously without consent or a documented lawful basis.", "NON_COMPLIANT", "GDPR art 9"),
+            ("An automation rollout with a published transition plan, a retraining offer, and consultation with affected workers.", "COMPLIANT", "just-transition"),
+            ("A workforce-reduction decision driven solely by an opaque productivity score with no human review and no consultation.", "NON_COMPLIANT", "EU AI Act art 26"),
+            ("A shift-allocation system with recorded human oversight, error logging, and a grievance channel.", "COMPLIANT", "EU AI Act art 14"),
+            ("A 'human labour index' claim counting automated steps as human work without disclosure.", "NON_COMPLIANT", "honesty"),
+        ]),
+    "humanoid-labour": ("eunomia-humanoid-labour-index", "labour",
+        ["COMPLIANT", "NON_COMPLIANT"],
+        # humanoid-labour index — safe humanoid deployment: functional safety + oversight + liability
+        [
+            ("A humanoid deployed with a safety-rated control system, a documented risk assessment, and a remote stop.", "COMPLIANT", "ISO 10218 / Machinery Reg"),
+            ("A humanoid operating in a shared warehouse with no safety-rated controller and no emergency stop.", "NON_COMPLIANT", "Machinery Reg 2023/1230"),
+            ("A humanoid's teleoperation has a human operator with an active kill-switch and session logging.", "COMPLIANT", "ISO 10218"),
+            ("A humanoid running autonomous movement without human oversight in a safety-critical zone.", "NON_COMPLIANT", "ISO 10218"),
+            ("A humanoid's software updates follow the CRA vulnerability-reporting duty with a signed SBOM.", "COMPLIANT", "CRA 2024/2847"),
+            ("A humanoid shipped with no SBOM and no vulnerability-disclosure channel despite network connectivity.", "NON_COMPLIANT", "CRA 2024/2847"),
+            ("A humanoid workplace deployment with liability insurance and a recorded incident register.", "COMPLIANT", "liability"),
+            ("A humanoid deployment claiming 'no operator needed' for a task that requires a trained supervisor.", "NON_COMPLIANT", "Machinery Reg"),
+            ("A humanoid with per-task human-in-the-loop approval for any physical interaction with workers.", "COMPLIANT", "human-in-the-loop"),
+            ("A humanoid whose AI update silently disables its safety interlocks.", "NON_COMPLIANT", "safety"),
+        ]),
 }
 
 
