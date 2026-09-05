@@ -462,16 +462,19 @@
   "doctrine": {
     "note": "Owner rulings \u2014 decisions, not bugs. DO NOT 'fix'.",
     "owner_rulings": [
-      "public/signed/card_index.json = 313 cards (OWNER RULING 2026-08-27, supersedes the 150 freeze). 150 verify against did:web:csoai.org#card-attestation-1. Index 313 != 313 verified. No agent clamps the index.",
-      "public/signed/chain.json is DELIBERATELY DELETED \u2014 do not restore",
-      "scripts/signed-json-guard.mjs enforces both"
+      "Cards: quote the one you mean \u2014 card_count = 1072 FILES on disk; root_card_count = 152/153 in the signed root. NOT '335/335' (was wrong).",
+      "Board = 22 slots, 22 MEASURED, 0 unmeasured, schema csoai.gspc-axes/0.5. Observed: behavioural 2026-08-12, jail 2026-08-18, financial-fact 2026-08-25 \u2014 weeks old, say so.",
+      "Journey: ask->scope->inspect->explain works; propose->approve->fix->retest->receipt has NO RUNTIME (backends 404). Never build UI over missing backends.",
+      "MCP: 11 tools over HTTP; stdio npm package carries 12 (extra witness_hash gated 503). npm SDK csoai-gspc-mcp@0.2.1.",
+      "'BFT'/'Byzantine'/'fault-tolerant' RETRACTED \u2014 banned display string; fails brand-gate and blocks the whole estate deploy. Say 'designed 33-agent council' + '23/33 threshold'.",
+      "Deploys: Cloudflare Pages only. Never vercel deploy; never wrangler pages deploy from a laptop."
     ],
     "content_rules": [
-      "Never 'certification' as a thing we issue \u2014 we measure",
-      "No public prices, no popularity claims, no internal codenames",
-      "NEVER type a count \u2014 derive from GET /api/gspc or /api/state (kind + as_of); board = 22 axes \u00b7 15 measured \u00b7 7 unmeasured",
-      "unmeasured is a first-class published status \u2014 never hide/shrink/grey it",
-      "New routes MUST be in PRIMARY_PATHS (client/src/data/library-ia.ts) or they ship flagged 'archived'"
+      "We measure, never certify. No conformity marks, no 'certified/guaranteed/approved'. Academy issues completion records only.",
+      "UNMEASURED is first-class; never invent a number; empty cell stays empty.",
+      "Bytes adjudicate \u2014 show the command that proves a claim.",
+      "Never send/publish/spend/sign/enable-schedule/delete without owner gate.",
+      "One lane = one writer = one branch."
     ],
     "git_rules": [
       "master is the ONLY integration branch; rebase onto origin/master first",
