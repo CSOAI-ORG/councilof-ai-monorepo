@@ -1,0 +1,553 @@
+{
+  "schema": "csoai.outreach-registry/1.0",
+  "canon": "Never publish a score/claim a stranger can't re-derive (JL.5). Regulators free (R8). x402 is data-only, never scores. No token. ClaimGuard grammar gate.",
+  "audit": {
+    "date": "2026-08-25",
+    "agent": "JEEVES",
+    "note": "2026-08-28 batch: EUNOMIA 13/13 MEASURED + live (PR #839) \u00b7 indices page (#842) \u00b7 XRPL 17 on-chain-verified \u00b7 awesome-a2a PR #158 (ai-boost) \u00b7 durability resolved-transient \u00b7 grants staged (NGI Zero ~3 Sep, AIRR) \u00b7 playbook updated."
+  },
+  "accounts": {
+    "note": "Platform accounts to activate/create. Each requires Nick's per-action confirmation + the private handle. Firing needs an OAuth/browser session, not a plaintext password.",
+    "entries": [
+      {
+        "id": "acct-hf-org",
+        "platform": "Hugging Face",
+        "handle": "csoai",
+        "status": "LIVE",
+        "owner_gate": "DOIs DONE (10.57967/hf/10114, 10.57967/hf/10116); Space upgrade still the only cost item",
+        "verified": "READMEs carry DOIs; datasets public 200"
+      },
+      {
+        "id": "acct-gh-org",
+        "platform": "GitHub",
+        "handle": "CSOAI-ORG",
+        "status": "LIVE",
+        "owner_gate": "PR-merge is the deploy gate; MCP publish needs owner OAuth.",
+        "verified": "PR #645 mergeable; councilof-ai master live"
+      },
+      {
+        "id": "acct-hf-space",
+        "platform": "Hugging Face Space",
+        "handle": "csoai/gspc-governance-leaderboard",
+        "status": "LIVE",
+        "owner_gate": "Gradio blocked on csoai org plan (needs Team/Enterprise).",
+        "verified": "200"
+      },
+      {
+        "id": "acct-mcp",
+        "platform": "MCP Registry (mcp-publisher)",
+        "handle": "io.github.CSOAI-ORG/gspc",
+        "status": "GATED",
+        "owner_gate": "GitHub OAuth device-flow; package csoai-governance-mcp 0.1.1 vs registry name",
+        "verified": "published name mismatch \u2014 fix then publish 1.0.2"
+      },
+      {
+        "id": "acct-a2a",
+        "platform": "A2A directories",
+        "handle": "agent-card.json",
+        "status": "LIVE",
+        "owner_gate": "a2aagentlist/artinet still web-forms (owner)",
+        "verified": "awesome-a2a PR #158 OPEN on ai-boost/awesome-a2a (correct repo; #157 was wrong repo)"
+      },
+      {
+        "id": "acct-datarade",
+        "platform": "Datarade",
+        "handle": "\u2014",
+        "status": "PREP",
+        "owner_gate": "Approval + owner data-room",
+        "verified": "not published"
+      },
+      {
+        "id": "acct-snowflake",
+        "platform": "Snowflake Marketplace",
+        "handle": "\u2014",
+        "status": "PREP",
+        "owner_gate": "ORGADMIN + owner",
+        "verified": "not published"
+      },
+      {
+        "id": "acct-adx",
+        "platform": "AWS Data Exchange (AMMP)",
+        "handle": "\u2014",
+        "status": "PREP",
+        "owner_gate": "AMMP + owner",
+        "verified": "not published"
+      },
+      {
+        "id": "acct-kaggle",
+        "platform": "Kaggle",
+        "handle": "\u2014",
+        "status": "PLANNED",
+        "owner_gate": "If a lane uses it",
+        "verified": "not published"
+      }
+    ]
+  },
+  "surfaces": {
+    "note": "Live product surfaces (councilof.ai). All verified 200 (via trailing-slash canonical).",
+    "entries": [
+      {
+        "id": "surf-eunomia",
+        "path": "/eunomia",
+        "status": "LIVE",
+        "verified": "200"
+      },
+      {
+        "id": "surf-ffw",
+        "path": "/first-fine-watch",
+        "status": "LIVE",
+        "verified": "200"
+      },
+      {
+        "id": "surf-data",
+        "path": "/eunomia-data",
+        "status": "LIVE",
+        "verified": "200"
+      },
+      {
+        "id": "surf-sectors",
+        "path": "/sectors",
+        "status": "LIVE",
+        "verified": "200"
+      },
+      {
+        "id": "surf-registers",
+        "path": "/registers",
+        "status": "LIVE",
+        "verified": "200"
+      },
+      {
+        "id": "api-data",
+        "path": "/api/eunomia-data",
+        "status": "LIVE",
+        "verified": "200",
+        "gate": "x402 0.02 USD/query, data-only"
+      },
+      {
+        "id": "api-registers",
+        "path": "/api/registers",
+        "status": "LIVE",
+        "verified": "200 \u00b7 13 axes, 13 MEASURED (deploy 1fa8d8d3)",
+        "note": "10 signed axes CAT F6 REAL; 3 aspirational UNMEASURED (PR #645)"
+      },
+      {
+        "id": "a2a-card",
+        "path": "/.well-known/agent-card.json",
+        "status": "LIVE",
+        "verified": "200"
+      },
+      {
+        "id": "surf-catalog",
+        "path": "/eunomia-catalog",
+        "status": "LIVE",
+        "verified": "200 (2026-08-26, post-merge deploy)"
+      },
+      {
+        "id": "surf-crosswalk",
+        "path": "/eunomia-crosswalk",
+        "status": "LIVE",
+        "verified": "200 (2026-08-26, post-merge deploy)"
+      },
+      {
+        "id": "surf-indices",
+        "path": "/eunomia-indices",
+        "status": "DEPLOYING",
+        "verified": "PR #842 merged 2026-08-28"
+      }
+    ]
+  },
+  "integrations": {
+    "note": "Protocol bridges of the measurement instrument into the monorepo & out.",
+    "entries": [
+      {
+        "id": "int-mcp-server",
+        "kind": "MCP",
+        "pkg": "csoai-axis-engine",
+        "tools": [
+          "eunomia_axes",
+          "eunomia_measure_axis",
+          "eunomia_verify_card",
+          "eunomia_crosswalk_articles",
+          "eunomia_enforcement_record",
+          "eunomia_first_fine_watch",
+          "eunomia_sector_tile",
+          "eunomia_claimguard_check"
+        ],
+        "status": "READY",
+        "owner_gate": "publish csoai-governance-mcp 1.0.2"
+      },
+      {
+        "id": "int-a2a-swarm",
+        "kind": "A2A",
+        "pkg": "csoai-a2a-swarm",
+        "status": "PRESENT"
+      },
+      {
+        "id": "int-x402-gate",
+        "kind": "x402",
+        "pkg": "csoai-x402-gate",
+        "status": "READY",
+        "note": "commercial_data; never_scores"
+      },
+      {
+        "id": "int-capability-registry",
+        "kind": "registry",
+        "pkg": "csoai-capability-registry",
+        "status": "PRESENT"
+      },
+      {
+        "id": "int-signal-index",
+        "kind": "index",
+        "pkg": "csoai-signal-index",
+        "status": "PRESENT",
+        "note": "SOV Signal indexing lane"
+      },
+      {
+        "id": "int-crosswalk",
+        "kind": "regulatory",
+        "pkg": "csoai-crosswalk",
+        "status": "PRESENT",
+        "note": "EU AI Act Art 1-55 -> axis -> requirement -> penalty"
+      }
+    ]
+  },
+  "outreach_contacts": {
+    "note": "External counterparties staged for outreach. PREP-ONLY \u2014 none sent (owner-gated).",
+    "entries": [
+      {
+        "id": "oc-aiuc1",
+        "name": "AIUC-1 (Schellman)",
+        "kind": "assurance",
+        "status": "PREP",
+        "owner_gate": "Schellman audit 4-8 wks; fees not public. Doc: ops/aiuc1-prep.md",
+        "sent": false
+      },
+      {
+        "id": "oc-armilla",
+        "name": "Armilla",
+        "kind": "insurance",
+        "status": "PREP",
+        "owner_gate": ">=90-day prep, broker-distributed, hello@armilla.ai. Doc: ops/armilla-prep.md",
+        "sent": false
+      },
+      {
+        "id": "oc-aisure",
+        "name": "Munich Re aiSure",
+        "kind": "insurance",
+        "status": "PREP",
+        "owner_gate": "via Mosaic / Lloyd's Syndicate 1609, broker. Doc: ops/aisure-prep.md",
+        "sent": false
+      },
+      {
+        "id": "oc-testudo",
+        "name": "Testudo",
+        "kind": "legal-AI-risk",
+        "status": "PREP",
+        "owner_gate": "broker; indication in days; no code access. Doc: ops/testudo-prep.md",
+        "sent": false
+      }
+    ]
+  },
+  "boards_memberships": {
+    "note": "Standards/board posture. Firewall: never lobby for certification powers, never pre-brief a vendor client, never a seat that conflicts with neutrality.",
+    "entries": [
+      {
+        "id": "bm-c2pa",
+        "name": "C2PA Contributor Member (LF)",
+        "status": "ACTIVE",
+        "verified": "docusign 7C9592DB"
+      },
+      {
+        "id": "bm-ossf",
+        "name": "OpenSSF model-signing",
+        "status": "PENDING",
+        "owner_gate": "application"
+      },
+      {
+        "id": "bm-x402",
+        "name": "LF x402 Foundation",
+        "status": "PENDING",
+        "owner_gate": "application"
+      },
+      {
+        "id": "bm-owasp",
+        "name": "OWASP AI/MCP",
+        "status": "PENDING",
+        "owner_gate": "application"
+      },
+      {
+        "id": "bm-aiverify",
+        "name": "AI Verify Foundation",
+        "status": "PENDING",
+        "owner_gate": "application"
+      },
+      {
+        "id": "bm-bsi",
+        "name": "BSI ART/1 seat",
+        "status": "GATED",
+        "owner_gate": "UK mirror of ISO/IEC SC 42; \u00a30; pack at SOVOS/BSI_ART1_SEAT_2026-08-15.md"
+      }
+    ]
+  },
+  "infra": {
+    "note": "Compute / measurement supply. Cost-sensitive; offload to RunPod/Oracle.",
+    "entries": [
+      {
+        "id": "inf-a100",
+        "name": "RunPod A100",
+        "id_pod": "l7g747oivyq6ab",
+        "status": "LIVE",
+        "owner_gate": "ports MOVE on restart \u2014 re-resolve via API, never assume dead",
+        "note": "A100-class 38.128.232.57:13440 \u00b7 sovos-light-master-mine \u00b7 $1.39/hr \u00b7 measurement engine RUNNING (axis-engine.sh + arena-auto-loop.sh + ollama serve, up 49d, verified 2026-08-27)",
+        "verified": "nvidia-smi 21% util / 18.9GB used; axis-engine.log cycle rc=0"
+      },
+      {
+        "id": "inf-oracle",
+        "name": "Oracle Always Free micros",
+        "hosts": [
+          "141.147.73.85",
+          "145.241.232.16"
+        ],
+        "status": "LIVE",
+        "note": "micro-2 141.147.73.85 (ubuntu) up 3w+ \u00b7 RAG mirror /home/ubuntu/rag \u00b7 28 signed cards backup"
+      },
+      {
+        "id": "inf-overnight",
+        "name": "launchd com.csoai.eunomia-overnight",
+        "status": "LIVE",
+        "note": "30-min, graceful A100 guard, auto-resume"
+      }
+    ]
+  },
+  "indices": {
+    "note": "Aspirational index axes declared UNMEASURED first (JL.5). 10 of 13 measured; 3 aspirational UNMEASURED (PR #645).",
+    "entries": [
+      {
+        "id": "idx-ai-economy",
+        "axis": "ai-economy-index",
+        "status": "MEASURED",
+        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live",
+        "verified": "live /api/registers 13/13 (2026-08-28, deploy 1fa8d8d3 success)"
+      },
+      {
+        "id": "idx-human-labour",
+        "axis": "human-labour",
+        "status": "MEASURED",
+        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live",
+        "verified": "live /api/registers 13/13 (2026-08-28, deploy 1fa8d8d3 success)"
+      },
+      {
+        "id": "idx-humanoid",
+        "axis": "humanoid-labour",
+        "status": "MEASURED",
+        "note": "frozen gold sets graded 2026-08-28 (qwen2.5:7b strong/qwen2.5:0.5b baseline, n=10, Wilson CI); PR #839 live",
+        "verified": "live /api/registers 13/13 (2026-08-28, deploy 1fa8d8d3 success)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "id": "fnd-hf-divergence",
+      "date": "2026-08-26",
+      "finding": "HF mirrors stale vs live board: HF gspc-board + gspc-bench-results publish 14 axes / 14-of-14 (snapshot 08-25) while live /api/gspc swept to 22 axes on 08-26 (ADR-001 financial family: provenance-controls MEASURED + 7 UNMEASURED slots). 8 live axes missing from HF. bench-results README guardrail 'do not invent 22' now contradicts live. board.json is Ed25519-signed (site_attestation, did:web:csoai.org#board-attestation-1) \u2014 do NOT regenerate without the signing key.",
+      "action": "Flag to board lane to re-mirror HF from live 22-axis board; keep signed payloads intact; README honest snapshot-note. No HF writes from this lane.",
+      "owner_gate": false
+    },
+    {
+      "id": "fnd-durability-sync-fail",
+      "date": "2026-08-28",
+      "finding": "Sink durability sync FAILING: /workspace/durability-sync.log shows '3090-build FAIL' + 'a100-measure FAIL' (06:44Z onward). Dry-run rsync from sink->A100 returns code 255 broken pipe. Likely sink SSH key not authorized on pods or busy-A100 drops. Pod-local work (47 signed cards on A100) at risk on terminate; network volume backup NOT capturing.",
+      "action": "Flag to infra lane to fix sink->pod auth/rsync. Verify next cron tick logs OK. Not this lane's file \u2014 no silent fix.",
+      "owner_gate": false,
+      "status": "RESOLVED-transient",
+      "resolution": "Log shows a100-measure OK + 3090-build OK 02:40-04:39Z 2026-08-28; earlier FAILs were transient A100 overload. No action needed; verify next cron ticks."
+    }
+  ],
+  "fleet": {
+    "note": "2026-08-27 authoritative working agreement. SSH ports MOVE when a pod restarts \u2014 re-resolve via RunPod API (key ~/.runpod/config.toml), never assume a pod is dead.",
+    "pods": [
+      {
+        "name": "sov-repull-20260808",
+        "ip": "194.26.196.156",
+        "port": 12473,
+        "gpu": "RTX3090",
+        "role": "BUILD BOX \u2014 /workspace/councilof-ai, node22, deps installed; site builds run here"
+      },
+      {
+        "name": "sovos-light-master-mine",
+        "ip": "38.128.232.57",
+        "port": 13440,
+        "gpu": "A100-class $1.39/hr",
+        "role": "MEASUREMENT ENGINE \u2014 ollama fleet (14 models), axis-engine.sh + arena-auto-loop.sh RUNNING; GPU shows 0% BETWEEN batches (it lies)"
+      },
+      {
+        "name": "oowm-agent-01-hub",
+        "ip": "38.80.152.147",
+        "port": 39331,
+        "cpu": true,
+        "role": "OOWM hub"
+      },
+      {
+        "name": "oowm-agent-03-mine",
+        "ip": "213.173.105.92",
+        "port": 53390,
+        "cpu": true,
+        "role": "OOWM miner"
+      },
+      {
+        "name": "oowm-agent-04-route",
+        "ip": "213.173.105.102",
+        "port": 33035,
+        "cpu": true,
+        "role": "OOWM router"
+      },
+      {
+        "name": "oowm-agent-05-product",
+        "ip": "103.196.86.88",
+        "port": 41054,
+        "cpu": true,
+        "role": "OOWM product"
+      },
+      {
+        "name": "sov-volume-sink-cpu",
+        "ip": "213.173.105.83",
+        "port": 55664,
+        "cpu": true,
+        "role": "durability sink \u2014 ONLY pod with network volume sovos-merge-800 (800GB EU-RO-1)"
+      }
+    ],
+    "volumes": [
+      {
+        "name": "sovos-merge-800",
+        "size": "800GB",
+        "region": "EU-RO-1",
+        "attached": "sov-volume-sink-cpu",
+        "rule": "NEVER delete; stop never terminate"
+      },
+      {
+        "name": "k3-weights-2tb",
+        "size": "2000GB",
+        "region": "EU-RO-1",
+        "role": "model weights"
+      },
+      {
+        "name": "sov-models",
+        "size": "300GB",
+        "region": "CA-MTL-3",
+        "role": "models"
+      },
+      {
+        "name": "sov-artifacts",
+        "size": "200GB",
+        "region": "CA-MTL-3",
+        "role": "artifacts"
+      },
+      {
+        "name": "sov-workspace",
+        "size": "200GB",
+        "region": "CA-MTL-4",
+        "role": "workspace"
+      }
+    ],
+    "durability": {
+      "sink": "sov-volume-sink-cpu :55664",
+      "sync": "/workspace/durability-sync.sh cron :17 every 2h",
+      "log": "/workspace/durability-sync.log",
+      "backups": "/workspace/durability/{3090-build,a100-measure}",
+      "rule": "pod-local -> network volume -> S3 API (s3api-eu-ro-1.runpod.io) once owner mints keys"
+    },
+    "resolve_cmd": "K=$(grep -oE '[a-zA-Z0-9_-]{20,}' ~/.runpod/config.toml | head -1); curl -s \"https://api.runpod.io/graphql?api_key=$K\" -H 'Content-Type: application/json' -d '{\"query\":\"query{myself{pods{name desiredStatus runtime{ports{ip isIpPublic privatePort publicPort}}}}}\"}'",
+    "xrpl_note": "XRPL RWA feed 12->17 (14 MEASURED + 3 CITED) on 2026-08-28; resolver recipe: XRPSCAN public API (https://api.xrpscan.com/api/v1/tokens?search=X with User-Agent) -> gateway_balances verification on s1.ripple.com:51234. Never guess addresses; RPC rejects wrong ones."
+  },
+  "doctrine": {
+    "note": "Owner rulings \u2014 decisions, not bugs. DO NOT 'fix'.",
+    "owner_rulings": [
+      "Cards: quote the one you mean \u2014 card_count = 1072 FILES on disk; root_card_count = 152/153 in the signed root. NOT '335/335' (was wrong).",
+      "Board = 22 slots, 22 MEASURED, 0 unmeasured, schema csoai.gspc-axes/0.5. Observed: behavioural 2026-08-12, jail 2026-08-18, financial-fact 2026-08-25 \u2014 weeks old, say so.",
+      "Journey: ask->scope->inspect->explain works; propose->approve->fix->retest->receipt has NO RUNTIME (backends 404). Never build UI over missing backends.",
+      "MCP: 11 tools over HTTP; stdio npm package carries 12 (extra witness_hash gated 503). npm SDK csoai-gspc-mcp@0.2.1.",
+      "'BFT'/'Byzantine'/'fault-tolerant' RETRACTED \u2014 banned display string; fails brand-gate and blocks the whole estate deploy. Say 'designed 33-agent council' + '23/33 threshold'.",
+      "Deploys: Cloudflare Pages only. Never vercel deploy; never wrangler pages deploy from a laptop."
+    ],
+    "content_rules": [
+      "We measure, never certify. No conformity marks, no 'certified/guaranteed/approved'. Academy issues completion records only.",
+      "UNMEASURED is first-class; never invent a number; empty cell stays empty.",
+      "Bytes adjudicate \u2014 show the command that proves a claim.",
+      "Never send/publish/spend/sign/enable-schedule/delete without owner gate.",
+      "One lane = one writer = one branch."
+    ],
+    "git_rules": [
+      "master is the ONLY integration branch; rebase onto origin/master first",
+      "DO NOT create worktrees \u2014 branch in the main checkout",
+      "DO NOT push in rapid bursts (starves GHA queue) \u2014 batch pushes",
+      "Stage by name; never git add -A in the main checkout",
+      "root src/ is DEAD \u2014 never edit it"
+    ],
+    "signup_boundary": [
+      "Agents may drive an ALREADY-authenticated session (Nick logs in once) and stage applications to submission",
+      "Agents must NOT create accounts, enter passwords, complete sign-ups, accept ToS, or send email without Nick's explicit go per item",
+      "Free-tier programmes to stage for Nick: NLnet NGI Zero (call opens 3 Sep, UK eligible), AIRR Rapid Access (20k free GPU hrs), NVIDIA Inception, HF org credits"
+    ],
+    "fleet_cost": "~$1.91/hr total (A100 $1.39 + 3090 + cpu pods); stale stopped pods still bill provisioned volumes \u2014 flag, don't delete"
+  },
+  "grant_staging": {
+    "note": "\u00a30 programmes staged for Nick to submit (agents never submit/accept ToS). See registry/fire-ready/grant-staging-ngi-airr.md",
+    "entries": [
+      {
+        "id": "grant-ngi-zero",
+        "name": "NLnet NGI Zero Commons Fund",
+        "status": "STAGED",
+        "next": "call opens ~3 Sep 2026",
+        "url": "https://nlnet.nl/propose/",
+        "cost": "\u00a30"
+      },
+      {
+        "id": "grant-airr",
+        "name": "AIRR Rapid Access (UKRI, Isambard-AI + Dawn)",
+        "status": "STAGED",
+        "note": "20,000 free GPU hours, rolling",
+        "url": "https://www.ukri.org/opportunity/isambard-ai-and-dawn-airr-supercomputers-rapid-access-route/",
+        "cost": "\u00a30"
+      }
+    ]
+  },
+  "estate_current": {
+    "as_of": "2026-09-05 (re-verified today)",
+    "board": {
+      "live": "22 slots / 22 MEASURED / 0 unmeasured / csoai.gspc-axes/0.5",
+      "observed": "behavioural 08-12, jail 08-18, financial-fact 08-25 \u2014 weeks old",
+      "fleet": "19-model board fleet; jail is a SEPARATE 7-model fleet \u2014 never conflate"
+    },
+    "hub": {
+      "cells": 699,
+      "measured": 629,
+      "unmeasured": 70,
+      "note": "third-party Hub models, NOT the fleet; never join to board"
+    },
+    "journey": {
+      "ask_scope_inspect_explain": "WORKS",
+      "action_jobs": "LIVE 200 \u2014 bounded action-intent ledger, SINGLE_WRITER_STAGING (LEADS KV), immutable write-once keys",
+      "agentic_fix": "503 @openapi-unavailable \u2014 honesty-gated by design",
+      "api_jobs_ras_remediation": "NOT real route names (brief probed wrong paths \u2014 404 is expected, not absence)",
+      "receipts": "/api/receipts/latest = UNPUBLISHED (durable receipt storage = architectural DO/D1 decision, owner-gated per gaps-2026-09.md P0 #1)"
+    },
+    "mcp": {
+      "http_tools": 11,
+      "stdio_package": 12,
+      "extra_is_witness_hash": "gated 503",
+      "npm_sdk": "csoai-gspc-mcp@0.2.1"
+    },
+    "cards": {
+      "card_count_files": 1072,
+      "root_card_count_signed": 152,
+      "verify": "quote the one you mean; NOT 335/335"
+    },
+    "deploys": "Cloudflare Pages only. Never vercel; never wrangler pages deploy from laptop. GHA on master.",
+    "traps": {
+      "signed_card_can_say_unmeasured": "hub-cards.ts passes status through + honors signed-pending-verify (guard EXISTS)",
+      "bft": "RETRACTED \u2014 banned string fails brand-gate + blocks whole estate deploy; say 'designed 33-agent council' + '23/33 threshold'",
+      "served_ne_rendered": "3x defect; check data already served before building a surface"
+    },
+    "corrections": "functions/api/corrections.ts documents honesty fixes (unread-source != empty-source; totals null unless all sources answered; no `?? 0` that turns absent into zero)."
+  }
+}

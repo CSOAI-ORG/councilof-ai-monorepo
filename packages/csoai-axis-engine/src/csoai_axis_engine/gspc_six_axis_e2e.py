@@ -93,6 +93,10 @@ AXES = {
     "eunomia-token":    ("eunomia-energy-currency",           "token"),       # ATP
     "climate-transition": ("eunomia-climate-transition",      "transition"),  # EU Taxonomy / ISSB / PCAF
     "privacy-risk":       ("eunomia-privacy-risk",            "risk"),        # GDPR art 9/33
+    # ── Aspirational index axes (frozen gold sets = the instrument; graded, not assumed) ──
+    "ai-economy-index":   ("eunomia-ai-agentcommerce-index",  "activity"),    # agent-payments: REAL vs GAMIFIED
+    "human-labour":       ("eunomia-human-labour-index",      "labour"),      # worker automation: transparency + oversight
+    "humanoid-labour":    ("eunomia-humanoid-labour-index",   "labour"),      # humanoid deployment: functional safety + oversight
 }
 
 

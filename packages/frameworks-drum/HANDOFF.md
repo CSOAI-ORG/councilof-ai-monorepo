@@ -19,7 +19,7 @@ certifier. The measured trust gauge is a separate, measured instrument.
 | articles | 139 |
 | sectors | 9 |
 | benchmarks | 36 |
-| **total** | **662** (650 public, 12 internal — internal excluded everywhere) |
+| **total** | **662** (638 public, 24 internal — internal excluded everywhere) |
 
 Canary: `drum-canary-7f3a9c2e`.
 
@@ -31,7 +31,7 @@ Canary: `drum-canary-7f3a9c2e`.
 
 ## Contents
 ```
-public/catalog.json      doctrine-clean public catalog (650 items, canary inside)
+public/catalog.json      doctrine-clean public catalog (638 items, canary inside)
 site/                    doctrine-clean static board (index + frameworks/charters/
                          regulations/articles/sectors/benchmarks + about/pricing/findings)
 feeds/                   honest measured surfaces:
@@ -41,6 +41,8 @@ feeds/                   honest measured surfaces:
    reg_events.json            126 regulation events
    dualwalk_report.json       TEA self-audit (EAT meets TEA — claim REAL)
    ci_crosscheck.json         135 citations, 0 dead
+   rwa_xrpl_measured.json     RWA on-chain measurement (6 XRPL instruments measured on mainnet; MEASURED / PARTIAL / CITED / UNMEASURED — measurement, never certification)
+   distribution_register.json  364-venue distribution MAP (tier rollup FREE 128 / REVIEW 83 / OWNER 62 / PERMISSIONLESS 39; 67 owner-gated signup stack) — registry MAP, no listing claim, 0 codenames
    findings.json / gpai_compliance_map.json / bond_market_map.json / arena_runs.json
 mcp/                      frameworks_drum_server.py (stdlib MCP, 9 tools, selftest 22/22)
                          + manifest.json

@@ -1,0 +1,14 @@
+{
+  "name": "io.github.CSOAI-ORG/gspc",
+  "version": "0.1.1",
+  "description": "CSOAI GSPC/EUNOMIA measurement MCP — axes, measure, verify, crosswalk, enforcement, first-fine-watch, sector, claimguard (measurement, not certification).",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "csoai-governance-mcp",
+      "version": "0.1.1",
+      "transport": { "type": "stdio" }
+    }
+  ],
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json"
+}

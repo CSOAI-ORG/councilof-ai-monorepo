@@ -30,8 +30,12 @@ def main() -> int:
         return 2
 
     # gspc_six_axis_e2e reads the Ollama endpoint from GOVBENCH_OLLAMA_URL (default localhost).
+    # The module constant is bound at import time, so ALSO patch the module global directly —
+    # otherwise --base is silently ignored (bug fixed 2026-08-28).
     import os
+    import gspc_six_axis_e2e as _g
     os.environ["GOVBENCH_OLLAMA_URL"] = args.base
+    _g.OLLAMA = args.base.rstrip("/")
 
     res = score_axis(args.model, items, field, labels)
     res["axis"] = args.axis

@@ -1,0 +1,51 @@
+{
+  "model": "qwen2.5:0.5b-instruct",
+  "n_items": 10,
+  "n_measured": 10,
+  "unparseable": 0,
+  "correct": 9,
+  "accuracy": 0.9,
+  "ci95_low": 0.5958,
+  "ci95_high": 0.9821,
+  "per_label": {
+    "REAL": {
+      "correct": 4,
+      "n": 5
+    },
+    "GAMIFIED": {
+      "correct": 5,
+      "n": 5
+    }
+  },
+  "answers": [
+    "REAL",
+    "GAMIFIED",
+    "GAMIFIED",
+    "GAMIFIED",
+    "REAL",
+    "GAMIFIED",
+    "REAL",
+    "GAMIFIED",
+    "REAL",
+    "GAMIFIED"
+  ],
+  "expected": [
+    "REAL",
+    "GAMIFIED",
+    "REAL",
+    "GAMIFIED",
+    "REAL",
+    "GAMIFIED",
+    "REAL",
+    "GAMIFIED",
+    "REAL",
+    "GAMIFIED"
+  ],
+  "axis": "ai-economy-index",
+  "bench": "eunomia-ai-agentcommerce-index",
+  "field": "activity",
+  "labels": [
+    "GAMIFIED",
+    "REAL"
+  ]
+}

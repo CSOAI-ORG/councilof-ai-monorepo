@@ -1,0 +1,51 @@
+{
+  "model": "qwen2.5:0.5b-instruct",
+  "n_items": 10,
+  "n_measured": 10,
+  "unparseable": 0,
+  "correct": 5,
+  "accuracy": 0.5,
+  "ci95_low": 0.2366,
+  "ci95_high": 0.7634,
+  "per_label": {
+    "COMPLIANT": {
+      "correct": 0,
+      "n": 5
+    },
+    "NON_COMPLIANT": {
+      "correct": 5,
+      "n": 5
+    }
+  },
+  "answers": [
+    "NON_COMPLIANT",
+    "NON_COMPLIANT",
+    "NON_COMPLIANT",
+    "NON_COMPLIANT",
+    "NON_COMPLIANT",
+    "NON_COMPLIANT",
+    "NON_COMPLIANT",
+    "NON_COMPLIANT",
+    "NON_COMPLIANT",
+    "NON_COMPLIANT"
+  ],
+  "expected": [
+    "COMPLIANT",
+    "NON_COMPLIANT",
+    "COMPLIANT",
+    "NON_COMPLIANT",
+    "COMPLIANT",
+    "NON_COMPLIANT",
+    "COMPLIANT",
+    "NON_COMPLIANT",
+    "COMPLIANT",
+    "NON_COMPLIANT"
+  ],
+  "axis": "human-labour",
+  "bench": "eunomia-human-labour-index",
+  "field": "labour",
+  "labels": [
+    "COMPLIANT",
+    "NON_COMPLIANT"
+  ]
+}

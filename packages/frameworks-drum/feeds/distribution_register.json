@@ -1,0 +1,450 @@
+{
+ "asset": "distribution-venues-register",
+ "generated": "2026-08-25",
+ "doctrine": "Registration / distribution MAP only. Measurement-not-certification. No listing status is asserted that is not explicit in the source. No external outreach. No codenames. No credentials.",
+ "source": "~/Downloads/OUTREACH-DATABASE-2026-08-25.csv",
+ "schema_version": "1.0",
+ "totals": {
+  "rows_parsed": 364,
+  "rows_emitted_doctrine_clean": 364,
+  "rows_omitted_codename": 0,
+  "owner_gated_venues": 67
+ },
+ "access_tier_rollup": {
+  "FREE_REGISTRATION": 128,
+  "REVIEW_GATED": 83,
+  "OWNER_GATED": 62,
+  "PERMISSIONLESS": 39,
+  "UNSPECIFIED": 35,
+  "UNKNOWN": 16,
+  "DERIVED": 1
+ },
+ "category_rollup": {
+  "4. AI tool directories (42)": 42,
+  "11. Dev / community / launch (32)": 32,
+  "16. Supplementary long-tail venues (28) \u2014 lower priority, batch-submit when capa": 28,
+  "8. Government / regulator portals (22)": 24,
+  "7. Academic / standards (22)": 22,
+  "13. Media / PR (22)": 22,
+  "N-SITES canon \u00b7 PART 1 \u2014 THE KNOWN 30 (HS.4 canon), status-checked": 22,
+  "15. Profiles / citations (18)": 19,
+  "2. MCP registries / aggregators (16)": 16,
+  "5. Cloud / data marketplaces (16)": 16,
+  "14. Conference / CFP (16)": 16,
+  "N-SITES canon \u00b7 PART 2 \u2014 MISSED: developer/registry surfaces (new from hunt)": 16,
+  "1. Package registries (12)": 12,
+  "3. A2A / agent directories (11)": 11,
+  "9. Insurance / finance rails (11)": 11,
+  "10. Charity / impact (11)": 11,
+  "12. Security / vuln (11)": 11,
+  "END-USER-TEST canon \u00b7 \u00a7I \u2014 OUR OWN PRESENCE (K3 curl, 19 Aug)": 10,
+  "6. HuggingFace + model/data hubs (9)": 9,
+  "END-USER-TEST canon \u00b7 \u00a70 \u2014 SCOREBOARD (where 100/100 stands)": 8,
+  "END-USER-TEST canon \u00b7 \u00a7K \u2014 CORRECTIONS LEDGER ADDITIONS": 6
+ },
+ "owner_gated": [
+  {
+   "name": "Chrome Web Store",
+   "url": "https://chrome.google.com/webstore/devconsole",
+   "category": "1. Package registries (12)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Google Cloud Agent Registry (Gemini Enterprise)",
+   "url": "https://cloud.google.com/gemini/enterprise/docs/register-and-manage-an-a2a-agent",
+   "category": "3. A2A / agent directories (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "AWS Agent Registry (Bedrock AgentCore, preview)",
+   "url": "https://aws.amazon.com/bedrock/agentcore/",
+   "category": "3. A2A / agent directories (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Microsoft Entra Agent ID",
+   "url": "https://learn.microsoft.com/entra/agent-id/",
+   "category": "3. A2A / agent directories (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "There's An AI For That",
+   "url": "https://theresanaiforthat.com/launch",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Futurepedia",
+   "url": "https://www.futurepedia.io/submit-tool",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Toolify",
+   "url": "https://www.toolify.ai/submit",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Insidr AI",
+   "url": "https://www.insidr.ai/submit-tools/",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "AI Scout",
+   "url": "https://aiscout.net",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "TopAI.tools",
+   "url": "https://topai.tools",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Toolpilot.ai",
+   "url": "https://toolpilot.ai",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "aitools.fyi",
+   "url": "https://aitools.fyi/submit",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "GPTE",
+   "url": "https://gpte.ai/submit-a-tool/",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "AI Parabellum",
+   "url": "https://aiparabellum.com/submit-your-ai-tool/",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "The Next AI",
+   "url": "https://www.thenextai.com/submit-ai-tool/",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Appscribed",
+   "url": "https://appscribed.com/submit-ai-tool/",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "BetaList",
+   "url": "https://betalist.com/submit",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Uneed",
+   "url": "https://www.uneed.best",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Joinly",
+   "url": "https://www.joinly.xyz/submit-startup",
+   "category": "4. AI tool directories (42)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "AWS Marketplace",
+   "url": "https://aws.amazon.com/marketplace/management/",
+   "category": "5. Cloud / data marketplaces (16)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "AWS Data Exchange (ADX)",
+   "url": "https://aws.amazon.com/data-exchange/",
+   "category": "5. Cloud / data marketplaces (16)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Azure Marketplace / AppSource",
+   "url": "https://partner.microsoft.com",
+   "category": "5. Cloud / data marketplaces (16)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Google Cloud Marketplace",
+   "url": "https://console.cloud.google.com/marketplace",
+   "category": "5. Cloud / data marketplaces (16)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Snowflake Marketplace",
+   "url": "https://www.snowflake.com/en/data-cloud/marketplace/",
+   "category": "5. Cloud / data marketplaces (16)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Datarade",
+   "url": "https://datarade.ai",
+   "category": "5. Cloud / data marketplaces (16)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Salesforce AppExchange",
+   "url": "https://appexchange.salesforce.com",
+   "category": "5. Cloud / data marketplaces (16)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Microsoft Teams Store (AppSource)",
+   "url": "https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/",
+   "category": "5. Cloud / data marketplaces (16)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "DataCite (via member or consortium)",
+   "url": "https://datacite.org",
+   "category": "7. Academic / standards (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "CrossRef (content registration)",
+   "url": "https://www.crossref.org",
+   "category": "7. Academic / standards (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "ISO/IEC via national body (BSI UK)",
+   "url": "https://standardsdevelopment.bsigroup.com",
+   "category": "7. Academic / standards (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "CEN-CENELEC (via national delegation)",
+   "url": "https://www.cencenelec.eu",
+   "category": "7. Academic / standards (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "ETSI",
+   "url": "https://portal.etsi.org",
+   "category": "7. Academic / standards (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "OASIS Open Projects",
+   "url": "https://www.oasis-open.org/open-projects/",
+   "category": "7. Academic / standards (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "UK Digital Marketplace / G-Cloud 15",
+   "url": "https://www.applytosupply.digitalmarketplace.service.gov.uk",
+   "category": "8. Government / regulator portals (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Find a Tender Service (UK)",
+   "url": "https://www.find-tender.service.gov.uk",
+   "category": "8. Government / regulator portals (22)",
+   "access_tier": "FREE_REGISTRATION"
+  },
+  {
+   "name": "Companies House",
+   "url": "https://find-and-update.company-information.service.gov.uk",
+   "category": "8. Government / regulator portals (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "ICO register of fee payers / DPO registration",
+   "url": "https://ico.org.uk/for-organisations/",
+   "category": "8. Government / regulator portals (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "data.gov.uk publisher",
+   "url": "https://ckan.publishing.service.gov.uk",
+   "category": "8. Government / regulator portals (22)",
+   "access_tier": "FREE_REGISTRATION"
+  },
+  {
+   "name": "SAM.gov (US)",
+   "url": "https://sam.gov",
+   "category": "8. Government / regulator portals (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "GLEIF LEI (via LOU/registration agent)",
+   "url": "https://www.gleif.org/en/about-lei/get-an-lei-find-lei-issuing-organizations",
+   "category": "9. Insurance / finance rails (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "ACORD (standards membership)",
+   "url": "https://www.acord.org",
+   "category": "9. Insurance / finance rails (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "S&P Global Marketplace / data partner",
+   "url": "https://www.spglobal.com/marketplace",
+   "category": "9. Insurance / finance rails (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Bloomberg Enterprise Access Point / alt-data",
+   "url": "https://www.bloomberg.com/professional/product/data-license/",
+   "category": "9. Insurance / finance rails (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "LSEG (Refinitiv) Developer/Partner",
+   "url": "https://developers.lseg.com",
+   "category": "9. Insurance / finance rails (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "ISDA (membership/working groups)",
+   "url": "https://www.isda.org/membership/",
+   "category": "9. Insurance / finance rails (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "OpenCorporates (data correction/claim)",
+   "url": "https://opencorporates.com",
+   "category": "9. Insurance / finance rails (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Financial Data Exchange (FDX)",
+   "url": "https://financialdataexchange.org",
+   "category": "9. Insurance / finance rails (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Charity Commission for England & Wales (register + API)",
+   "url": "https://register-of-charities.charitycommission.gov.uk",
+   "category": "10. Charity / impact (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Candid / GuideStar",
+   "url": "https://www.guidestar.org / https://updater.candid.org",
+   "category": "10. Charity / impact (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Social Value UK (membership)",
+   "url": "https://www.socialvalueuk.org",
+   "category": "10. Charity / impact (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "WIP (wip.co)",
+   "url": "https://wip.co",
+   "category": "11. Dev / community / launch (32)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "GitHub Security Advisories (repo + Advisory DB)",
+   "url": "https://github.com/advisories",
+   "category": "12. Security / vuln (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "HackerOne (own program)",
+   "url": "https://www.hackerone.com",
+   "category": "12. Security / vuln (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Bugcrowd",
+   "url": "https://www.bugcrowd.com",
+   "category": "12. Security / vuln (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Intigriti",
+   "url": "https://www.intigriti.com",
+   "category": "12. Security / vuln (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "CVE.org / CNA route (via GitHub or VulnCheck)",
+   "url": "https://www.cve.org",
+   "category": "12. Security / vuln (11)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "The Rundown AI / Ben's Bites (tool features)",
+   "url": "https://www.bensbites.com",
+   "category": "13. Media / PR (22)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Google Business Profile",
+   "url": "https://www.google.com/business/",
+   "category": "15. Profiles / citations (18)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Bing Places",
+   "url": "https://www.bingplaces.com",
+   "category": "15. Profiles / citations (18)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Apple Maps / Apple Business Connect",
+   "url": "https://businessconnect.apple.com",
+   "category": "15. Profiles / citations (18)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "Dealroom (claim profile)",
+   "url": "https://dealroom.co",
+   "category": "15. Profiles / citations (18)",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "GSA Multiple Award Schedule route (via SAM)",
+   "url": "https://www.gsa.gov",
+   "category": "16. Supplementary long-tail venues (28) \u2014 lower priority, batch-submit when capa",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "UKRI Funding Service",
+   "url": "https://www.ukri.org/opportunity/",
+   "category": "16. Supplementary long-tail venues (28) \u2014 lower priority, batch-submit when capa",
+   "access_tier": "FREE_REGISTRATION"
+  },
+  {
+   "name": "Anthropic Connectors",
+   "url": "claude.ai",
+   "category": "N-SITES canon \u00b7 PART 1 \u2014 THE KNOWN 30 (HS.4 canon), status-checked",
+   "access_tier": "OWNER_GATED"
+  },
+  {
+   "name": "OpenAI Apps/Plugin dir",
+   "url": "developers.openai.com",
+   "category": "N-SITES canon \u00b7 PART 1 \u2014 THE KNOWN 30 (HS.4 canon), status-checked",
+   "access_tier": "UNSPECIFIED"
+  },
+  {
+   "name": "AWS Marketplace agent category",
+   "url": "aws.amazon.com/marketplace",
+   "category": "N-SITES canon \u00b7 PART 1 \u2014 THE KNOWN 30 (HS.4 canon), status-checked",
+   "access_tier": "UNSPECIFIED"
+  },
+  {
+   "name": "Show HN / Product Hunt",
+   "url": "news.ycombinator.com / producthunt.com",
+   "category": "N-SITES canon \u00b7 PART 1 \u2014 THE KNOWN 30 (HS.4 canon), status-checked",
+   "access_tier": "UNSPECIFIED"
+  }
+ ],
+ "note": "owner_gated = venues needing an external/paid/owner-account action (Nick's signup stack). They are DRAFT targets, NOT sent and NOT listed."
+}
