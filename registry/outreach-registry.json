@@ -510,5 +510,44 @@
         "cost": "\u00a30"
       }
     ]
+  },
+  "estate_current": {
+    "as_of": "2026-09-05 (re-verified today)",
+    "board": {
+      "live": "22 slots / 22 MEASURED / 0 unmeasured / csoai.gspc-axes/0.5",
+      "observed": "behavioural 08-12, jail 08-18, financial-fact 08-25 \u2014 weeks old",
+      "fleet": "19-model board fleet; jail is a SEPARATE 7-model fleet \u2014 never conflate"
+    },
+    "hub": {
+      "cells": 699,
+      "measured": 629,
+      "unmeasured": 70,
+      "note": "third-party Hub models, NOT the fleet; never join to board"
+    },
+    "journey": {
+      "ask_scope_inspect_explain": "WORKS",
+      "action_jobs": "LIVE 200 \u2014 bounded action-intent ledger, SINGLE_WRITER_STAGING (LEADS KV), immutable write-once keys",
+      "agentic_fix": "503 @openapi-unavailable \u2014 honesty-gated by design",
+      "api_jobs_ras_remediation": "NOT real route names (brief probed wrong paths \u2014 404 is expected, not absence)",
+      "receipts": "/api/receipts/latest = UNPUBLISHED (durable receipt storage = architectural DO/D1 decision, owner-gated per gaps-2026-09.md P0 #1)"
+    },
+    "mcp": {
+      "http_tools": 11,
+      "stdio_package": 12,
+      "extra_is_witness_hash": "gated 503",
+      "npm_sdk": "csoai-gspc-mcp@0.2.1"
+    },
+    "cards": {
+      "card_count_files": 1072,
+      "root_card_count_signed": 152,
+      "verify": "quote the one you mean; NOT 335/335"
+    },
+    "deploys": "Cloudflare Pages only. Never vercel; never wrangler pages deploy from laptop. GHA on master.",
+    "traps": {
+      "signed_card_can_say_unmeasured": "hub-cards.ts passes status through + honors signed-pending-verify (guard EXISTS)",
+      "bft": "RETRACTED \u2014 banned string fails brand-gate + blocks whole estate deploy; say 'designed 33-agent council' + '23/33 threshold'",
+      "served_ne_rendered": "3x defect; check data already served before building a surface"
+    },
+    "corrections": "functions/api/corrections.ts documents honesty fixes (unread-source != empty-source; totals null unless all sources answered; no `?? 0` that turns absent into zero)."
   }
 }
