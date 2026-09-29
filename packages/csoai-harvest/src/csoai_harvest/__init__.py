@@ -13,7 +13,8 @@ The GOVERNANCE governs the INTAKE — dogfood at the door. The Rego
 policy here is the same kind of policy that gates sovos-article-zero
 on outbound actions; here it gates inbound assimilation.
 
-This package ships the WATCH + GATE 1 stages. ABSORB / GATE 2 / SIGN /
+This package ships WATCH, GATE 1, and bounded read-only official MCP
+Registry discovery intake. ABSORB / GATE 2 / SIGN /
 PUBLISH / RETURN are downstream packages (csoai-harvest-2, sovos-arena,
 sovos-sigil, sovos-charter-registry, sovos-catapult).
 """
@@ -22,6 +23,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Dict, List, Optional, Set
+
+from .mcp_registry import build_snapshot as build_mcp_registry_snapshot
 
 
 # SPDX allow-list (per Master Part X.1 + Part Y white space)
@@ -237,4 +240,5 @@ __all__ = [
     "Verdict",
     "gate_license",
     "render_regogo_policy",
+    "build_mcp_registry_snapshot",
 ]
