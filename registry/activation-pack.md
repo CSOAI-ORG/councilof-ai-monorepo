@@ -20,7 +20,7 @@ to package.json — they are decoupled.
 - [ ] Nick: run the device-flow + publish (or I drive the CLI if he grants a session). Verify after.
 
 ## 2 · A2A directories — £0
-- **a2aagentlist.com** (NOT .ai): submission is an **email to gal6111@gmail.com**, subject "A2A Agent Submission",
+- **a2aagentlist.com** (NOT .ai): submission is an **email to [address removed]**, subject "A2A Agent Submission",
   incl. agent details + card URL. Draft ready: `fire-ready/a2aagentlist-email.md`. ⚠️ personal gmail, community-run.
 - **a2a-registry.org**: submit (no account, /submit) or publish (auth, /console/agents, STAGE→ACTIVE).
 - **artinet**: NOT a directory (open-source A2A platform, the-artinet-project/artinet) — skip listing.
@@ -58,7 +58,7 @@ to package.json — they are decoupled.
 - **OWASP MCP Top-10**: contribute free (fork → PR, "even a line counts"); leadership needs ~$50/yr OWASP membership.
 - **AI Verify Foundation (IMDA)**: community £0 (aiverifyfoundation.sg/community); General fee unpublished (contact form).
 - **BSI ART/1** (UK mirror ISO/IEC SC 42): committee seat £0, BUT **BSI membership required first** (subscription,
-  7 categories, £ varies — contact membership@bsigroup.com). Verify hcms page in browser.
+  7 categories, £ varies — contact [address removed]). Verify hcms page in browser.
 - [ ] Nick: submit WG join requests + AI Verify contact form; decide on BSI membership.
 
 ## 8 · Insurance outreach (drafts ready, none sent)
