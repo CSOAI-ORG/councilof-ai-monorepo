@@ -5,14 +5,20 @@ on:
     branches: [main, master]
   pull_request:
     branches: [main, master]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: Verify repo structure
         run: |
           echo "CSOAI-ORG repository CI check passed"
           test -f README.md && echo "README.md exists"
           test -f LICENSE && echo "LICENSE exists"
+      - name: Test MCP Registry harvest intake
+        run: PYTHONPATH=packages/csoai-harvest/src python -m unittest discover -s packages/csoai-harvest/tests -p 'test_mcp_registry.py' -v
